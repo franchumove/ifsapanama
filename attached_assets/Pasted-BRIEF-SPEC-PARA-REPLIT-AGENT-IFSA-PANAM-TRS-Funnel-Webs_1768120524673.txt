@@ -1,0 +1,531 @@
+BRIEF / SPEC PARA REPLIT AGENT — IFSA PANAMÁ (TRS-Funnel™ Website)
+0) Objetivo del sitio (TRS)
+
+Construir una web que no “muestre” servicios, sino que mueva estado interno del visitante:
+
+Transformar (0–250ms): “Esto se ve serio. Control.”
+
+Resonar (250ms–3s): “Me baja el riesgo. Confío.”
+
+Simbolizar (3–10s): “Quiero una visita técnica / cotización.”
+
+Acción primaria a optimizar
+
+Solicitar visita técnica (CTA principal, siempre visible).
+
+Acciones secundarias
+
+Ver proyectos (filtro por tipo)
+
+Contacto (WhatsApp + formulario)
+
+Descargar perfil (si se crea PDF luego)
+
+1) Branding & UI System
+Paleta (base)
+
+Negro: #0B0B0B (fondo hero, header, textos fuertes)
+
+Dorado: #C9A227 (CTAs, iconos, acentos, números)
+
+Blanco: #FFFFFF (fondos de lectura)
+
+Gris claro: #F5F5F5 (secciones alternas)
+
+Gris texto: #2B2B2B
+
+Regla: Dorado solo para “señales” (botones, iconos, líneas, números). No usar dorado en párrafos largos.
+
+Tipografía (Google Fonts)
+
+Titulares: Montserrat o Poppins (700/800)
+
+Cuerpo: Inter (400/500)
+
+Estilo visual
+
+Minimalista, industrial, “control de obra”.
+
+Muchas fotos reales (obra, maquinaria, topografía, personal).
+
+Cards con borde sutil y sombras suaves.
+
+Animaciones discretas (fade/slide) sin exagerar.
+
+2) Tech stack (implementación)
+
+Construir con:
+
+Next.js (App Router) + TypeScript
+
+Tailwind CSS
+
+Componentes: shadcn/ui (Button, Card, Tabs, Accordion, Dialog)
+
+Animaciones: Framer Motion (suave)
+
+SEO: metadata por página + OpenGraph
+
+Form: validación con zod + react-hook-form
+
+Envío de formulario: endpoint /api/lead (guardar a email + fallback a mailto si no hay SMTP)
+
+Integración WhatsApp: link directo con mensaje prellenado
+
+Responsive first (mobile decide).
+
+3) Arquitectura de información (Menú)
+
+Máximo 7 items.
+
+Header (sticky)
+
+Logo IFSA PANAMÁ (texto si no hay logo final)
+
+Menú:
+
+Inicio
+
+Proyectos
+
+Servicios
+
+Capacidades
+
+Calidad & Seguridad
+
+Nosotros
+
+Contacto
+
+CTA fijo botón dorado: “Solicitar visita técnica”
+
+Ícono WhatsApp (floating bottom-right)
+
+Footer
+
+Dirección (si se define después)
+
+Teléfono Panamá
+
+Email
+
+Links rápidos
+
+“Responsabilidad. Eficiencia. Control de calidad.” (mantra)
+
+4) Estructura TRS (HOME) — SECCIONES Y COPY
+4.1 HERO (Interrupción Simbólica)
+
+Diseño:
+
+Fondo negro con foto de obra (overlay)
+
+Titular grande + subtítulo corto
+
+2 CTAs
+
+Copy Hero (usar este):
+
+H1: “Construcción e infraestructura con control real.”
+
+Sub: “Obra civil, arquitectura, topografía y maquinaria para proyectos públicos y privados en Panamá.”
+
+CTA1 (dorado): Solicitar visita técnica
+
+CTA2 (outline): Ver proyectos
+
+Micro strip debajo (3-4 chips):
+
+“Obra civil & arquitectura”
+
+“Topografía & tecnología”
+
+“Maquinaria y transporte”
+
+“Panamá”
+
+4.2 BLOQUE “PRUEBA RÁPIDA” (Enganche emocional)
+
+Sección blanca con 3 números/beneficios (sin inventar cifras).
+
+Card 1: “Control de calidad”
+
+Card 2: “Ejecución eficiente”
+
+Card 3: “Responsabilidad operativa”
+
+Copy corto por card:
+
+“Planificación + supervisión + entrega.”
+
+“Método en obra, no promesas.”
+
+“Cumplimiento y trazabilidad.”
+
+4.3 RUTAS POR INTENCIÓN (Ancla narrativa)
+
+Título: “¿Qué tipo de obra necesitas?”
+Tres cards clicables (con iconos):
+
+Infraestructura & Urbanismo
+
+Industrial / Plantas / Sistemas
+
+Obras públicas & grandes frentes
+
+Cada card → lleva a /proyectos?tipo=...
+
+4.4 PROYECTOS DESTACADOS (Prueba sensorial)
+
+Grid de 6 proyectos (mock data al inicio).
+Cada card:
+
+Foto
+
+Nombre
+
+Tipo (tag)
+
+Botón: “Ver ficha”
+
+Importante: La ficha de proyecto debe tener estructura “control”: reto → solución → alcance.
+
+4.5 SERVICIOS (claros, cortos)
+
+Título: “Servicios integrales para ejecutar sin fricción.”
+Lista de servicios con iconos:
+
+Obra civil
+
+Arquitectura / diseño (si aplica)
+
+Topografía y replanteo
+
+Movimiento de tierra
+
+Redes / drenajes / colectoras (si aplica)
+
+Estructuras metálicas / cerramientos (si aplica)
+
+Logística / transporte / maquinaria
+
+4.6 CAPACIDADES (Símbolo de certeza)
+
+Sección fondo gris claro.
+Dos columnas:
+
+Izquierda: lista de capacidades
+
+Derecha: imagen de maquinaria / topografía
+
+Copy recomendado:
+“Capacidad no es ‘tener equipo’. Es poder responder a campo con método.”
+
+Items:
+
+Personal técnico
+
+Supervisión de obra
+
+Topografía y tecnología de dibujo
+
+Maquinaria y transporte
+
+Protocolos de ejecución
+
+4.7 CALIDAD & SEGURIDAD (Baja riesgo)
+
+Accordion FAQ estilo “lo que la gente teme”
+Preguntas:
+
+“¿Cómo aseguran calidad y cumplimiento?”
+
+“¿Cómo gestionan cambios en obra?”
+
+“¿Cómo controlan tiempos y coordinación?”
+
+“¿Qué documentación entregan?”
+
+Respuestas cortas: método, supervisión, trazabilidad (sin inventar certificaciones).
+
+4.8 CTA FINAL (Símbolo accionable)
+
+Fondo negro, copy directo:
+
+Título: “Si tu obra no puede fallar, empecemos con una visita técnica.”
+
+Sub: “Cuéntanos ubicación, etapa y tipo de proyecto. Respuesta en el mismo día hábil (si se puede decir; si no, “a la brevedad”).”
+
+Botón: Agendar visita
+
+Link: “O hablar por WhatsApp”
+
+5) PÁGINAS INTERNAS (estructura + contenido)
+5.1 /proyectos (página más importante)
+Layout
+
+Hero simple: “Proyectos”
+
+Filtros:
+
+Tipo: Infraestructura / Industrial / Urbanismo / etc.
+
+Servicio: Topografía, obra civil, etc.
+
+Grid de proyectos
+
+Cada card → /proyectos/[slug]
+
+Datos de proyecto (modelo)
+
+Campos:
+
+title
+
+slug
+
+category (tipo)
+
+location (si hay)
+
+year (opcional)
+
+thumbnail
+
+gallery[]
+
+challenge (Reto)
+
+solution (Solución)
+
+scope[] (Alcance)
+
+outcome (Resultado/entregable)
+
+tags[]
+
+5.2 /proyectos/[slug] (ficha “control”)
+
+Secciones:
+
+Header (foto + título + tags)
+
+Reto (1 párrafo)
+
+Solución IFSA (1 párrafo)
+
+Alcance (bullets)
+
+Galería (slider)
+
+CTA sticky: “Quiero una visita técnica”
+
+5.3 /servicios
+
+Hero: “Servicios”
+
+Bloques por servicio (cards)
+
+Para cada servicio:
+
+Qué resuelve (dolor)
+
+Cómo lo ejecutamos (método)
+
+En qué casos aplica
+
+CTA: visita técnica
+
+5.4 /capacidades
+
+Sección maquinaria (sin listar marcas si no existen)
+
+Sección topografía & tecnología
+
+Sección equipo humano (roles)
+
+Sección metodología (planificación, supervisión, control)
+
+5.5 /calidad-seguridad
+
+Principios operativos (responsabilidad, eficiencia, control)
+
+“Cómo trabajamos” (pasos en obra, sin sonar marketing)
+
+FAQs
+
+5.6 /nosotros
+
+Historia breve (si no hay, texto placeholder)
+
+Misión / Visión / Valores (presentado como “principios”)
+
+Foto equipo (placeholder)
+
+CTA: contacto
+
+5.7 /contacto
+
+Bloque 1: Formulario “Solicitar visita técnica”
+
+Bloque 2: WhatsApp directo
+
+Bloque 3: Teléfono + correo
+
+Mapa (si se tiene dirección)
+
+6) Componentes clave a construir (reutilizables)
+
+Header.tsx (sticky + CTA)
+
+Footer.tsx
+
+Hero.tsx
+
+TrustStrip.tsx (chips)
+
+ServiceCards.tsx
+
+ProjectGrid.tsx
+
+ProjectFilters.tsx
+
+ProjectCase.tsx
+
+CTASection.tsx
+
+WhatsAppFloatingButton.tsx
+
+LeadForm.tsx (react-hook-form + zod)
+
+7) Lead Form (estructura exacta)
+
+Campos:
+
+Nombre completo (required)
+
+Empresa (optional)
+
+Teléfono (required)
+
+Email (required)
+
+Tipo de proyecto (dropdown)
+
+Ubicación (required)
+
+Etapa (dropdown: idea/diseño/ejecución/urgente)
+
+Mensaje (optional)
+
+Botón:
+
+“Solicitar visita técnica”
+
+Después de enviar:
+
+Mensaje success + botón “Hablar por WhatsApp”
+
+Redirigir opcional a WhatsApp con resumen del lead
+
+WhatsApp link (formato)
+
+https://wa.me/507XXXXXXXX?text=...
+Texto prellenado:
+“Hola IFSA PANAMÁ, quiero solicitar una visita técnica. Tipo de proyecto: __. Ubicación: __. Etapa: __. Nombre: __. Teléfono: __.”
+
+8) SEO / Performance (obligatorio)
+
+Metadata por página (title + description)
+
+OpenGraph image (placeholder)
+
+Sitemap + robots.txt
+
+Schema.org básico:
+
+LocalBusiness / ConstructionCompany
+
+Alt text en imágenes
+
+Lazy loading en galerías
+
+9) Contenido inicial (NO inventar datos)
+
+Crear “mock data” para proyectos/servicios pero dejar claro en comentarios:
+// TODO: Replace with real project data provided by IFSA
+
+No inventar:
+
+Años
+
+Cantidad de proyectos
+
+Certificaciones
+
+Clientes exactos (a menos que IFSA confirme)
+
+Sí se puede decir (genérico):
+
+“proyectos públicos y privados”
+
+“obra civil, arquitectura, topografía, maquinaria”
+
+10) Estructura de carpetas recomendada (Next.js)
+
+/app
+
+/page.tsx (Home)
+
+/proyectos/page.tsx
+
+/proyectos/[slug]/page.tsx
+
+/servicios/page.tsx
+
+/capacidades/page.tsx
+
+/calidad-seguridad/page.tsx
+
+/nosotros/page.tsx
+
+/contacto/page.tsx
+
+/api/lead/route.ts
+
+/components
+
+/data (projects.ts, services.ts)
+
+/public (images placeholders)
+
+11) Reglas TRS de copy (para todo el sitio)
+
+Frases cortas, concretas.
+
+Hablar como “obra”: control, método, cumplimiento, supervisión.
+
+Nada de marketing cliché (“somos los mejores”, “lideres”, “innovadores”).
+
+En cada sección: 1 idea fuerte + 1 prueba + 1 acción.
+
+12) Entregables que el agente debe producir (orden)
+
+Wireframe funcional en Next.js con rutas completas
+
+UI base (header/footer/hero/CTA/whatsapp)
+
+Mock data + proyectos con slug
+
+Formulario funcional (API route)
+
+SEO básico
+
+Ajustes responsive + performance
+
+✅ LISTO: INSTRUCCIÓN FINAL PARA EL AGENTE (COPIAR/PEGAR)
+
+Ahora pega esto al final para que el agente lo ejecute como plan:
+
+“Construye un sitio web en Next.js + TS + Tailwind siguiendo la especificación anterior. Implementa todas las páginas del sitemap, los componentes reutilizables, el sistema de datos mock para proyectos/servicios, el formulario de leads con endpoint /api/lead, y un botón flotante de WhatsApp. Mantén el estilo negro/dorado/blanco, minimalista industrial, con foco en CTA ‘Solicitar visita técnica’. No inventes datos reales (números, certificaciones, clientes); usa placeholders claros. Prioriza mobile, velocidad y SEO.”

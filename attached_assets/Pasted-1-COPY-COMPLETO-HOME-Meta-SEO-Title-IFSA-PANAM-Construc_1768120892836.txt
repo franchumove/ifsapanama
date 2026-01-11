@@ -1,0 +1,680 @@
+1) COPY COMPLETO — HOME (/)
+Meta (SEO)
+
+Title: IFSA PANAMÁ | Construcción e infraestructura con control real
+
+Description: Obra civil, infraestructura, topografía y maquinaria para proyectos públicos y privados en Panamá. Solicita una visita técnica.
+
+Hero
+
+H1: Construcción e infraestructura con control real.
+Sub: Obra civil, arquitectura, topografía y maquinaria para proyectos públicos y privados en Panamá.
+CTA primario: Solicitar visita técnica
+CTA secundario: Ver proyectos
+
+Chips (strip):
+
+Obra civil & arquitectura
+
+Topografía & replanteo
+
+Maquinaria & transporte
+
+Panamá
+
+Sección: Prueba rápida (3 cards)
+
+Título: Cuando una obra no puede fallar, el método importa.
+Texto breve: En IFSA PANAMÁ trabajamos con planificación, supervisión y control en campo para reducir incertidumbre y asegurar entregables.
+
+Card 1 — Control de calidad
+Texto: Inspección, trazabilidad y verificación de obra en cada etapa.
+
+Card 2 — Ejecución eficiente
+Texto: Coordinación y respuesta operativa para avanzar sin fricción innecesaria.
+
+Card 3 — Responsabilidad operativa
+Texto: Compromiso con seguridad, orden y cumplimiento técnico en el sitio.
+
+Sección: Rutas por intención (3 tarjetas)
+
+Título: ¿Qué tipo de obra necesitas?
+Sub: Elige tu ruta y revisa proyectos similares.
+
+Ruta 1: Infraestructura & urbanismo
+Texto: Drenajes, colectoras, enrocados, obras de contención y redes asociadas.
+CTA: Ver proyectos de infraestructura
+
+Ruta 2: Industrial / plantas / sistemas
+Texto: Obras técnicas, redes, estaciones, sistemas y ejecución con alta exigencia de coordinación.
+CTA: Ver proyectos industriales
+
+Ruta 3: Obras públicas y grandes frentes
+Texto: Intervenciones de alta visibilidad donde el control y el orden no son opcionales.
+CTA: Ver proyectos públicos
+
+Sección: Proyectos destacados
+
+Título: Proyectos que prueban ejecución.
+Sub: Cada ficha muestra el reto, la solución y el alcance para que puedas evaluar con claridad.
+Botón: Ver todos los proyectos
+
+Sección: Servicios
+
+Título: Servicios integrales para ejecutar con certeza.
+Sub: Desde el replanteo hasta la entrega, con capacidad operativa y control en campo.
+
+Bullets (cards):
+
+Obra civil
+
+Infraestructura y urbanismo
+
+Topografía, replanteo y control geométrico
+
+Movimiento de tierra
+
+Redes y drenajes (según alcance)
+
+Estructuras metálicas / cerramientos (según proyecto)
+
+Logística, transporte y apoyo de maquinaria
+
+Nota pequeña: Servicios sujetos a alcance y condiciones del proyecto.
+
+Sección: Capacidades (2 columnas)
+
+Título: Capacidad es responder en campo con método.
+Texto: No se trata solo de “tener equipo”. Se trata de ejecutar con supervisión, coordinación y control técnico.
+
+Lista de capacidades:
+
+Personal técnico y supervisión de obra
+
+Planificación de frentes y coordinación operativa
+
+Topografía y replanteo
+
+Maquinaria y transporte (según necesidad)
+
+Protocolos de ejecución y control
+
+CTA: Solicitar visita técnica
+
+Sección: Calidad & seguridad (FAQ)
+
+Título: Calidad y seguridad para bajar riesgo.
+Sub: Respuestas cortas a lo que más preocupa antes de contratar una constructora.
+
+FAQs (acordeón):
+
+¿Cómo aseguran calidad y cumplimiento?
+Respuesta: Alineamos alcance, verificamos medidas y ejecutamos con supervisión en campo. Documentamos avances y validamos entregables según cada etapa.
+
+¿Qué pasa si el proyecto cambia en obra?
+Respuesta: Gestionamos cambios por alcance: evaluación, impacto, aprobación y ejecución controlada. Evitamos improvisación sin trazabilidad.
+
+¿Cómo controlan tiempos y coordinación?
+Respuesta: Organizamos frentes, dependencias y entregas parciales. Priorizamos comunicación operativa para que el avance sea estable.
+
+¿Qué documentación entregan?
+Respuesta: Depende del proyecto. Podemos incluir reportes de avance, evidencias fotográficas y entregables técnicos acordados.
+
+CTA final (negro)
+
+Título: Si tu obra no puede fallar, empecemos con una visita técnica.
+Sub: Cuéntanos ubicación, etapa y tipo de proyecto. Te respondemos con el siguiente paso claro.
+Botón: Agendar visita técnica
+Link secundario: Hablar por WhatsApp
+
+Footer mantra
+
+Texto: Responsabilidad. Eficiencia. Control de calidad.
+
+2) COPY COMPLETO — PROYECTOS (/proyectos)
+Meta
+
+Title: Proyectos | IFSA PANAMÁ
+
+Description: Explora proyectos por tipo de obra y servicio. Fichas con reto, solución y alcance.
+
+Hero
+
+H1: Proyectos
+Sub: Filtra por tipo de obra para ver fichas con contexto, alcance y entregables.
+
+Texto de apoyo (sobre filtros)
+
+Título: Encuentra un proyecto similar al tuyo.
+Texto: Si tu proyecto exige control y respuesta operativa, aquí verás cómo estructuramos la ejecución.
+
+CTA fijo: Solicitar visita técnica
+
+3) COPY COMPLETO — FICHA DE PROYECTO (/proyectos/[slug])
+Bloque superior
+
+Etiqueta: {Categoría}
+Título: {Nombre del proyecto}
+Sub: {Ubicación opcional} · {Tipo de obra}
+
+Secciones
+
+Reto (H2): El reto
+Texto: {challenge}
+
+Solución (H2): La solución IFSA
+Texto: {solution}
+
+Alcance (H2): Alcance de trabajo
+Bullets: {scope[]}
+
+Entregable (H2): Resultado / entregable
+Texto: {outcome}
+
+CTA (final):
+Título: ¿Quieres algo similar?
+Texto: Cuéntanos ubicación y etapa. Te decimos el siguiente paso técnico.
+Botón: Solicitar visita técnica
+Link: WhatsApp
+
+4) COPY COMPLETO — SERVICIOS (/servicios)
+Meta
+
+Title: Servicios | IFSA PANAMÁ
+
+Description: Servicios de construcción, obra civil, topografía y apoyo de maquinaria para proyectos públicos y privados en Panamá.
+
+Hero
+
+H1: Servicios
+Sub: Ejecutamos con método: planificación, supervisión y control para reducir riesgo en campo.
+
+Sección intro
+
+Título: Un servicio no es una lista. Es un sistema de ejecución.
+Texto: Por eso describimos cada servicio por lo que resuelve, cómo se ejecuta y cuándo aplica.
+
+Bloques por servicio (copys listos)
+
+1) Obra civil
+
+Resuelve: ejecución estructurada en campo, coordinación de frentes y entregas.
+
+Cómo: planificación de tareas, supervisión, control de calidad y orden operativo.
+
+Aplica cuando: necesitas avance estable y entregables verificables.
+
+2) Infraestructura & urbanismo
+
+Resuelve: intervención de redes, drenajes, contención y obras asociadas.
+
+Cómo: replanteo, ejecución por frentes, control de niveles y coordinación operativa.
+
+Aplica cuando: el terreno, el agua o la circulación requieren control técnico.
+
+3) Topografía, replanteo y control geométrico
+
+Resuelve: precisión en medidas, niveles y trazos para evitar retrabajos.
+
+Cómo: levantamiento, replanteo en sitio y verificación continua.
+
+Aplica cuando: el error de centímetros cuesta semanas.
+
+4) Movimiento de tierra
+
+Resuelve: preparación del terreno para estructura y redes.
+
+Cómo: organización de frentes, control de niveles, manejo de material y seguridad.
+
+Aplica cuando: necesitas base estable para construir sin sorpresas.
+
+5) Redes / drenajes / colectoras (según alcance)
+
+Resuelve: conducción de agua y control de escorrentías.
+
+Cómo: trazo, excavación, instalación y verificación por tramos.
+
+Aplica cuando: la infraestructura depende del agua.
+
+6) Estructuras metálicas / cerramientos (según proyecto)
+
+Resuelve: soluciones funcionales de cerramiento y estructura auxiliar.
+
+Cómo: fabricación/instalación según alcance, seguridad y control de ajustes.
+
+Aplica cuando: se requiere rapidez y precisión.
+
+7) Logística, transporte y apoyo de maquinaria
+
+Resuelve: operación de apoyo para mantener avance y ritmo.
+
+Cómo: coordinación de recursos y respuesta a campo.
+
+Aplica cuando: el proyecto exige capacidad operativa real.
+
+CTA final
+
+Título: El primer paso es técnico, no comercial.
+Sub: Solicita una visita y te respondemos con diagnóstico de alcance.
+Botón: Solicitar visita técnica
+
+5) COPY COMPLETO — CAPACIDADES (/capacidades)
+Meta
+
+Title: Capacidades | IFSA PANAMÁ
+
+Description: Equipo técnico, topografía, supervisión, maquinaria y logística para ejecutar obras con control.
+
+Hero
+
+H1: Capacidades
+Sub: Lo que te da tranquilidad no es “promesa”. Es capacidad operativa + método.
+
+Sección: Método operativo
+
+Título: Cómo respondemos en campo
+Lista (pasos):
+
+Entendemos alcance y restricciones del sitio
+
+Replanteo / verificación inicial (si aplica)
+
+Planificación de frentes y coordinación
+
+Ejecución con supervisión y control
+
+Entregables y cierre por etapas
+
+Sección: Capacidad técnica
+
+Título: Capacidad técnica y supervisión
+Bullets:
+
+Supervisión de obra y control de avance
+
+Coordinación de equipos en sitio
+
+Control de calidad por etapa
+
+Seguridad operativa (según plan)
+
+Sección: Topografía & tecnología
+
+Título: Topografía y precisión
+Texto: El control geométrico reduce retrabajos y mantiene el proyecto dentro de parámetros.
+
+Bullets:
+
+Levantamiento (según necesidad)
+
+Replanteo
+
+Control de niveles y alineaciones
+
+Validación por tramos / etapas
+
+Sección: Maquinaria & logística
+
+Título: Maquinaria y apoyo operativo
+Texto: Capacidad para sostener ritmo y responder a campo según el proyecto.
+
+CTA: Solicitar visita técnica
+
+6) COPY COMPLETO — CALIDAD & SEGURIDAD (/calidad-seguridad)
+Meta
+
+Title: Calidad y Seguridad | IFSA PANAMÁ
+
+Description: Enfoque de ejecución con supervisión, control y orden operativo para reducir riesgo en obra.
+
+Hero
+
+H1: Calidad y seguridad
+Sub: No es un “sello”. Es cómo se ejecuta, cómo se verifica y cómo se controla.
+
+Sección: Principios operativos
+
+Título: Principios en obra
+Cards:
+
+Control: verificar lo crítico antes de avanzar
+
+Orden: coordinación de frentes y seguridad
+
+Trazabilidad: evidencias y entregables por etapa
+
+Sección: Lo que evitamos
+
+Título: Lo que evitamos (porque cuesta caro)
+Bullets:
+
+Improvisación sin control
+
+Cambios sin trazabilidad
+
+Retrabajos por falta de replanteo
+
+Avances sin verificación
+
+FAQ (puedes reutilizar el de Home + 2 extras)
+
+¿Trabajan con cronogramas y entregas parciales?
+Respuesta: Sí, definimos etapas y entregables acordados para mantener control de avance.
+
+¿Cómo se coordinan con otros contratistas?
+Respuesta: Coordinación operativa y comunicación de frentes para evitar interferencias y retrabajos.
+
+CTA: Solicitar visita técnica
+
+7) COPY COMPLETO — NOSOTROS (/nosotros)
+Meta
+
+Title: Nosotros | IFSA PANAMÁ
+
+Description: Constructora en Panamá enfocada en responsabilidad, eficiencia y control de calidad.
+
+Hero
+
+H1: Nosotros
+Sub: IFSA PANAMÁ es una constructora enfocada en ejecutar con responsabilidad, eficiencia y control de calidad.
+
+Sección: Historia (placeholder controlado)
+
+Título: Una empresa se define por cómo ejecuta.
+Texto (placeholder):
+“IFSA PANAMÁ nace para responder a proyectos donde el control técnico y la capacidad operativa marcan la diferencia. (TODO: agregar historia real / año / enfoque específico).”
+
+Sección: Principios
+
+Título: Principios
+
+Responsabilidad
+
+Eficiencia
+
+Control de calidad
+
+Sección: Equipo (placeholder)
+
+Título: Equipo
+Texto: “Equipo técnico y operativo orientado a ejecución en campo.”
+(TODO: agregar fotos/roles reales)
+
+CTA final:
+Título: Si quieres claridad, empecemos por el sitio.
+Botón: Solicitar visita técnica
+
+8) COPY COMPLETO — CONTACTO (/contacto)
+Meta
+
+Title: Contacto | IFSA PANAMÁ
+
+Description: Solicita una visita técnica en Panamá. Cuéntanos ubicación, tipo de obra y etapa.
+
+Hero
+
+H1: Contacto
+Sub: El primer paso es técnico. Cuéntanos tu proyecto y coordinamos el siguiente paso.
+
+Sección: Formulario
+
+Título: Solicitar visita técnica
+Texto: Completa lo esencial para ubicar alcance y responder con claridad.
+
+Campos (labels):
+
+Nombre completo
+
+Empresa (opcional)
+
+Teléfono
+
+Email
+
+Tipo de proyecto (dropdown)
+
+Ubicación
+
+Etapa (dropdown)
+
+Mensaje (opcional)
+
+Botón: Solicitar visita técnica
+
+Sección: WhatsApp directo
+
+Título: ¿Prefieres WhatsApp?
+Texto: Escríbenos y envíanos: tipo de proyecto, ubicación y etapa.
+Botón: Hablar por WhatsApp
+
+Datos (placeholders que deben ser reales)
+
+Teléfono: +507 397-2914 (pueden cambiarlo si IFSA confirma otro)
+
+Email: (TODO: agregar email real)
+
+9) JSON / TS — PROYECTOS (para /data/projects.ts)
+
+Te dejo en TypeScript (recomendado). Incluye tags, categorías y placeholders de imágenes en /public/projects/....
+
+// /data/projects.ts
+export type ProjectCategory =
+  | "infraestructura"
+  | "industrial"
+  | "obras-publicas"
+  | "urbanismo"
+  | "sistemas"
+  | "cerramientos";
+
+export type Project = {
+  title: string;
+  slug: string;
+  category: ProjectCategory;
+  typeLabel: string; // etiqueta visible
+  location?: string;
+  thumbnail: string; // /projects/xxx/thumb.jpg
+  gallery: string[]; // /projects/xxx/1.jpg ...
+  challenge: string;
+  solution: string;
+  scope: string[];
+  outcome: string;
+  tags: string[];
+  featured?: boolean;
+};
+
+export const projectCategories: { key: ProjectCategory; label: string }[] = [
+  { key: "infraestructura", label: "Infraestructura" },
+  { key: "industrial", label: "Industrial / Plantas" },
+  { key: "obras-publicas", label: "Obras públicas" },
+  { key: "urbanismo", label: "Urbanismo" },
+  { key: "sistemas", label: "Sistemas / Redes" },
+  { key: "cerramientos", label: "Cerramientos / Metálico" },
+];
+
+export const projects: Project[] = [
+  {
+    title: "PTAR Aguas Residuales (JD2) — Ejecución y obras asociadas",
+    slug: "ptar-aguas-residuales-jd2",
+    category: "industrial",
+    typeLabel: "Industrial / Planta",
+    location: "Panamá (TODO: especificar ubicación real)",
+    thumbnail: "/projects/ptar-jd2/thumb.jpg",
+    gallery: [
+      "/projects/ptar-jd2/1.jpg",
+      "/projects/ptar-jd2/2.jpg",
+      "/projects/ptar-jd2/3.jpg",
+    ],
+    challenge:
+      "Ejecución en un entorno técnico donde la coordinación, el orden y la verificación por etapas son críticos para evitar retrabajos y demoras.",
+    solution:
+      "Planificación por frentes, supervisión en campo y control de avance para sostener ritmo operativo y asegurar entregables verificables.",
+    scope: [
+      "Coordinación de frentes y actividades (según alcance)",
+      "Apoyo operativo en ejecución y control de avance",
+      "Evidencias y cierre por etapas (TODO: detallar entregables reales)",
+    ],
+    outcome:
+      "Entrega por etapas con control de ejecución y validación de alcance (TODO: especificar entregable final real).",
+    tags: ["planta", "coordinación", "supervisión", "control"],
+    featured: true,
+  },
+  {
+    title: "Metro Línea 2 — Bordillos y aceras (tramo)",
+    slug: "metro-linea-2-bordillos-aceras",
+    category: "obras-publicas",
+    typeLabel: "Obras públicas",
+    location: "Panamá (TODO: tramo real)",
+    thumbnail: "/projects/metro-l2-bordillos/thumb.jpg",
+    gallery: [
+      "/projects/metro-l2-bordillos/1.jpg",
+      "/projects/metro-l2-bordillos/2.jpg",
+      "/projects/metro-l2-bordillos/3.jpg",
+    ],
+    challenge:
+      "Intervención en un frente de alta visibilidad donde el orden operativo y el control geométrico determinan el resultado.",
+    solution:
+      "Replanteo, ejecución por tramos y verificación continua para asegurar alineaciones, niveles y acabados conforme a alcance.",
+    scope: [
+      "Replanteo y control de niveles",
+      "Ejecución de bordillos y aceras por tramos",
+      "Gestión operativa del frente (TODO: detallar metodología real)",
+    ],
+    outcome:
+      "Ejecución y entrega del tramo con control geométrico y orden de obra.",
+    tags: ["obra pública", "urbanismo", "control geométrico", "tramos"],
+    featured: true,
+  },
+  {
+    title: "Metro Línea 2 — Cubierta metálica (área)",
+    slug: "metro-linea-2-cubierta-metalica",
+    category: "cerramientos",
+    typeLabel: "Estructura metálica",
+    location: "Panamá (TODO: estación/área real)",
+    thumbnail: "/projects/metro-l2-cubierta/thumb.jpg",
+    gallery: [
+      "/projects/metro-l2-cubierta/1.jpg",
+      "/projects/metro-l2-cubierta/2.jpg",
+    ],
+    challenge:
+      "Montaje que exige precisión, seguridad y coordinación para evitar interferencias y retrabajos.",
+    solution:
+      "Instalación controlada con verificación de ajustes y aseguramiento operativo en campo.",
+    scope: [
+      "Instalación/ejecución de cubierta metálica (según alcance)",
+      "Control de ajustes y verificación",
+      "Seguridad y orden del frente",
+    ],
+    outcome:
+      "Cubierta ejecutada con control de ajuste y verificación en sitio (TODO: detallar).",
+    tags: ["metálico", "montaje", "seguridad", "precisión"],
+    featured: true,
+  },
+  {
+    title: "Enrocado y obras de contención (sector)",
+    slug: "enrocado-obras-contencion-sector",
+    category: "infraestructura",
+    typeLabel: "Infraestructura",
+    location: "Panamá (TODO: ubicación real)",
+    thumbnail: "/projects/enrocado/thumb.jpg",
+    gallery: ["/projects/enrocado/1.jpg", "/projects/enrocado/2.jpg"],
+    challenge:
+      "Controlar estabilidad del terreno y manejo de agua para evitar erosión y fallas en el tiempo.",
+    solution:
+      "Ejecución por etapas con control de niveles, orden de frente y verificación de colocación según requerimientos del sitio.",
+    scope: [
+      "Preparación del área (según alcance)",
+      "Colocación de enrocado / contención",
+      "Verificación y cierre por etapas",
+    ],
+    outcome:
+      "Estabilización del sector mediante contención y manejo de escorrentías (TODO).",
+    tags: ["contención", "infraestructura", "estabilidad", "agua"],
+    featured: true,
+  },
+  {
+    title: "Red contra incendio (instalación por tramos)",
+    slug: "red-contra-incendio-instalacion-tramos",
+    category: "sistemas",
+    typeLabel: "Sistemas / Redes",
+    location: "Panamá (TODO: cliente/sector)",
+    thumbnail: "/projects/red-contra-incendio/thumb.jpg",
+    gallery: [
+      "/projects/red-contra-incendio/1.jpg",
+      "/projects/red-contra-incendio/2.jpg",
+    ],
+    challenge:
+      "Instalación de red con necesidad de coordinación y control para asegurar continuidad, pruebas y compatibilidad con el sitio.",
+    solution:
+      "Trazado, instalación controlada y verificación por tramos con coordinación operativa.",
+    scope: [
+      "Trazado y excavación (si aplica)",
+      "Instalación de tuberías/accesorios (según alcance)",
+      "Verificación por tramos (TODO: pruebas reales)",
+    ],
+    outcome:
+      "Red instalada con control por tramos y entregables acordados (TODO).",
+    tags: ["red", "seguridad", "sistemas", "verificación"],
+  },
+  {
+    title: "Cerca perimetral (ejecución)",
+    slug: "cerca-perimetral-ejecucion",
+    category: "urbanismo",
+    typeLabel: "Urbanismo / Cerramiento",
+    location: "Panamá (TODO: ubicación real)",
+    thumbnail: "/projects/cerca-perimetral/thumb.jpg",
+    gallery: ["/projects/cerca-perimetral/1.jpg"],
+    challenge:
+      "Definir perímetro con ejecución ordenada y control de alineación para un resultado estable y funcional.",
+    solution:
+      "Replanteo, ejecución por tramos y verificación de alineaciones y anclajes según alcance.",
+    scope: [
+      "Replanteo de perímetro",
+      "Ejecución de bases/anclajes (según alcance)",
+      "Instalación del cerramiento",
+    ],
+    outcome:
+      "Perímetro ejecutado con alineación y estabilidad según alcance (TODO).",
+    tags: ["cerramiento", "perímetro", "orden", "tramos"],
+  },
+];
+
+10) EXTRA: Servicios (data opcional para /data/services.ts)
+
+Si quieres también te dejo esto para que el agente lo use para pintar cards (opcional):
+
+// /data/services.ts
+export type Service = {
+  title: string;
+  slug: string;
+  summary: string;
+  solves: string;
+  how: string[];
+  appliesWhen: string[];
+};
+
+export const services: Service[] = [
+  {
+    title: "Obra civil",
+    slug: "obra-civil",
+    summary: "Ejecución en campo con método: planificación, supervisión y control.",
+    solves: "Reduce incertidumbre operativa y estabiliza el avance.",
+    how: ["Planificación por frentes", "Supervisión en campo", "Control de calidad por etapa"],
+    appliesWhen: ["Proyectos con alto riesgo de retrabajo", "Coordinación con múltiples frentes"],
+  },
+  {
+    title: "Topografía y replanteo",
+    slug: "topografia-replanteo",
+    summary: "Precisión para evitar errores que cuestan semanas.",
+    solves: "Alineaciones, niveles y trazos verificados.",
+    how: ["Levantamiento (según alcance)", "Replanteo en sitio", "Verificación continua"],
+    appliesWhen: ["Infraestructura, redes, urbanismo", "Obras con tolerancias estrictas"],
+  },
+  {
+    title: "Infraestructura & urbanismo",
+    slug: "infraestructura-urbanismo",
+    summary: "Ejecución por tramos y control de niveles para asegurar funcionalidad.",
+    solves: "Manejo de agua, drenajes, contención y redes asociadas.",
+    how: ["Replanteo", "Ejecución por tramos", "Control de niveles"],
+    appliesWhen: ["Proyectos en terreno complejo", "Obras con drenajes y colectoras"],
+  },
+];
