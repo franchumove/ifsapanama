@@ -81,9 +81,19 @@ export default {
           busy: "rgb(239 68 68)",
           offline: "rgb(156 163 175)",
         },
+        gold: {
+          DEFAULT: "hsl(var(--gold) / <alpha-value>)",
+          dark: "hsl(var(--gold-dark) / <alpha-value>)",
+        },
+        ifsa: {
+          black: "hsl(var(--ifsa-black) / <alpha-value>)",
+          "gray-light": "hsl(var(--ifsa-gray-light) / <alpha-value>)",
+          text: "hsl(var(--ifsa-text) / <alpha-value>)",
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
+        heading: ["var(--font-heading)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
       },
