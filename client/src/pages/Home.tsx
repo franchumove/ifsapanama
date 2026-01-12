@@ -21,6 +21,7 @@ export default function Home() {
         title="Construcción e infraestructura con control real."
         subtitle="Obra civil, arquitectura, topografía y maquinaria para proyectos públicos y privados en Panamá."
         showCTAs
+        showStats
         chips={[
           "Obra civil & arquitectura",
           "Topografía & replanteo",

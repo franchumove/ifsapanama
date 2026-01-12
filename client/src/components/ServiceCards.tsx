@@ -29,65 +29,68 @@ interface ServiceCardsProps {
   showDetails?: boolean;
 }
 
+const easing = [0.22, 1, 0.36, 1];
+
 export function ServiceCards({ services, showDetails = false }: ServiceCardsProps) {
   return (
-    <section className="py-16 lg:py-24 bg-muted/50" data-testid="section-services">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 lg:py-32 bg-muted/30" data-testid="section-services">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.7, ease: easing }}
+          className="text-center mb-16"
         >
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-foreground mb-4">
+          <div className="divider-gold mb-6" />
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
             Servicios integrales para ejecutar con certeza.
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Desde el replanteo hasta la entrega, con capacidad operativa y control en campo.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {services.map((service, index) => {
             const IconComponent = iconMap[service.icon] || Building2;
             
             return (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.6, delay: index * 0.06, ease: easing }}
               >
                 <Card 
-                  className="h-full border-border/50 hover-elevate"
+                  className="h-full border-border/40 transition-all duration-500 hover:border-primary/20 hover:shadow-lg group"
                   data-testid={`card-service-${service.id}`}
                 >
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <IconComponent className="h-6 w-6 text-primary" />
+                  <CardContent className="p-7 lg:p-8">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mb-6 transition-all duration-500 group-hover:from-primary/20 group-hover:to-primary/10">
+                      <IconComponent className="h-7 w-7 text-primary" />
                     </div>
-                    <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                    <h3 className="font-heading font-semibold text-xl text-foreground mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       {service.description}
                     </p>
                     
                     {showDetails && (
-                      <div className="mt-4 pt-4 border-t border-border/50 space-y-3">
+                      <div className="mt-6 pt-6 border-t border-border/50 space-y-4">
                         <div>
-                          <span className="text-xs font-medium text-primary uppercase tracking-wide">Resuelve</span>
-                          <p className="text-sm text-muted-foreground mt-1">{service.resuelve}</p>
+                          <span className="text-xs font-semibold text-primary uppercase tracking-wider">Resuelve</span>
+                          <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{service.resuelve}</p>
                         </div>
                         <div>
-                          <span className="text-xs font-medium text-primary uppercase tracking-wide">Cómo</span>
-                          <p className="text-sm text-muted-foreground mt-1">{service.como}</p>
+                          <span className="text-xs font-semibold text-primary uppercase tracking-wider">Cómo</span>
+                          <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{service.como}</p>
                         </div>
                         <div>
-                          <span className="text-xs font-medium text-primary uppercase tracking-wide">Aplica cuando</span>
-                          <p className="text-sm text-muted-foreground mt-1">{service.aplica}</p>
+                          <span className="text-xs font-semibold text-primary uppercase tracking-wider">Aplica cuando</span>
+                          <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{service.aplica}</p>
                         </div>
                       </div>
                     )}
@@ -102,8 +105,8 @@ export function ServiceCards({ services, showDetails = false }: ServiceCardsProp
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center text-muted-foreground text-sm mt-8"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center text-muted-foreground text-sm mt-12"
         >
           Servicios sujetos a alcance y condiciones del proyecto.
         </motion.p>
@@ -112,11 +115,11 @@ export function ServiceCards({ services, showDetails = false }: ServiceCardsProp
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex justify-center mt-8"
+          transition={{ duration: 0.6, delay: 0.5, ease: easing }}
+          className="flex justify-center mt-10"
         >
           <Link href="/servicios" data-testid="link-view-all-services">
-            <Button variant="outline" className="gap-2" data-testid="button-view-services">
+            <Button variant="outline" size="lg" className="gap-2 font-semibold transition-all duration-500 hover:border-primary/30" data-testid="button-view-services">
               Ver todos los servicios
               <ArrowRight className="h-4 w-4" />
             </Button>

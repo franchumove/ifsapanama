@@ -12,6 +12,8 @@ interface CTASectionProps {
   showWhatsApp?: boolean;
 }
 
+const easing = [0.22, 1, 0.36, 1];
+
 export function CTASection({
   title = "Si tu obra no puede fallar, empecemos con una visita técnica.",
   subtitle = "Cuéntanos ubicación, etapa y tipo de proyecto. Te respondemos con el siguiente paso claro.",
@@ -20,26 +22,40 @@ export function CTASection({
   showWhatsApp = true,
 }: CTASectionProps) {
   return (
-    <section className="py-16 lg:py-24 bg-ifsa-black" data-testid="section-cta-final">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-24 lg:py-32 bg-ifsa-black relative overflow-hidden" data-testid="section-cta-final">
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-30"
+        style={{
+          background: "radial-gradient(ellipse at center top, hsl(var(--gold) / 0.15), transparent 60%)"
+        }}
+      />
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7, ease: easing }}
         >
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-white mb-4">
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            whileInView={{ opacity: 1, width: "4rem" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2, ease: easing }}
+            className="h-1 bg-gradient-to-r from-primary to-gold-dark mx-auto mb-10"
+          />
+          
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6 tracking-tight">
             {title}
           </h2>
-          <p className="text-white/70 max-w-2xl mx-auto mb-8">
+          <p className="text-white/65 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
             {subtitle}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link href={buttonLink} data-testid="link-cta-final">
               <Button 
                 size="lg" 
-                className="font-semibold gap-2 w-full sm:w-auto"
+                className="font-semibold gap-2 w-full sm:w-auto shadow-gold transition-all duration-500 hover:shadow-xl"
                 data-testid="button-cta-final"
               >
                 {buttonText}
@@ -55,7 +71,7 @@ export function CTASection({
                 <Button
                   size="lg"
                   variant="outline"
-                  className="font-semibold gap-2 w-full sm:w-auto border-white/30 text-white hover:bg-white/10 hover:text-white"
+                  className="font-semibold gap-2 w-full sm:w-auto border-white/20 text-white hover:bg-white/10 hover:text-white hover:border-white/30 backdrop-blur-sm transition-all duration-500"
                   data-testid="button-cta-whatsapp"
                 >
                   <MessageCircle className="h-5 w-5" />

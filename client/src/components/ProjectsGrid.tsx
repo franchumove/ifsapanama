@@ -13,6 +13,8 @@ interface ProjectsGridProps {
   limit?: number;
 }
 
+const easing = [0.22, 1, 0.36, 1];
+
 export function ProjectsGrid({
   projects,
   title = "Proyectos que prueban ejecución.",
@@ -23,26 +25,27 @@ export function ProjectsGrid({
   const displayProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <section className="py-16 lg:py-24 bg-background" data-testid="section-projects-grid">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 lg:py-32 bg-background" data-testid="section-projects-grid">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12"
+          transition={{ duration: 0.7, ease: easing }}
+          className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16"
         >
           <div>
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-foreground mb-3">
+            <div className="divider-gold mb-6 mx-0" style={{ marginLeft: 0 }} />
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4 tracking-tight">
               {title}
             </h2>
-            <p className="text-muted-foreground max-w-xl">
+            <p className="text-muted-foreground max-w-xl text-lg">
               {subtitle}
             </p>
           </div>
           {showViewAll && (
             <Link href="/proyectos" data-testid="link-view-all-projects">
-              <Button variant="outline" className="gap-2" data-testid="button-view-all-projects">
+              <Button variant="outline" size="lg" className="gap-2 font-semibold transition-all duration-500 hover:border-primary/30" data-testid="button-view-all-projects">
                 Ver todos los proyectos
                 <ArrowRight className="h-4 w-4" />
               </Button>
@@ -50,7 +53,7 @@ export function ProjectsGrid({
           )}
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {displayProjects.map((project, index) => (
             <ProjectCard key={project.slug} project={project} index={index} />
           ))}
