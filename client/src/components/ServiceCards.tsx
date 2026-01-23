@@ -44,10 +44,10 @@ export function ServiceCards({ services, showDetails = false }: ServiceCardsProp
         >
           <div className="divider-gold mb-6" />
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
-            Servicios integrales para ejecutar con certeza.
+            Servicios técnicos para la ejecución y control de obra.
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Desde el replanteo hasta la entrega, con capacidad operativa y control en campo.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+            Desde el dibujo y la topografía hasta la entrega final, cumpliendo con estricto control de calidad y especificaciones técnicas.
           </p>
         </motion.div>
 

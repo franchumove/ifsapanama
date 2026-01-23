@@ -14,9 +14,9 @@ interface HeroProps {
 }
 
 const stats = [
-  { value: "15+", label: "Años de experiencia" },
-  { value: "120+", label: "Proyectos completados" },
-  { value: "500K+", label: "Metros cuadrados" },
+  { value: "6+", label: "Años de excelencia" },
+  { value: "Sólida", label: "Infraestructura operativa" },
+  { value: "Técnico", label: "Equipo calificado" },
 ];
 
 const easing = [0.22, 1, 0.36, 1];
@@ -45,15 +45,9 @@ export function Hero({
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-ifsa-black/70 via-ifsa-black/60 to-ifsa-black" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ifsa-black/50 via-transparent to-transparent" />
-      <div 
-        className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
-        style={{
-          background: "linear-gradient(to top, hsl(var(--gold) / 0.08), transparent)"
-        }}
-      />
-
+      <div className="absolute inset-0 bg-gradient-to-b from-ifsa-black/80 via-ifsa-black/70 to-ifsa-black" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ifsa-black/60 via-transparent to-transparent" />
+      
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24 lg:py-40 w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -63,9 +57,9 @@ export function Hero({
         >
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "4rem" }}
+            animate={{ opacity: 1, width: "3rem" }}
             transition={{ duration: 0.6, delay: 0.2, ease: easing }}
-            className="h-1 bg-gradient-to-r from-primary to-gold-dark mb-8"
+            className="h-1 bg-primary mb-8"
           />
 
           <h1
@@ -80,7 +74,7 @@ export function Hero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: easing }}
-              className="text-lg sm:text-xl lg:text-2xl text-white/75 max-w-2xl mb-10 font-light leading-relaxed"
+              className="text-lg sm:text-xl lg:text-2xl text-white/80 max-w-2xl mb-10 font-normal leading-relaxed"
               data-testid="text-hero-subtitle"
             >
               {subtitle}
@@ -97,7 +91,7 @@ export function Hero({
               <Link href="/contacto" data-testid="link-hero-cta-primary">
                 <Button 
                   size="lg" 
-                  className="font-semibold w-full sm:w-auto gap-2 shadow-gold transition-all duration-500 hover:shadow-xl" 
+                  className="font-semibold w-full sm:w-auto gap-2 shadow-sm transition-all duration-500 bg-[#2F2F2F] hover:bg-black text-white border-0" 
                   data-testid="button-hero-cta-primary"
                 >
                   Solicitar visita técnica
@@ -108,7 +102,7 @@ export function Hero({
                 <Button
                   size="lg"
                   variant="outline"
-                  className="font-semibold w-full sm:w-auto gap-2 border-white/20 text-white hover:bg-white/10 hover:text-white hover:border-white/30 backdrop-blur-sm transition-all duration-500"
+                  className="font-semibold w-full sm:w-auto gap-2 border-white/40 text-white hover:bg-white/10 hover:text-white hover:border-white/60 backdrop-blur-sm transition-all duration-500"
                   data-testid="button-hero-cta-secondary"
                 >
                   Ver proyectos

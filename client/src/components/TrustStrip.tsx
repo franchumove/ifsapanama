@@ -35,11 +35,10 @@ export function TrustStrip() {
         >
           <div className="divider-gold mb-6" />
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight" data-testid="text-trust-title">
-            Cuando una obra no puede fallar, el método importa.
+            Ejecución técnica y cumplimiento de obra.
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg" data-testid="text-trust-description">
-            En IFSA PANAMÁ trabajamos con planificación, supervisión y control en campo
-            para reducir incertidumbre y asegurar entregables.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed" data-testid="text-trust-description">
+            En IFSA PANAMÁ trabajamos bajo estricto control de calidad y supervisión técnica en campo para asegurar el cumplimiento de cada especificación asignada.
           </p>
         </motion.div>
 

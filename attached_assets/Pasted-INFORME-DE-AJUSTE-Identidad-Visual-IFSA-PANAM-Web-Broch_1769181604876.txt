@@ -1,0 +1,201 @@
+INFORME DE AJUSTE
+
+Identidad Visual IFSA PANAMÁ (Web + Brochure)
+
+⸻
+
+1️⃣ DIAGNÓSTICO NEURO–SIMBÓLICO
+
+Neuro (qué reconoce el cerebro del cliente)
+
+IFSA no es una marca emocional, es una marca de:
+	•	ingeniería
+	•	cumplimiento
+	•	control técnico
+	•	documentación
+	•	licitación / obra pública / industrial
+
+El brochure deja claro que:
+	•	Hablan en lenguaje técnico
+	•	Usan diagramación sobria
+	•	Prefieren grises, blancos, negros
+	•	No buscan “impactar”, buscan ser tomados en serio
+
+👉 Por tanto, el dorado NO es coherente con su identidad histórica.
+
+⸻
+
+2️⃣ ADN VISUAL REAL (extraído del brochure)
+
+🎨 Paleta cromática real (ajustada)
+
+Basado en el PDF:
+
+Colores base (obligatorios):
+	•	Gris oscuro técnico (primario)
+#2F2F2F
+	•	Negro estructural
+#0F0F0F
+	•	Blanco operativo
+#FFFFFF
+
+Colores secundarios (apoyo):
+	•	Gris medio
+#6B6B6B
+	•	Gris claro / fondo
+#F2F2F2
+
+📌 Regla TRS:
+
+El color no debe llamar atención, debe sostener credibilidad.
+
+➡️ El CTA NO debe ser dorado, debe ser:
+	•	Gris oscuro sólido
+	•	O negro con texto blanco
+	•	O blanco con borde negro (según fondo)
+
+⸻
+
+3️⃣ Tipografías coherentes con IFSA
+
+El brochure usa una tipografía sans serif técnica, corporativa, sin gestos emocionales.
+
+Recomendación FINAL (web):
+
+Titulares (H1–H3):
+	•	Montserrat o
+	•	Poppins (peso 600–700)
+
+Texto cuerpo:
+	•	Inter o
+	•	Roboto
+
+📌 Regla:
+	•	Nada manuscrito
+	•	Nada “rounded”
+	•	Nada con personalidad emocional
+
+La tipografía debe decir:
+
+“Esto es un documento técnico, no una landing de marketing.”
+
+⸻
+
+4️⃣ Ajustes concretos a la WEB ACTUAL (lo importante)
+
+🔁 CAMBIO 1 — CTA
+
+Actual: botón amarillo/dorado
+Correcto según identidad:
+	•	Fondo gris oscuro #2F2F2F
+	•	Texto blanco
+	•	Hover: negro sólido
+
+Texto del botón:
+
+Solicitar visita técnica (se queda igual, es perfecto)
+
+⸻
+
+🔁 CAMBIO 2 — Métricas destacadas
+
+Actualmente:
+	•	15+ años
+	•	120+ proyectos
+	•	500K+ m²
+
+⚠️ Problema:
+En el brochure NO hay consistencia clara con esos números (hablan de 6+ años, desde 2017).
+
+📌 Recomendación TRS:
+	•	Eliminar métricas duras si no están 100% validadas
+	•	Reemplazar por métricas simbólicas:
+
+Ejemplo:
+	•	“Experiencia en proyectos públicos e industriales”
+	•	“Obras ejecutadas para clientes gubernamentales y privados”
+	•	“Intervenciones técnicas de mediana y alta complejidad”
+
+Esto mantiene autoridad sin riesgo legal ni contradicción.
+
+⸻
+
+🔁 CAMBIO 3 — Lenguaje (alinearlo al brochure)
+
+El brochure usa frases como:
+	•	“estricto control de calidad”
+	•	“tecnología de vanguardia”
+	•	“cumplimiento de especificaciones”
+	•	“supervisión y ejecución”
+
+👉 Ajuste recomendado en la web:
+Reemplazar frases demasiado “marketing” por lenguaje técnico-documental.
+
+Ejemplo:
+❌ “Servicios integrales para ejecutar con certeza”
+✅ “Servicios técnicos para la ejecución y control de obra”
+
+⸻
+
+5️⃣ Sistema visual recomendado (mini–manual práctico)
+
+Cards / bloques
+	•	Bordes sutiles
+	•	Radio bajo (4–6px)
+	•	Sombras casi invisibles
+	•	Mucho espacio en blanco
+
+Íconos
+	•	Lineales
+	•	Grosor uniforme
+	•	Sin rellenos decorativos
+	•	Estilo “ingeniería / planos”
+
+Imágenes
+	•	Reales (obra, planos, campo)
+	•	Evitar renders genéricos
+	•	Preferir:
+	•	supervisión
+	•	trabajadores midiendo
+	•	maquinaria en contexto real
+
+⸻
+
+6️⃣ Identidad verbal (muy importante)
+
+Voz IFSA (según brochure)
+	•	Formal
+	•	Técnica
+	•	Segura
+	•	No emocional
+	•	No exagerada
+
+📌 Ejemplo correcto:
+
+“Ejecutamos obras civiles y de infraestructura cumpliendo con especificaciones técnicas y control de calidad en cada etapa.”
+
+📌 Ejemplo incorrecto:
+
+“Transformamos tus proyectos con soluciones innovadoras.”
+
+⸻
+
+7️⃣ Conclusión clara (para decisiones)
+
+❌ No hacer
+	•	Dorado
+	•	Branding “premium”
+	•	Marketing emocional
+	•	Claims inflados
+
+✅ Hacer
+	•	Gris / negro / blanco
+	•	Estética técnica
+	•	Lenguaje de licitación
+	•	Web como documento de respaldo, no anuncio
+
+⸻
+
+8️⃣ INSTRUCCIÓN LISTA PARA REPLIT (copiar/pegar)
+
+“Ajusta el diseño del sitio IFSA PANAMÁ para alinearlo con una identidad técnica-corporativa basada en gris, negro y blanco. Elimina dorados. Usa tipografías sans serif técnicas (Montserrat/Poppins + Inter/Roboto). Estiliza CTAs en gris oscuro o negro. Mantén estética sobria, documental y de ingeniería, coherente con el brochure histórico de IFSA. Evita claims emocionales y métricas no validadas.”
