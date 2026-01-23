@@ -34,7 +34,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-90" />
             <Badge 
-              className="absolute top-5 left-5 bg-primary text-primary-foreground border-0 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider"
+              className="absolute top-5 left-5 bg-[#2F2F2F] text-white border-0 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-sm"
               data-testid={`badge-project-type-${project.slug}`}
             >
               {project.typeLabel}

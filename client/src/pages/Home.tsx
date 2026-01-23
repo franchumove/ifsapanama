@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <Layout>
       <Hero
-        title="Construcción e infraestructura con control real."
-        subtitle="Obra civil, arquitectura, topografía y maquinaria para proyectos públicos y privados en Panamá."
+        title="Construcción e infraestructura de mediana y alta complejidad."
+        subtitle="Servicios técnicos para la ejecución, supervisión y control de obra en Panamá, cumpliendo con estricta calidad y responsabilidad operativa."
         showCTAs
         showStats
         chips={[
