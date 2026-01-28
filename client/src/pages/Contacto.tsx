@@ -64,21 +64,35 @@ export default function Contacto() {
                   </h3>
                   
                   <a
+                    href="tel:+50765519061"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                    data-testid="link-contact-phone-1"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <Phone className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground">Celular</p>
+                      <p className="text-foreground font-medium">(507) 6551-9061</p>
+                    </div>
+                  </a>
+
+                  <a
                     href="tel:+5073972914"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-                    data-testid="link-contact-phone"
+                    data-testid="link-contact-phone-2"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Teléfono</p>
-                      <p className="text-foreground font-medium">+507 397-2914</p>
+                      <p className="text-foreground font-medium">(507) 397-2914</p>
                     </div>
                   </a>
                   
                   <a
-                    href="mailto:info@ifsapanama.com"
+                    href="mailto:fillette@ifsapanama.com"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                     data-testid="link-contact-email"
                   >
@@ -87,7 +101,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Email</p>
-                      <p className="text-foreground font-medium">info@ifsapanama.com</p>
+                      <p className="text-foreground font-medium">fillette@ifsapanama.com</p>
                     </div>
                   </a>
                   
@@ -97,7 +111,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Ubicación</p>
-                      <p className="text-foreground font-medium">Ciudad de Panamá, Panamá</p>
+                      <p className="text-foreground font-medium">Panamá Pacifico - Veracruz</p>
                     </div>
                   </div>
                 </CardContent>

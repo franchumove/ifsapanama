@@ -26,24 +26,32 @@ export function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+5073972914"
+                href="tel:+50765519061"
                 className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors text-sm"
                 data-testid="link-phone"
               >
                 <Phone className="h-4 w-4 text-primary" />
-                +507 397-2914
+                (507) 6551-9061
               </a>
               <a
-                href="mailto:info@ifsapanama.com"
+                href="tel:+5073972914"
+                className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors text-sm"
+                data-testid="link-phone-2"
+              >
+                <Phone className="h-4 w-4 text-primary" />
+                (507) 397-2914
+              </a>
+              <a
+                href="mailto:fillette@ifsapanama.com"
                 className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors text-sm"
                 data-testid="link-email"
               >
                 <Mail className="h-4 w-4 text-primary" />
-                info@ifsapanama.com
+                fillette@ifsapanama.com
               </a>
               <div className="flex items-start gap-3 text-white/70 text-sm" data-testid="text-address">
                 <MapPin className="h-4 w-4 text-primary mt-0.5" />
-                <span>Ciudad de Panamá, Panamá</span>
+                <span>Panamá Pacifico - Veracruz</span>
               </div>
             </div>
           </div>
