@@ -32,20 +32,20 @@ export function ProjectsGrid({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: easing }}
-          className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16"
+          className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 sm:mb-16"
         >
           <div>
             <div className="divider-gold mb-6 mx-0" style={{ marginLeft: 0 }} />
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4 tracking-tight">
+            <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-foreground mb-4 tracking-tight">
               {title}
             </h2>
-            <p className="text-muted-foreground max-w-xl text-lg">
+            <p className="text-muted-foreground max-w-xl text-base sm:text-lg leading-relaxed">
               {subtitle}
             </p>
           </div>
           {showViewAll && (
             <Link href="/proyectos" data-testid="link-view-all-projects">
-              <Button variant="outline" size="lg" className="gap-2 font-semibold transition-all duration-500 hover:border-primary/30" data-testid="button-view-all-projects">
+              <Button variant="outline" size="lg" className="gap-2 font-semibold transition-all duration-500 hover:border-primary/30 w-full sm:w-auto" data-testid="button-view-all-projects">
                 Ver todos los proyectos
                 <ArrowRight className="h-4 w-4" />
               </Button>

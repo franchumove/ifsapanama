@@ -31,13 +31,13 @@ export function TrustStrip() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: easing }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <div className="divider-gold mb-6" />
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight" data-testid="text-trust-title">
+          <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-foreground mb-4 sm:mb-6 tracking-tight" data-testid="text-trust-title">
             Ejecución técnica y cumplimiento de obra.
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed" data-testid="text-trust-description">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg leading-relaxed" data-testid="text-trust-description">
             En IFSA PANAMÁ trabajamos bajo estricto control de calidad y supervisión técnica en campo para asegurar el cumplimiento de cada especificación asignada.
           </p>
         </motion.div>
