@@ -39,9 +39,11 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href="/" className="flex items-center gap-2" data-testid="link-home-logo">
-            <span className="font-heading font-bold text-xl lg:text-2xl text-white tracking-tight">
-              IFSA <span className="text-primary">PANAMÁ</span>
-            </span>
+            <img 
+              src="/logo_ifsa.svg" 
+              alt="IFSA PANAMÁ" 
+              className="h-10 lg:h-12 w-auto object-contain"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1" data-testid="nav-desktop">
@@ -89,9 +91,11 @@ export function Header() {
             >
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-8">
-                  <span className="font-heading font-bold text-xl text-white">
-                    IFSA <span className="text-primary">PANAMÁ</span>
-                  </span>
+                  <img 
+                    src="/logo_ifsa.svg" 
+                    alt="IFSA PANAMÁ" 
+                    className="h-8 w-auto object-contain"
+                  />
                 </div>
                 <nav className="flex flex-col gap-1" data-testid="nav-mobile">
                   {navLinks.map((link) => (
