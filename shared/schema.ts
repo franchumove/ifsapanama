@@ -58,7 +58,9 @@ export type ProjectCategory =
   | "obras-publicas"
   | "urbanismo"
   | "sistemas"
-  | "cerramientos";
+  | "cerramientos"
+  | "obra-civil"
+  | "hidraulica";
 
 export type Project = {
   title: string;
