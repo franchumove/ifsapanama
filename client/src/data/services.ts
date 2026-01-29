@@ -5,8 +5,8 @@ export const services: Service[] = [
     id: "disenos-ingenieria",
     title: "Diseños de Ingeniería",
     icon: "PencilRuler",
-    description: "Definición técnica y normativa del proyecto para evitar errores de diseño, sobrecostos y retrabajos en obra.",
-    resuelve: "Definición técnica y normativa del proyecto para evitar errores de diseño, sobrecostos y retrabajos en obra.",
+    description: "Definición técnica y normativa del proyecto para evitar errores de diseño, sobrecostos y retrabajos.",
+    resuelve: "Definición técnica y normativa del proyecto para evitar errores de diseño, sobrecostos y retrabajos.",
     como: "Cálculos estructurales y técnicos, consultoría especializada y diseño alineado a normativa y condiciones reales de campo.",
     aplica: "En fases iniciales de proyectos arquitectónicos, civiles e infraestructura.",
   },
@@ -23,8 +23,8 @@ export const services: Service[] = [
     id: "infraestructura-sanitaria",
     title: "Infraestructura Sanitaria e Hidráulica",
     icon: "Droplets",
-    description: "Gestión, protección y conducción de recursos hídricos describe obras hidráulicas complejas.",
-    resuelve: "Gestión, protección y conducción de recursos hídricos describe obras hidráulicas complejas.",
+    description: "Gestión, protección y conducción de recursos hídricos en obras de alta exigencia técnica.",
+    resuelve: "Gestión, protección y conducción de recursos hídricos en obras de alta exigencia técnica.",
     como: "Instalación de tuberías HDPE / PVC, sistemas colectores, enrocados de protección, rellenos y compactaciones específicas.",
     aplica: "Obras de saneamiento, drenaje, protección hidráulica y redes sanitarias.",
   },
@@ -62,39 +62,41 @@ export const capabilities = [
     id: "metodo-operativo",
     title: "Cómo respondemos en campo",
     items: [
-      "Planificación de frentes",
-      "Coordinación operativa",
-      "Supervisión constante",
-      "Control de tiempos y especificaciones",
-      "Responsabilidad de principio a fin"
+      "Planificación de frentes y coordinación operativa sólida",
+      "Ejecución con estricto control de calidad",
+      "Supervisión técnica constante en campo",
+      "Cumplimiento de especificaciones y tiempos",
+      "Responsabilidad operativa de principio a fin"
     ],
   },
   {
     id: "capacidad-tecnica",
     title: "Capacidad técnica y supervisión",
     items: [
-      "Equipo técnico calificado",
-      "Supervisión de alta complejidad",
-      "Control de calidad por fases"
+      "Equipo técnico altamente calificado",
+      "Filosofía de cumplimiento basada en el método",
+      "Supervisión de proyectos de alta complejidad",
+      "Control de calidad en cada fase de ejecución"
     ],
   },
   {
     id: "topografia-precision",
     title: "Topografía y precisión",
     items: [
-      "Levantamientos",
+      "Levantamiento según necesidad",
       "Replanteo",
-      "Control geométrico",
-      "Validación por tramos"
+      "Control de niveles y alineaciones",
+      "Validación por tramos y etapas"
     ],
   },
   {
     id: "maquinaria-apoyo",
     title: "Maquinaria y apoyo operativo",
+    description: "Capacidad para sostener ritmo y responder en campo según el proyecto. Coordinación de recursos, transporte de materiales y equipos para movimiento de tierra según necesidades específicas de cada obra.",
     items: [
       "Coordinación de recursos",
-      "Transporte",
-      "Movimiento de tierra según necesidad"
+      "Transporte de materiales",
+      "Equipos para movimiento de tierra"
     ],
   }
 ];

@@ -10,30 +10,15 @@ export default function Capacidades() {
   return (
     <Layout>
       <Hero
-        title="Capacidades Operativas"
-        subtitle='Lo que te da tranquilidad no es "promesa". Es capacidad operativa + método.'
+        title="Capacidades"
+        subtitle="Cuando una obra no puede fallar, el método importa."
         size="small"
       />
 
       <section className="py-24 bg-background" data-testid="section-capabilities">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-20"
-          >
-            <h2 className="font-heading font-bold text-3xl sm:text-5xl text-foreground mb-6 uppercase tracking-tighter">
-              Sistemas de Respaldo
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Las capacidades no son servicios. Son los sistemas que garantizan que IFSA pueda ejecutar sin fallar.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {capabilities.map((capability, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-20">
+            {capabilities.slice(0, 3).map((capability, index) => (
               <motion.div
                 key={capability.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -60,24 +45,36 @@ export default function Capacidades() {
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-32 p-12 lg:p-16 border border-border bg-foreground/5 text-center"
-          >
-            <h2 className="font-heading font-bold text-3xl text-foreground mb-6 uppercase tracking-tighter">
-              Control Real en Campo
-            </h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
-              Nuestro enfoque no se basa en la subcontratación masiva, sino en la supervisión técnica directa y el control geométrico mediante topografía de precisión en cada tramo del proyecto.
-            </p>
-          </motion.div>
+          {capabilities[3] && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="p-12 lg:p-16 border border-border bg-foreground/5"
+            >
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6 uppercase tracking-tighter">
+                {capabilities[3].title}
+              </h2>
+              <p className="text-muted-foreground max-w-4xl text-lg leading-relaxed mb-8">
+                {capabilities[3].description}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {capabilities[3].items.map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckSquare className="h-5 w-5 text-foreground/40 shrink-0" />
+                    <span className="text-foreground font-bold uppercase tracking-tight text-xs">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
 
-      <CTASection />
+      <CTASection 
+        title="Si tu obra no puede fallar, empecemos con una visita técnica."
+      />
     </Layout>
   );
 }

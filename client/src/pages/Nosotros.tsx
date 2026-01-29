@@ -134,7 +134,7 @@ export default function Nosotros() {
       </section>
 
       <CTASection
-        title="Cuando una obra no puede fallar, el método importa."
+        title="Si tu obra no puede fallar, empecemos con una visita técnica."
         subtitle="Hablemos de los requerimientos técnicos de tu proyecto."
       />
     </Layout>

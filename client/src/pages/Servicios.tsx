@@ -36,9 +36,15 @@ export default function Servicios() {
             <h2 className="font-heading font-bold text-3xl sm:text-5xl text-foreground mb-6 uppercase tracking-tighter">
               Servicios Oficiales
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Un servicio no es una lista. Es un sistema de ejecución definido por el problema que resuelve, su método y su aplicación.
-            </p>
+            <div className="max-w-2xl mx-auto space-y-4">
+              <p className="text-foreground font-bold text-xl leading-snug">
+                Un servicio no es una lista.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Es un sistema de ejecución definido por el problema que resuelve,
+                su método y su aplicación en campo.
+              </p>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -94,7 +100,7 @@ export default function Servicios() {
       </section>
 
       <CTASection
-        title="El primer paso es técnico, no comercial."
+        title="EL PRIMER PASO ES TÉCNICO, NO COMERCIAL."
         subtitle="Solicita una visita y te respondemos con diagnóstico de alcance."
       />
     </Layout>
