@@ -58,8 +58,17 @@ export function LeadForm() {
       setIsSuccess(true);
       toast({
         title: "Solicitud enviada",
-        description: "Nos pondremos en contacto contigo pronto.",
+        description: "Redirigiendo a WhatsApp para confirmar...",
       });
+
+      // Redirect to WhatsApp automatically after a short delay
+      const message = `Hola IFSA PANAMÁ, quiero solicitar una visita técnica. Tipo de proyecto: ${variables.tipoProyecto}. Ubicación: ${variables.ubicacion}. Etapa: ${variables.etapa}. Nombre: ${variables.nombre}. Teléfono: ${variables.telefono}.`;
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/50765519061?text=${encodedMessage}`;
+      
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+      }, 1500);
     },
     onError: () => {
       toast({
