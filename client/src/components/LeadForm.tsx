@@ -119,16 +119,16 @@ export function LeadForm() {
   }
 
   return (
-    <Card className="border-border/50" data-testid="card-lead-form">
+    <Card className="rounded-none border-border" data-testid="card-lead-form">
       <CardHeader className="border-b border-border mb-6">
         <CardTitle className="font-heading text-xl uppercase tracking-widest">Solicitar visita técnica</CardTitle>
         <p className="text-muted-foreground text-[10px] uppercase tracking-wider">
           Formulario de control técnico de proyectos
         </p>
       </CardHeader>
-      <CardContent>
+      <CardContent className="p-0">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 px-6 pb-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
