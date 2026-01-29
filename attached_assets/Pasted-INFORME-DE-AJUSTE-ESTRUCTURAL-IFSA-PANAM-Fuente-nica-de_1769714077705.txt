@@ -1,0 +1,242 @@
+INFORME DE AJUSTE ESTRUCTURAL – IFSA PANAMÁ
+
+Fuente única de verdad: Brochure IFSA PANAMÁ + Web actual
+Objetivo: Unificar identidad, servicios y narrativa técnica.
+Regla clave: IFSA no vende servicios sueltos, vende ejecución técnica controlada.
+
+⸻
+
+1. PRINCIPIO RECTOR (NO NEGOCIABLE)
+
+UN SERVICIO NO ES UNA LISTA.
+ES UN SISTEMA DE EJECUCIÓN.
+
+Cada servicio debe explicarse siempre con:
+	•	Qué problema resuelve
+	•	Cómo se ejecuta
+	•	Cuándo aplica
+
+⚠️ Prohibido:
+	•	Inventar servicios nuevos
+	•	Duplicar servicios con nombres distintos
+	•	Convertir capacidades en “servicios comerciales”
+
+⸻
+
+2. SERVICIOS OFICIALES DE IFSA PANAMÁ
+
+(Validados contra el brochure completo)
+
+Estos son LOS ÚNICOS SERVICIOS que IFSA ofrece.
+Todo lo demás debe mapearse a estos.
+
+⸻
+
+1. DISEÑOS DE INGENIERÍA
+
+RESUELVE
+Definición técnica y normativa del proyecto para evitar errores de diseño, sobrecostos y retrabajos en obra.
+
+CÓMO SE EJECUTA
+	•	Cálculos estructurales y técnicos
+	•	Consultoría especializada
+	•	Diseño alineado a normativa y condiciones reales de campo
+
+APLICA CUANDO
+En fases iniciales de proyectos arquitectónicos, civiles e infraestructura.
+
+📌 Fuente brochure: “Diseños de ingeniería, cálculos y consultorías”
+
+⸻
+
+2. OBRA CIVIL GENERAL
+
+RESUELVE
+Ejecución integral de obras civiles con control técnico, coordinación de frentes y cumplimiento de especificaciones.
+
+CÓMO SE EJECUTA
+	•	Movimiento de tierras
+	•	Construcción civil
+	•	Redes
+	•	Estructuras metálicas
+	•	Coordinación operativa en campo
+
+APLICA CUANDO
+Proyectos públicos y privados que exigen orden, control y responsabilidad técnica.
+
+📌 Fuente brochure: “Obra civil general (mov. tierras – construcción – redes – estructura metálica)”
+
+⸻
+
+3. INFRAESTRUCTURA SANITARIA E HIDRÁULICA
+
+RESUELVE
+Gestión, protección y conducción de recursos hídricos describe obras hidráulicas complejas.
+
+CÓMO SE EJECUTA
+	•	Instalación de tuberías HDPE / PVC
+	•	Sistemas colectores
+	•	Enrocados de protección
+	•	Rellenos y compactaciones específicas
+	•	Redes hidráulicas y sanitarias
+
+APLICA CUANDO
+Obras de saneamiento, drenaje, protección hidráulica y redes sanitarias.
+
+📌 Fuente brochure: “Infraestructura Sanitaria e Hidráulica – Gestión hídrica y protección”
+
+⸻
+
+4. OBRAS VIALES Y PAVIMENTOS
+
+RESUELVE
+Construcción y rehabilitación de infraestructura vial segura y duradera.
+
+CÓMO SE EJECUTA
+	•	Desarrollo de pavimentos
+	•	Andenes
+	•	Bordillos
+	•	Accesos viales
+	•	Cumplimiento de diseño vial y control de materiales
+
+APLICA CUANDO
+Nuevos desarrollos urbanos o rehabilitación de vías existentes.
+
+📌 Fuente brochure: “Obras viales, pavimentos y accesos”
+
+⸻
+
+5. ESTRUCTURAS Y CIMENTACIONES
+
+RESUELVE
+Estabilidad estructural y cerramiento seguro de predios e infraestructuras.
+
+CÓMO SE EJECUTA
+	•	Fundaciones especiales
+	•	Estructuras de concreto reforzado
+	•	Muros de contención
+	•	Cercas perimetrales (malla ciclón, electrosoldada)
+
+APLICA CUANDO
+Proyectos que requieren soporte estructural y seguridad física.
+
+📌 Fuente brochure: “Estructuras y Cimentaciones – Seguridad Perimetral”
+
+⸻
+
+6. MANTENIMIENTOS LOCATIVOS
+
+RESUELVE
+Preservación del valor, operatividad y seguridad de infraestructuras existentes.
+
+CÓMO SE EJECUTA
+	•	Mantenimiento preventivo
+	•	Mantenimiento correctivo
+	•	Atención técnica especializada
+
+APLICA CUANDO
+Edificaciones comerciales, industriales y residenciales.
+
+📌 Fuente brochure: “Mantenimientos locativos”
+
+⸻
+
+3. DIFERENCIA CLAVE: SERVICIOS vs CAPACIDADES
+
+❌ ERROR ACTUAL
+
+La web mezcla:
+	•	Servicios
+	•	Capacidades
+	•	Metodología
+	•	Recursos
+
+✅ CORRECCIÓN OBLIGATORIA
+
+Servicios = Lo que IFSA ejecuta para el cliente
+Capacidades = Cómo IFSA puede hacerlo sin fallar
+
+⸻
+
+4. PÁGINA “CAPACIDADES” – AJUSTE CORRECTO
+
+La página /capacidades está BIEN encaminada, pero debe leerse así:
+
+CAPACIDADES NO SON SERVICIOS
+
+Son sistemas de respaldo operativo.
+
+Estructura correcta:
+
+4.1 Cómo respondemos en campo
+✔ Planificación de frentes
+✔ Coordinación operativa
+✔ Supervisión constante
+✔ Control de tiempos y especificaciones
+✔ Responsabilidad de principio a fin
+
+✔️ CORRECTO – mantener
+
+⸻
+
+4.2 Capacidad técnica y supervisión
+✔ Equipo técnico calificado
+✔ Supervisión de alta complejidad
+✔ Control de calidad por fases
+
+✔️ CORRECTO – mantener
+
+⸻
+
+4.3 Topografía y precisión
+✔ Levantamientos
+✔ Replanteo
+✔ Control geométrico
+✔ Validación por tramos
+
+✔️ CORRECTO – esto NO es un servicio independiente, es una capacidad transversal.
+
+⸻
+
+4.4 Maquinaria y apoyo operativo
+✔ Coordinación de recursos
+✔ Transporte
+✔ Movimiento de tierra según necesidad
+
+✔️ CORRECTO – capacidad, no servicio.
+
+⸻
+
+5. AJUSTES QUE DEBE HACER EL AGENTE IA EN REPLIT
+
+INSTRUCCIONES DIRECTAS:
+	1.	Eliminar cualquier servicio que no esté en el brochure
+	2.	Reescribir servicios usando el formato: Resuelve / Cómo / Aplica
+	3.	Separar claramente:
+	•	Servicios (qué se vende)
+	•	Capacidades (cómo se ejecuta)
+	4.	No duplicar nombres
+Ejemplo:
+	•	“Topografía” ❌ como servicio
+	•	“Topografía y precisión” ✔ como capacidad
+	5.	Mantener tono:
+	•	Técnico
+	•	Sobrio
+	•	Cero marketing inflado
+	•	Cero promesas vagas
+
+⸻
+
+6. IDENTIDAD VISUAL (RECORDATORIO)
+	•	Paleta: Grises + Negro + Blanco
+	•	Estilo: técnico, institucional, serio
+	•	Nada decorativo sin función
+	•	Tipografías sobrias (como brochure y web actual)
+
+⸻
+
+7. FRASE GUÍA PARA TODA LA WEB
+
+“Cuando una obra no puede fallar, el método importa.”
+
+Si algo no refuerza esa idea → se elimina.

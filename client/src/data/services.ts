@@ -5,28 +5,55 @@ export const services: Service[] = [
     id: "disenos-ingenieria",
     title: "Diseños de Ingeniería",
     icon: "PencilRuler",
-    description: "Definición técnica y normativa del proyecto para evitar errores de diseño, reprocesos y desviaciones en obra.",
-    resuelve: "Definición técnica y normativa del proyecto para evitar errores de diseño, reprocesos y desviaciones en obra.",
-    como: "Mediante ingeniería especializada, criterios normativos y soporte técnico aplicado a la ejecución real.",
-    aplica: "En fases iniciales de proyectos arquitectónicos, civiles e industriales que requieren precisión técnica antes de construir.",
+    description: "Definición técnica y normativa del proyecto para evitar errores de diseño, sobrecostos y retrabajos en obra.",
+    resuelve: "Definición técnica y normativa del proyecto para evitar errores de diseño, sobrecostos y retrabajos en obra.",
+    como: "Cálculos estructurales y técnicos, consultoría especializada y diseño alineado a normativa y condiciones reales de campo.",
+    aplica: "En fases iniciales de proyectos arquitectónicos, civiles e infraestructura.",
   },
   {
     id: "obra-civil-general",
     title: "Obra Civil General",
     icon: "Building2",
-    description: "La ejecución integral de infraestructura con control de calidad, coordinación de frentes y cumplimiento técnico.",
-    resuelve: "La ejecución integral de infraestructura con control de calidad, coordinación de frentes y cumplimiento técnico.",
-    como: "Con planificación operativa, personal técnico, supervisión en campo y recursos propios para distintos niveles de complejidad.",
-    aplica: "En proyectos públicos o privados que no pueden fallar en tiempos, especificaciones ni ejecución.",
+    description: "Ejecución integral de obras civiles con control técnico, coordinación de frentes y cumplimiento de especificaciones.",
+    resuelve: "Ejecución integral de obras civiles con control técnico, coordinación de frentes y cumplimiento de especificaciones.",
+    como: "Movimiento de tierras, construcción civil, redes, estructuras metálicas y coordinación operativa en campo.",
+    aplica: "Proyectos públicos y privados que exigen orden, control y responsabilidad técnica.",
+  },
+  {
+    id: "infraestructura-sanitaria",
+    title: "Infraestructura Sanitaria e Hidráulica",
+    icon: "Droplets",
+    description: "Gestión, protección y conducción de recursos hídricos describe obras hidráulicas complejas.",
+    resuelve: "Gestión, protección y conducción de recursos hídricos describe obras hidráulicas complejas.",
+    como: "Instalación de tuberías HDPE / PVC, sistemas colectores, enrocados de protección, rellenos y compactaciones específicas.",
+    aplica: "Obras de saneamiento, drenaje, protección hidráulica y redes sanitarias.",
+  },
+  {
+    id: "obras-viales",
+    title: "Obras Viales y Pavimentos",
+    icon: "Milestone",
+    description: "Construcción y rehabilitación de infraestructura vial segura y duradera.",
+    resuelve: "Construcción y rehabilitación de infraestructura vial segura y duradera.",
+    como: "Desarrollo de pavimentos, andenes, bordillos, accesos viales y control de materiales.",
+    aplica: "Nuevos desarrollos urbanos o rehabilitación de vías existentes.",
+  },
+  {
+    id: "estructuras-cimentaciones",
+    title: "Estructuras y Cimentaciones",
+    icon: "Construction",
+    description: "Estabilidad estructural y cerramiento seguro de predios e infraestructuras.",
+    resuelve: "Estabilidad estructural y cerramiento seguro de predios e infraestructuras.",
+    como: "Fundaciones especiales, estructuras de concreto reforzado, muros de contención y cercas perimetrales.",
+    aplica: "Proyectos que requieren soporte estructural y seguridad física.",
   },
   {
     id: "mantenimientos-locativos",
     title: "Mantenimientos Locativos",
     icon: "Settings2",
-    description: "La conservación operativa, funcional y técnica de infraestructuras existentes.",
-    resuelve: "La conservación operativa, funcional y técnica de infraestructuras existentes.",
-    como: "A través de atención técnica especializada, intervención planificada y respuesta eficiente en sitio.",
-    aplica: "En edificaciones comerciales, industriales o residenciales que requieren continuidad operativa.",
+    description: "Preservación del valor, operatividad y seguridad de infraestructuras existentes.",
+    resuelve: "Preservación del valor, operatividad y seguridad de infraestructuras existentes.",
+    como: "Mantenimiento preventivo, correctivo y atención técnica especializada.",
+    aplica: "Edificaciones comerciales, industriales y residenciales.",
   },
 ];
 
@@ -35,34 +62,41 @@ export const capabilities = [
     id: "metodo-operativo",
     title: "Cómo respondemos en campo",
     items: [
-      "Planificación de frentes y coordinación operativa sólida",
-      "Ejecución con estricto control de calidad",
-      "Supervisión técnica constante en campo",
-      "Cumplimiento de especificaciones y tiempos",
-      "Responsabilidad operativa de principio a fin"
+      "Planificación de frentes",
+      "Coordinación operativa",
+      "Supervisión constante",
+      "Control de tiempos y especificaciones",
+      "Responsabilidad de principio a fin"
     ],
   },
   {
     id: "capacidad-tecnica",
     title: "Capacidad técnica y supervisión",
     items: [
-      "Equipo técnico altamente calificado",
-      "Filosofía de cumplimiento basada en el método",
-      "Supervisión de proyectos de alta complejidad",
-      "Control de calidad en cada fase de ejecución"
+      "Equipo técnico calificado",
+      "Supervisión de alta complejidad",
+      "Control de calidad por fases"
+    ],
+  },
+  {
+    id: "topografia-precision",
+    title: "Topografía y precisión",
+    items: [
+      "Levantamientos",
+      "Replanteo",
+      "Control geométrico",
+      "Validación por tramos"
+    ],
+  },
+  {
+    id: "maquinaria-apoyo",
+    title: "Maquinaria y apoyo operativo",
+    items: [
+      "Coordinación de recursos",
+      "Transporte",
+      "Movimiento de tierra según necesidad"
     ],
   }
-];
-
-export const executionLines = [
-  { name: "Infraestructura sanitaria e hidráulica", icon: "Droplets" },
-  { name: "Obras viales y pavimentos", icon: "Milestone" },
-  { name: "Estructuras y cimentaciones", icon: "Construction" },
-  { name: "Movimiento de tierra", icon: "Truck" },
-  { name: "Topografía y replanteo", icon: "Map" },
-  { name: "Redes, drenajes y colectores", icon: "Layers" },
-  { name: "Cerramientos y estructuras metálicas", icon: "Container" },
-  { name: "Logística, transporte y maquinaria", icon: "Truck" }
 ];
 
 export const faqs = [

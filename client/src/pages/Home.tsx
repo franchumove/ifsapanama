@@ -12,7 +12,7 @@ import { services, faqs } from "@/data/services";
 
 export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured).slice(0, 6);
-  const homeServices = services.slice(0, 3);
+  const homeServices = services;
   const homeFaqs = faqs.slice(0, 3);
 
   return (

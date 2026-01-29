@@ -5,10 +5,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import type { Service } from "@shared/schema";
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+const iconMap: Record<string, LucideIcons.LucideIcon> = {
   PencilRuler: LucideIcons.PencilRuler,
   Building2: LucideIcons.Building2,
   Settings2: LucideIcons.Settings2,
+  Droplets: LucideIcons.Droplets,
+  Milestone: LucideIcons.Milestone,
+  Construction: LucideIcons.Construction,
 };
 
 interface ServiceCardsProps {
@@ -38,7 +41,7 @@ export function ServiceCards({ services, showDetails = false }: ServiceCardsProp
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const IconComponent = (iconMap as any)[service.icon] || LucideIcons.Building2;
             

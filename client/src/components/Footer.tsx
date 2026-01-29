@@ -83,6 +83,9 @@ export function Footer() {
             <nav className="flex flex-col gap-3">
               <span className="text-white/70 text-sm font-medium">Diseños de Ingeniería</span>
               <span className="text-white/70 text-sm font-medium">Obra Civil General</span>
+              <span className="text-white/70 text-sm font-medium">Infraestructura Sanitaria</span>
+              <span className="text-white/70 text-sm font-medium">Obras Viales</span>
+              <span className="text-white/70 text-sm font-medium">Estructuras y Cimentaciones</span>
               <span className="text-white/70 text-sm font-medium">Mantenimientos Locativos</span>
             </nav>
           </div>
