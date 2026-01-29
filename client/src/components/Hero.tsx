@@ -48,7 +48,7 @@ export function Hero({
       <div className="absolute inset-0 bg-gradient-to-b from-ifsa-black/80 via-ifsa-black/70 to-ifsa-black" />
       <div className="absolute inset-0 bg-gradient-to-r from-ifsa-black/60 via-transparent to-transparent" />
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-24 lg:py-40 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-32 lg:py-48 w-full flex flex-col justify-center min-h-[80vh] lg:min-h-[90vh]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,13 +57,13 @@ export function Hero({
         >
           <motion.div
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "3rem" }}
+            animate={{ opacity: 1, width: "3.5rem" }}
             transition={{ duration: 0.6, delay: 0.2, ease: easing }}
-            className="h-1 bg-primary mb-6 sm:mb-8"
+            className="h-1 bg-primary mb-8 sm:mb-10"
           />
 
           <h1
-            className="font-heading font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6 sm:mb-8 tracking-tight"
+            className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white leading-[1.05] mb-8 sm:mb-10 tracking-tight"
             data-testid="text-hero-title"
           >
             {title}
@@ -74,7 +74,7 @@ export function Hero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: easing }}
-              className="text-base sm:text-xl lg:text-2xl text-white/80 max-w-2xl mb-8 sm:mb-10 font-normal leading-relaxed"
+              className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-3xl mb-10 sm:mb-12 font-normal leading-relaxed"
               data-testid="text-hero-subtitle"
             >
               {subtitle}
@@ -86,7 +86,7 @@ export function Hero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.25, ease: easing }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16"
+              className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-16"
             >
               <Link href="/contacto" data-testid="link-hero-cta-primary">
                 <Button 
