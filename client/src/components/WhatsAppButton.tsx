@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5073972914";
+const WHATSAPP_NUMBER = "50765519061";
 const DEFAULT_MESSAGE = "Hola IFSA PANAMÁ, quiero solicitar información sobre sus servicios.";
 
 interface WhatsAppButtonProps {
