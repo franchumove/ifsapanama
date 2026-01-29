@@ -77,7 +77,7 @@ export function Hero({
               className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-3xl mb-10 sm:mb-12 font-normal leading-relaxed"
               data-testid="text-hero-subtitle"
             >
-              Cuando una obra no puede fallar, el método importa.
+              {subtitle}
             </motion.p>
           )}
 
