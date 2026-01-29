@@ -37,12 +37,11 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-2" data-testid="link-home-logo">
-            <img 
-              src="/logo_ifsa.svg" 
-              alt="IFSA PANAMÁ" 
-              className="h-10 lg:h-12 w-auto object-contain"
-            />
+          <Link href="/" className="flex items-center gap-2 group" data-testid="link-home-logo">
+            <div className="w-10 h-10 bg-white flex items-center justify-center border border-border">
+              <span className="text-black font-heading font-black text-xl tracking-tighter">IFSA</span>
+            </div>
+            <span className="text-white font-heading font-bold text-lg uppercase tracking-widest hidden sm:block">Panamá</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1" data-testid="nav-desktop">
@@ -86,26 +85,25 @@ export function Header() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-full sm:w-80 bg-ifsa-black border-l-0"
+              className="w-full sm:w-80 bg-ifsa-black border-l border-border p-0"
             >
-              <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between mb-8">
-                  <img 
-                    src="/logo_ifsa.svg" 
-                    alt="IFSA PANAMÁ" 
-                    className="h-8 w-auto object-contain"
-                  />
+              <div className="flex flex-col h-full p-8">
+                <div className="flex items-center gap-2 mb-12">
+                  <div className="w-10 h-10 bg-white flex items-center justify-center border border-border">
+                    <span className="text-black font-heading font-black text-xl tracking-tighter">IFSA</span>
+                  </div>
+                  <span className="text-white font-heading font-bold text-lg uppercase tracking-widest">Panamá</span>
                 </div>
-                <nav className="flex flex-col gap-1" data-testid="nav-mobile">
+                <nav className="flex flex-col gap-2" data-testid="nav-mobile">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`px-4 py-3 text-base font-medium transition-colors rounded-md ${
+                      className={`px-4 py-3 text-[10px] font-black uppercase tracking-[0.2em] transition-colors border border-transparent ${
                         location === link.href
-                          ? "text-primary bg-white/5"
-                          : "text-white/80 hover:text-white hover:bg-white/5"
+                          ? "text-white bg-white/10 border-border"
+                          : "text-white/60 hover:text-white hover:bg-white/5"
                       }`}
                       data-testid={`link-mobile-${link.href.replace("/", "") || "home"}`}
                     >

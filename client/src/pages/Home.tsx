@@ -12,14 +12,14 @@ import { services, faqs } from "@/data/services";
 
 export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured).slice(0, 6);
-  const homeServices = services.slice(0, 7);
-  const homeFaqs = faqs.slice(0, 4);
+  const homeServices = services.slice(0, 3);
+  const homeFaqs = faqs.slice(0, 3);
 
   return (
     <Layout>
       <Hero
         title="Construcción e infraestructura de mediana y alta complejidad."
-        subtitle="Servicios técnicos para la ejecución, supervisión y control de obra en Panamá, cumpliendo con estricta calidad y responsabilidad operativa."
+        subtitle="Cuando una obra no puede fallar, el método importa."
         showCTAs
         showStats
         chips={[

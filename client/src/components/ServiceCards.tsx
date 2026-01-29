@@ -39,7 +39,7 @@ export function ServiceCards({ services, showDetails = false }: ServiceCardsProp
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.slice(0, 3).map((service, index) => {
+          {services.map((service, index) => {
             const IconComponent = (iconMap as any)[service.icon] || LucideIcons.Building2;
             
             return (

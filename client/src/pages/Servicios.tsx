@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import * as LucideIcons from "lucide-react";
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+const iconMap: Record<string, LucideIcons.LucideIcon> = {
   PencilRuler: LucideIcons.PencilRuler,
   Building2: LucideIcons.Building2,
   Settings2: LucideIcons.Settings2,
@@ -113,7 +113,7 @@ export default function Servicios() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {executionLines.map((line, index) => {
-                const Icon = iconMap[line.icon] || Construction;
+                const Icon = (iconMap as any)[line.icon] || LucideIcons.Construction;
                 return (
                   <motion.div
                     key={line.name}

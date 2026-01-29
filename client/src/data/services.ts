@@ -30,6 +30,30 @@ export const services: Service[] = [
   },
 ];
 
+export const capabilities = [
+  {
+    id: "metodo-operativo",
+    title: "Cómo respondemos en campo",
+    items: [
+      "Planificación de frentes y coordinación operativa sólida",
+      "Ejecución con estricto control de calidad",
+      "Supervisión técnica constante en campo",
+      "Cumplimiento de especificaciones y tiempos",
+      "Responsabilidad operativa de principio a fin"
+    ],
+  },
+  {
+    id: "capacidad-tecnica",
+    title: "Capacidad técnica y supervisión",
+    items: [
+      "Equipo técnico altamente calificado",
+      "Filosofía de cumplimiento basada en el método",
+      "Supervisión de proyectos de alta complejidad",
+      "Control de calidad en cada fase de ejecución"
+    ],
+  }
+];
+
 export const executionLines = [
   { name: "Infraestructura sanitaria e hidráulica", icon: "Droplets" },
   { name: "Obras viales y pavimentos", icon: "Milestone" },
