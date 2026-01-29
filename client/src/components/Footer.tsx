@@ -15,11 +15,12 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-white flex items-center justify-center border border-border">
-                <span className="text-black font-heading font-black text-xl tracking-tighter">IFSA</span>
-              </div>
-              <span className="text-white font-heading font-bold text-lg uppercase tracking-widest">Panamá</span>
+            <Link href="/" className="inline-block mb-6" data-testid="link-footer-logo">
+              <img 
+                src="/logo_ifsa.svg" 
+                alt="IFSA PANAMÁ" 
+                className="h-10 lg:h-12 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-white/70 text-sm max-w-md mb-6">
               Construcción e infraestructura con control real. Obra civil, arquitectura, 

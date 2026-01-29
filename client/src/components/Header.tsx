@@ -37,11 +37,12 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-2 group" data-testid="link-home-logo">
-            <div className="w-10 h-10 bg-white flex items-center justify-center border border-border">
-              <span className="text-black font-heading font-black text-xl tracking-tighter">IFSA</span>
-            </div>
-            <span className="text-white font-heading font-bold text-lg uppercase tracking-widest hidden sm:block">Panamá</span>
+          <Link href="/" className="flex items-center gap-2" data-testid="link-home-logo">
+            <img 
+              src="/logo_ifsa.svg" 
+              alt="IFSA PANAMÁ" 
+              className="h-10 lg:h-12 w-auto object-contain"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1" data-testid="nav-desktop">
@@ -88,11 +89,12 @@ export function Header() {
               className="w-full sm:w-80 bg-ifsa-black border-l border-border p-0"
             >
               <div className="flex flex-col h-full p-8">
-                <div className="flex items-center gap-2 mb-12">
-                  <div className="w-10 h-10 bg-white flex items-center justify-center border border-border">
-                    <span className="text-black font-heading font-black text-xl tracking-tighter">IFSA</span>
-                  </div>
-                  <span className="text-white font-heading font-bold text-lg uppercase tracking-widest">Panamá</span>
+                <div className="flex items-center justify-between mb-8">
+                  <img 
+                    src="/logo_ifsa.svg" 
+                    alt="IFSA PANAMÁ" 
+                    className="h-8 w-auto object-contain"
+                  />
                 </div>
                 <nav className="flex flex-col gap-2" data-testid="nav-mobile">
                   {navLinks.map((link) => (
