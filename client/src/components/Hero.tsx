@@ -63,7 +63,7 @@ export function Hero({
           />
 
           <h1
-            className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white leading-[1.05] mb-8 sm:mb-10 tracking-tight"
+            className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white leading-[1.05] mb-8 sm:mb-10 tracking-tighter uppercase"
             data-testid="text-hero-title"
           >
             {title}
@@ -150,7 +150,7 @@ export function Hero({
                     className="text-center sm:text-left p-4 sm:p-6 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
                     data-testid={`stat-${index}`}
                   >
-                    <div className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2 tracking-tight">
+                    <div className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2 tracking-tighter tabular-nums">
                       {stat.value}
                     </div>
                     <div className="text-white/60 text-[10px] sm:text-sm font-medium uppercase tracking-wider">

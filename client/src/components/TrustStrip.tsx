@@ -34,7 +34,7 @@ export function TrustStrip() {
           className="text-center mb-12 sm:mb-16"
         >
           <div className="divider-gold mb-6" />
-          <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-foreground mb-4 sm:mb-6 tracking-tight" data-testid="text-trust-title">
+          <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-foreground mb-4 sm:mb-6 tracking-tighter uppercase" data-testid="text-trust-title">
             Ejecución técnica y cumplimiento de obra.
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg leading-relaxed" data-testid="text-trust-description">

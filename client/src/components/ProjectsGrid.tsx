@@ -36,7 +36,7 @@ export function ProjectsGrid({
         >
           <div>
             <div className="divider-gold mb-6 mx-0" style={{ marginLeft: 0 }} />
-            <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-foreground mb-4 tracking-tight">
+            <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-foreground mb-4 tracking-tighter uppercase">
               {title}
             </h2>
             <p className="text-muted-foreground max-w-xl text-base sm:text-lg leading-relaxed">

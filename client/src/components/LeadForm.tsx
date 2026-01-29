@@ -120,10 +120,10 @@ export function LeadForm() {
 
   return (
     <Card className="border-border/50" data-testid="card-lead-form">
-      <CardHeader>
-        <CardTitle className="font-heading text-xl">Solicitar visita técnica</CardTitle>
-        <p className="text-muted-foreground text-sm">
-          Completa lo esencial para ubicar alcance y responder con claridad.
+      <CardHeader className="border-b border-border mb-6">
+        <CardTitle className="font-heading text-xl uppercase tracking-widest">Solicitar visita técnica</CardTitle>
+        <p className="text-muted-foreground text-[10px] uppercase tracking-wider">
+          Formulario de control técnico de proyectos
         </p>
       </CardHeader>
       <CardContent>

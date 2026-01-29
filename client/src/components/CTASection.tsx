@@ -38,7 +38,7 @@ export function CTASection({
             className="h-1 bg-primary mx-auto mb-10"
           />
           
-          <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-6 tracking-tight">
+          <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-6 tracking-tighter uppercase">
             {title}
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto mb-10 sm:mb-12 text-base sm:text-lg leading-relaxed">

@@ -43,7 +43,7 @@ export function ServiceCards({ services, showDetails = false }: ServiceCardsProp
           className="text-center mb-12 sm:mb-16"
         >
           <div className="divider-gold mb-6" />
-          <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-foreground mb-4 sm:mb-6 tracking-tight">
+          <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-foreground mb-4 sm:mb-6 tracking-tighter uppercase">
             Servicios técnicos para la ejecución y control de obra.
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
