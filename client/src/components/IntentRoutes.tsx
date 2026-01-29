@@ -33,6 +33,16 @@ export function IntentRoutes() {
   return (
     <section className="py-24 lg:py-32 bg-muted/30" data-testid="section-intent-routes">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <motion.h3 
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-lg sm:text-xl md:text-[22px] font-semibold text-foreground mb-6 sm:mb-8 mt-2 sm:mt-4 leading-relaxed"
+          data-testid="text-intent-title"
+        >
+          Explora proyectos según el tipo de obra
+        </motion.h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {routes.map((route, index) => (
             <motion.div
