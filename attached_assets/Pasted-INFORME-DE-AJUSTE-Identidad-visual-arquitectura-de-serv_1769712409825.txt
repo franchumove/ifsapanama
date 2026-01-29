@@ -1,0 +1,208 @@
+INFORME DE AJUSTE
+
+Identidad visual, arquitectura de servicios y discurso operativo
+
+IFSA PANAMÁ
+
+⸻
+
+1. CONTEXTO Y OBJETIVO
+
+IFSA Panamá no cuenta con un manual de marca formal.
+Las referencias válidas de identidad provienen de:
+	•	Brochure histórico (PDF y piezas gráficas)
+	•	Sitio web actual
+	•	Proyectos ejecutados
+	•	Preferencias explícitas del cliente en tipografía, color y tono
+
+Objetivo del ajuste:
+Unificar identidad visual + arquitectura de servicios + discurso, eliminando fragmentación, redundancias y “listas técnicas” mal planteadas como servicios.
+
+⸻
+
+2. PRINCIPIO RECTOR (OBLIGATORIO)
+
+UN SERVICIO NO ES UNA LISTA.
+ES UN SISTEMA DE EJECUCIÓN.
+
+Cada servicio debe definirse siempre por:
+	1.	Qué problema resuelve
+	2.	Cómo se ejecuta
+	3.	Cuándo aplica
+
+Todo lo demás son capacidades, alcances o recursos, no servicios independientes.
+
+⸻
+
+3. IDENTIDAD VISUAL (BASE DEFINITIVA)
+
+🎨 Paleta cromática
+
+Colores primarios
+	•	Gris oscuro (base institucional)
+	•	Negro
+	•	Blanco
+
+Uso
+	•	Fondos: gris / negro
+	•	Texto principal: blanco / gris claro
+	•	Acentos: mínimo, sobrio, técnico (no decorativo)
+
+❌ Se elimina el dorado como color identitario
+❌ Se evita saturación, gradientes comerciales o colores emocionales
+
+⸻
+
+🔤 Tipografía
+
+Principios
+	•	Sans serif
+	•	Alta legibilidad
+	•	Carácter técnico, industrial, profesional
+
+Uso tipográfico
+	•	Títulos: peso medio / semibold
+	•	Subtítulos: regular
+	•	Texto: regular / light
+	•	Nada ornamental
+	•	Nada manuscrito
+	•	Nada “branding creativo”
+
+La tipografía comunica orden, método y control, no emoción.
+
+⸻
+
+4. ARQUITECTURA CORRECTA DE SERVICIOS
+
+🔑 SERVICIOS CORE (ÚNICOS)
+
+Estos son los únicos servicios que IFSA ofrece:
+
+⸻
+
+1. DISEÑOS DE INGENIERÍA
+
+RESUELVE
+Definición técnica y normativa del proyecto para evitar errores de diseño, reprocesos y desviaciones en obra.
+
+CÓMO SE EJECUTA
+Mediante ingeniería especializada, criterios normativos y soporte técnico aplicado a la ejecución real.
+
+APLICA CUANDO
+En fases iniciales de proyectos arquitectónicos, civiles e industriales que requieren precisión técnica antes de construir.
+
+⸻
+
+2. OBRA CIVIL GENERAL
+
+RESUELVE
+La ejecución integral de infraestructura con control de calidad, coordinación de frentes y cumplimiento técnico.
+
+CÓMO SE EJECUTA
+Con planificación operativa, personal técnico, supervisión en campo y recursos propios para distintos niveles de complejidad.
+
+APLICA CUANDO
+En proyectos públicos o privados que no pueden fallar en tiempos, especificaciones ni ejecución.
+
+⸻
+
+3. MANTENIMIENTOS LOCATIVOS
+
+RESUELVE
+La conservación operativa, funcional y técnica de infraestructuras existentes.
+
+CÓMO SE EJECUTA
+A través de atención técnica especializada, intervención planificada y respuesta eficiente en sitio.
+
+APLICA CUANDO
+En edificaciones comerciales, industriales o residenciales que requieren continuidad operativa.
+
+⸻
+
+5. LÍNEAS DE EJECUCIÓN (NO SERVICIOS)
+
+Las siguientes NO son servicios independientes.
+Son líneas de ejecución que viven dentro de los servicios core, principalmente dentro de Obra Civil General.
+
+Deben presentarse como:
+
+“Alcances técnicos según el proyecto”
+
+Líneas válidas:
+	•	Infraestructura sanitaria e hidráulica
+	•	Obras viales y pavimentos
+	•	Estructuras y cimentaciones
+	•	Movimiento de tierra
+	•	Topografía y replanteo
+	•	Redes, drenajes y colectores
+	•	Cerramientos y estructuras metálicas
+	•	Logística, transporte y maquinaria
+
+❌ No deben aparecer como servicios principales
+❌ No deben competir entre sí en la navegación
+❌ No deben fragmentar el mensaje
+
+⸻
+
+6. AJUSTE DEL DISCURSO WEB
+
+❌ Lo que se elimina
+	•	Listas largas de “servicios”
+	•	Redundancias técnicas
+	•	Subservicios presentados como ofertas independientes
+	•	Lenguaje genérico de constructora comercial
+
+✅ Lo que se refuerza
+	•	Método
+	•	Control
+	•	Ejecución
+	•	Supervisión
+	•	Cumplimiento técnico
+	•	Responsabilidad operativa
+
+⸻
+
+7. TONO DE COMUNICACIÓN
+
+Características del tono IFSA:
+	•	Técnico
+	•	Claro
+	•	Sobrio
+	•	Seguro
+	•	Sin exageraciones
+	•	Sin promesas vacías
+	•	Sin storytelling emocional
+
+IFSA no vende sueños,
+IFSA ejecuta obras que no pueden fallar.
+
+⸻
+
+8. DIRECTIVA FINAL PARA IA / REPLIT
+
+Toda generación futura de:
+	•	textos
+	•	páginas
+	•	secciones
+	•	servicios
+	•	descripciones
+
+DEBE:
+	1.	Respetar los 3 servicios core
+	2.	Tratar las demás capacidades como líneas de ejecución
+	3.	Mantener identidad gris / negro / blanco
+	4.	Usar lenguaje técnico y profesional
+	5.	Priorizar claridad operativa sobre marketing
+
+⸻
+
+9. FRASE EJE (CONCEPTO CENTRAL)
+
+Cuando una obra no puede fallar, el método importa.
+
+Este concepto debe atravesar:
+	•	Home
+	•	Servicios
+	•	Proyectos
+	•	Capacidades
+	•	Cierre comercial

@@ -1,27 +1,14 @@
 import { Link } from "wouter";
-import { 
-  Building2, 
-  Construction, 
-  Compass, 
-  Mountain, 
-  Droplets, 
-  Fence, 
-  Truck 
-} from "lucide-react";
+import * as LucideIcons from "lucide-react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import type { Service } from "@shared/schema";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Building2,
-  Construction,
-  Compass,
-  Mountain,
-  Droplets,
-  Fence,
-  Truck,
+  PencilRuler: LucideIcons.PencilRuler,
+  Building2: LucideIcons.Building2,
+  Settings2: LucideIcons.Settings2,
 };
 
 interface ServiceCardsProps {
@@ -51,9 +38,9 @@ export function ServiceCards({ services, showDetails = false }: ServiceCardsProp
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
-          {services.map((service, index) => {
-            const IconComponent = iconMap[service.icon] || Building2;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.slice(0, 3).map((service, index) => {
+            const IconComponent = (iconMap as any)[service.icon] || LucideIcons.Building2;
             
             return (
               <motion.div
@@ -61,39 +48,37 @@ export function ServiceCards({ services, showDetails = false }: ServiceCardsProp
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.06, ease: easing }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: easing }}
               >
                 <Card 
-                  className="h-full border-border/40 transition-all duration-500 hover:border-primary/20 hover:shadow-lg group"
+                  className="h-full border-border transition-all duration-300 hover:border-foreground/30 group bg-card"
                   data-testid={`card-service-${service.id}`}
                 >
-                  <CardContent className="p-7 lg:p-8">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mb-6 transition-all duration-500 group-hover:from-primary/20 group-hover:to-primary/10">
-                      <IconComponent className="h-7 w-7 text-primary" />
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-foreground/5 flex items-center justify-center mb-8 border border-border">
+                      <IconComponent className="h-8 w-8 text-foreground" />
                     </div>
-                    <h3 className="font-heading font-semibold text-xl text-foreground mb-3">
+                    <h3 className="font-heading font-bold text-xl text-foreground mb-4 uppercase tracking-tighter">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-8">
                       {service.description}
                     </p>
                     
-                    {showDetails && (
-                      <div className="mt-6 pt-6 border-t border-border/50 space-y-4">
-                        <div>
-                          <span className="text-xs font-semibold text-primary uppercase tracking-wider">Resuelve</span>
-                          <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{service.resuelve}</p>
-                        </div>
-                        <div>
-                          <span className="text-xs font-semibold text-primary uppercase tracking-wider">Cómo</span>
-                          <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{service.como}</p>
-                        </div>
-                        <div>
-                          <span className="text-xs font-semibold text-primary uppercase tracking-wider">Aplica cuando</span>
-                          <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{service.aplica}</p>
-                        </div>
+                    <div className="space-y-6">
+                      <div>
+                        <span className="text-[10px] font-bold text-foreground uppercase tracking-widest block mb-2">Resuelve</span>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{service.resuelve}</p>
                       </div>
-                    )}
+                      <div>
+                        <span className="text-[10px] font-bold text-foreground uppercase tracking-widest block mb-2">Cómo</span>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{service.como}</p>
+                      </div>
+                      <div>
+                        <span className="text-[10px] font-bold text-foreground uppercase tracking-widest block mb-2">Aplica cuando</span>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{service.aplica}</p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -119,9 +104,9 @@ export function ServiceCards({ services, showDetails = false }: ServiceCardsProp
           className="flex justify-center mt-10"
         >
           <Link href="/servicios" data-testid="link-view-all-services">
-            <Button variant="outline" size="lg" className="gap-2 font-semibold transition-all duration-500 hover:border-primary/30" data-testid="button-view-services">
+            <Button variant="outline" size="lg" className="gap-2 font-semibold transition-all duration-300 hover:border-foreground/30" data-testid="button-view-services">
               Ver todos los servicios
-              <ArrowRight className="h-4 w-4" />
+              <LucideIcons.ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
         </motion.div>

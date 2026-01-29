@@ -129,6 +129,7 @@ export function LeadForm() {
       <CardContent className="p-0">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 px-6 pb-8">
+            <div className="divider-gold mx-0 mb-4 bg-foreground/20 h-[1px] w-full" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <FormField
                 control={form.control}

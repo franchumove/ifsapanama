@@ -50,10 +50,10 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${
+                className={`px-3 py-2 text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${
                   location === link.href
-                    ? "text-primary"
-                    : "text-white/80 hover:text-white"
+                    ? "text-white underline underline-offset-8"
+                    : "text-white/60 hover:text-white"
                 }`}
                 data-testid={`link-nav-${link.href.replace("/", "") || "home"}`}
               >

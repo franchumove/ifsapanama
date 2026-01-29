@@ -1,59 +1,53 @@
 import { Layout } from "@/components/Layout";
 import { Hero } from "@/components/Hero";
 import { CTASection } from "@/components/CTASection";
-import { services } from "@/data/services";
+import { services, executionLines } from "@/data/services";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { 
-  Building2, 
-  Construction, 
-  Compass, 
-  Mountain, 
-  Droplets, 
-  Fence, 
-  Truck 
-} from "lucide-react";
+import * as LucideIcons from "lucide-react";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Building2,
-  Construction,
-  Compass,
-  Mountain,
-  Droplets,
-  Fence,
-  Truck,
+  PencilRuler: LucideIcons.PencilRuler,
+  Building2: LucideIcons.Building2,
+  Settings2: LucideIcons.Settings2,
+  Droplets: LucideIcons.Droplets,
+  Milestone: LucideIcons.Milestone,
+  Construction: LucideIcons.Construction,
+  Truck: LucideIcons.Truck,
+  Map: LucideIcons.Map,
+  Layers: LucideIcons.Layers,
+  Container: LucideIcons.Container,
 };
 
 export default function Servicios() {
   return (
     <Layout>
       <Hero
-        title="Servicios"
-        subtitle="Ejecutamos con método: planificación, supervisión y control para reducir riesgo en campo."
+        title="Arquitectura de Servicios"
+        subtitle="Cuando una obra no puede fallar, el método importa."
         size="small"
-        backgroundImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&h=800&fit=crop"
       />
 
-      <section className="py-12 lg:py-20 bg-background" data-testid="section-services-intro">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-background" data-testid="section-services-intro">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            className="text-center mb-20"
           >
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl text-foreground mb-4">
-              Un servicio no es una lista. Es un sistema de ejecución.
+            <h2 className="font-heading font-bold text-3xl sm:text-5xl text-foreground mb-6 uppercase tracking-tighter">
+              Servicios Core
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Por eso describimos cada servicio por lo que resuelve, cómo se ejecuta y cuándo aplica.
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Un servicio no es una lista. Es un sistema de ejecución definido por el problema que resuelve, su método y su aplicación.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-32">
             {services.map((service, index) => {
-              const IconComponent = iconMap[service.icon] || Building2;
+              const IconComponent = (iconMap as any)[service.icon] || LucideIcons.Building2;
               
               return (
                 <motion.div
@@ -61,47 +55,37 @@ export default function Servicios() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full border-border/50" data-testid={`card-service-detail-${service.id}`}>
-                    <CardContent className="p-6 lg:p-8">
-                      <div className="flex items-start gap-4">
-                        <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                          <IconComponent className="h-7 w-7 text-primary" />
+                  <Card className="h-full border-border bg-card rounded-none" data-testid={`card-service-detail-${service.id}`}>
+                    <CardContent className="p-8">
+                      <div className="w-16 h-16 bg-foreground/5 flex items-center justify-center mb-8 border border-border">
+                        <IconComponent className="h-8 w-8 text-foreground" />
+                      </div>
+                      <h3 className="font-heading font-bold text-2xl text-foreground mb-6 uppercase tracking-tighter">
+                        {service.title}
+                      </h3>
+                      
+                      <div className="space-y-8">
+                        <div>
+                          <span className="text-[10px] font-bold text-foreground uppercase tracking-widest block mb-2">Resuelve</span>
+                          <p className="text-muted-foreground leading-relaxed">
+                            {service.resuelve}
+                          </p>
                         </div>
-                        <div className="flex-1">
-                          <h3 className="font-heading font-semibold text-xl text-foreground mb-4">
-                            {service.title}
-                          </h3>
-                          
-                          <div className="space-y-4">
-                            <div>
-                              <span className="text-xs font-semibold text-primary uppercase tracking-wide">
-                                Resuelve
-                              </span>
-                              <p className="text-muted-foreground mt-1">
-                                {service.resuelve}
-                              </p>
-                            </div>
-                            
-                            <div>
-                              <span className="text-xs font-semibold text-primary uppercase tracking-wide">
-                                Cómo
-                              </span>
-                              <p className="text-muted-foreground mt-1">
-                                {service.como}
-                              </p>
-                            </div>
-                            
-                            <div>
-                              <span className="text-xs font-semibold text-primary uppercase tracking-wide">
-                                Aplica cuando
-                              </span>
-                              <p className="text-muted-foreground mt-1">
-                                {service.aplica}
-                              </p>
-                            </div>
-                          </div>
+                        
+                        <div>
+                          <span className="text-[10px] font-bold text-foreground uppercase tracking-widest block mb-2">Cómo se ejecuta</span>
+                          <p className="text-muted-foreground leading-relaxed">
+                            {service.como}
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <span className="text-[10px] font-bold text-foreground uppercase tracking-widest block mb-2">Aplica cuando</span>
+                          <p className="text-muted-foreground leading-relaxed">
+                            {service.aplica}
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -110,6 +94,44 @@ export default function Servicios() {
               );
             })}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="border-t border-border pt-20"
+          >
+            <div className="text-center mb-16">
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-4 uppercase tracking-tighter">
+                Líneas de Ejecución
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Alcances técnicos especializados integrados en nuestros servicios core según los requerimientos del proyecto.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {executionLines.map((line, index) => {
+                const Icon = iconMap[line.icon] || Construction;
+                return (
+                  <motion.div
+                    key={line.name}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    className="flex flex-col items-center justify-center p-6 border border-border bg-card text-center space-y-3"
+                  >
+                    <Icon className="h-6 w-6 text-foreground/40" />
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-foreground/80 leading-tight">
+                      {line.name}
+                    </span>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
         </div>
       </section>
 
