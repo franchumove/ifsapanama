@@ -42,7 +42,7 @@ export function Hero({
       data-testid="section-hero"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+        className="absolute inset-0 bg-cover bg-[center_top] sm:bg-center bg-no-repeat scale-105"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
       <div className="absolute inset-0 bg-ifsa-black/40 backdrop-blur-[2px]" />
