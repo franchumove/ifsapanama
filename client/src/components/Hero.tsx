@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import heroConstruction from "@/assets/images/hero-construction.png";
 
 interface HeroProps {
   title: string;
@@ -25,7 +26,7 @@ export function Hero({
   title,
   subtitle,
   showCTAs = false,
-  backgroundImage = "/images/hero-construction.png",
+  backgroundImage = heroConstruction,
   chips,
   size = "large",
   showStats = false,
@@ -42,7 +43,7 @@ export function Hero({
       data-testid="section-hero"
     >
       <div
-        className="absolute inset-0 bg-cover bg-[center_top] sm:bg-center bg-no-repeat scale-105"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
       <div className="absolute inset-0 bg-ifsa-black/40 backdrop-blur-[2px]" />
