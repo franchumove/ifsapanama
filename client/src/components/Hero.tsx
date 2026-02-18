@@ -32,22 +32,21 @@ export function Hero({
 
   return (
     <section
-      className={`relative ${heightClass} flex items-center justify-center overflow-hidden bg-black`}
+      className={`relative ${heightClass} flex items-center overflow-hidden bg-black`}
       data-testid="section-hero"
     >
       <div
-        className="absolute inset-0 bg-cover bg-right sm:bg-center bg-no-repeat"
+        className="absolute inset-y-0 right-0 w-full md:w-1/2 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/hero-reference.jpg')" }}
       />
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 md:via-black/40 to-transparent" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-32 lg:py-48 w-full flex flex-col justify-center min-h-[85vh] lg:min-h-[95vh]">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: easing }}
-          className="max-w-4xl"
+          className="max-w-4xl text-left"
         >
           <h1
             className="font-heading font-black text-4xl sm:text-6xl md:text-7xl lg:text-[100px] text-white leading-[0.9] mb-8 sm:mb-10 tracking-tighter uppercase"
