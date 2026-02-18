@@ -45,28 +45,27 @@ export function Hero({
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-ifsa-black/80 via-ifsa-black/70 to-ifsa-black" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ifsa-black/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-ifsa-black/40 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ifsa-black/90" />
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-32 lg:py-48 w-full flex flex-col justify-center min-h-[80vh] lg:min-h-[90vh]">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-32 lg:py-48 w-full flex flex-col justify-center min-h-[85vh] lg:min-h-[95vh]">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: easing }}
           className="max-w-4xl"
         >
-          <motion.div
-            initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "3.5rem" }}
-            transition={{ duration: 0.6, delay: 0.2, ease: easing }}
-            className="h-1 bg-primary mb-8 sm:mb-10"
-          />
+          <div className="flex items-center gap-3 mb-10">
+            <div className="w-12 h-px bg-white/40" />
+            <span className="text-white font-black text-[10px] tracking-[0.3em] uppercase">Ifsa Panamá</span>
+          </div>
 
           <h1
-            className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white leading-[1.05] mb-8 sm:mb-10 tracking-tighter uppercase"
+            className="font-heading font-black text-4xl sm:text-6xl md:text-7xl lg:text-[100px] text-white leading-[0.9] mb-8 sm:mb-10 tracking-tighter uppercase"
             data-testid="text-hero-title"
           >
-            {title}
+            Construcción e<br />infraestructura<br />
+            <span className="text-white/60 text-3xl sm:text-5xl md:text-6xl lg:text-[80px]">de mediana y alta<br />complejidad.</span>
           </h1>
 
           {subtitle && (
@@ -74,10 +73,10 @@ export function Hero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: easing }}
-              className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-3xl mb-10 sm:mb-12 font-normal leading-relaxed"
+              className="text-sm sm:text-base lg:text-lg text-white/70 max-w-2xl mb-12 font-medium leading-relaxed tracking-wide"
               data-testid="text-hero-subtitle"
             >
-              {subtitle}
+              Cuando una obra no puede fallar, el método importa.
             </motion.p>
           )}
 
