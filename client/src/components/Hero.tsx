@@ -36,24 +36,24 @@ export function Hero({
       data-testid="section-hero"
     >
       <div
-        className="absolute inset-y-0 right-0 w-full md:w-1/2 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-y-0 right-0 w-full md:w-[45%] bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/hero-reference.jpg')" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 md:via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 md:via-black/60 to-transparent" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-32 lg:py-48 w-full flex flex-col justify-center min-h-[85vh] lg:min-h-[95vh]">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: easing }}
-          className="max-w-4xl text-left"
+          className="max-w-4xl text-left -ml-2 md:-ml-4 lg:-ml-8"
         >
           <h1
-            className="font-heading font-black text-4xl sm:text-6xl md:text-7xl lg:text-[100px] text-white leading-[0.9] mb-8 sm:mb-10 tracking-tighter uppercase"
+            className="font-heading font-black text-3xl sm:text-5xl md:text-6xl lg:text-[85px] text-white leading-[0.85] mb-8 sm:mb-10 tracking-tighter uppercase"
             data-testid="text-hero-title"
           >
             Construcción e<br />infraestructura<br />
-            <span className="text-white/60 text-3xl sm:text-5xl md:text-6xl lg:text-[80px]">de mediana y alta<br />complejidad.</span>
+            <span className="text-white/60 text-2xl sm:text-4xl md:text-5xl lg:text-[65px]">de mediana y alta<br />complejidad.</span>
           </h1>
 
           {subtitle && (
