@@ -37,12 +37,9 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-2" data-testid="link-home-logo">
-            <img 
-              src="/logo_ifsa.svg" 
-              alt="IFSA PANAMÁ" 
-              className="h-10 lg:h-12 w-auto object-contain"
-            />
+          <Link href="/" className="flex flex-col gap-0" data-testid="link-home-logo">
+            <span className="text-white font-heading font-black text-2xl tracking-tighter leading-none">Ifsa</span>
+            <span className="text-white/60 font-heading font-medium text-xs tracking-[0.2em] uppercase leading-none ml-0.5">Panamá</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1" data-testid="nav-desktop">
@@ -89,12 +86,9 @@ export function Header() {
               className="w-full sm:w-80 bg-ifsa-black border-l border-border p-0"
             >
               <div className="flex flex-col h-full p-8">
-                <div className="flex items-center justify-between mb-8">
-                  <img 
-                    src="/logo_ifsa.svg" 
-                    alt="IFSA PANAMÁ" 
-                    className="h-8 w-auto object-contain"
-                  />
+                <div className="flex flex-col gap-0 mb-8">
+                  <span className="text-white font-heading font-black text-2xl tracking-tighter leading-none">Ifsa</span>
+                  <span className="text-white/60 font-heading font-medium text-xs tracking-[0.2em] uppercase leading-none ml-0.5">Panamá</span>
                 </div>
                 <nav className="flex flex-col gap-2" data-testid="nav-mobile">
                   {navLinks.map((link) => (
