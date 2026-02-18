@@ -2,7 +2,6 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import heroConstruction from "@/assets/images/hero-reference.jpg";
 
 interface HeroProps {
   title: string;
@@ -14,19 +13,13 @@ interface HeroProps {
   showStats?: boolean;
 }
 
-const stats = [
-  { value: "6+", label: "Años de excelencia" },
-  { value: "Sólida", label: "Infraestructura operativa" },
-  { value: "Técnico", label: "Equipo calificado" },
-];
-
 const easing = [0.22, 1, 0.36, 1];
 
 export function Hero({
   title,
   subtitle,
   showCTAs = false,
-  backgroundImage = heroConstruction,
+  backgroundImage = "/images/hero-reference.jpg",
   chips,
   size = "large",
   showStats = false,
@@ -46,8 +39,8 @@ export function Hero({
         className="absolute inset-0 bg-cover bg-right sm:bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
-      <div className="absolute inset-0 bg-black/30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/20 to-transparent" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-32 lg:py-48 w-full flex flex-col justify-center min-h-[85vh] lg:min-h-[95vh]">
         <motion.div
