@@ -36,10 +36,11 @@ export function Hero({
       data-testid="section-hero"
     >
       <div
-        className="absolute inset-y-0 right-0 w-full md:w-[45%] bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-right sm:bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/hero-reference.jpg')" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 md:via-black/60 to-transparent" />
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-32 lg:py-48 w-full flex flex-col justify-center min-h-[85vh] lg:min-h-[95vh]">
         <motion.div
