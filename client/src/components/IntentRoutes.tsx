@@ -109,22 +109,25 @@ export function IntentRoutes() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="h-full"
               >
-                <Card className="border-0 bg-white/5 rounded-sm overflow-hidden h-full hover:bg-white/10 transition-colors">
-                  <CardContent className="p-8 flex items-start gap-5">
-                    <div className="mt-1">
-                      <pilar.icon className="h-6 w-6 text-[#C9A227]" />
-                    </div>
-                    <div>
-                      <h4 className="font-heading font-black text-base text-white uppercase tracking-tighter mb-2">
-                        {pilar.title}
-                      </h4>
-                      <p className="text-white/50 text-[11px] leading-relaxed font-medium">
-                        {pilar.description}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <Link href="/calidad-seguridad">
+                  <Card className="border-0 bg-white/5 rounded-sm overflow-hidden h-full hover:bg-white/10 transition-colors cursor-pointer group">
+                    <CardContent className="p-8 flex items-start gap-5">
+                      <div className="mt-1">
+                        <pilar.icon className="h-6 w-6 text-[#C9A227] group-hover:scale-110 transition-transform" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-black text-base text-white uppercase tracking-tighter mb-2">
+                          {pilar.title}
+                        </h4>
+                        <p className="text-white/50 text-[11px] leading-relaxed font-medium">
+                          {pilar.description}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </div>

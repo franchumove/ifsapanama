@@ -49,11 +49,11 @@ export function Hero({
           className="max-w-4xl text-left -ml-2 md:-ml-4 lg:-ml-8"
         >
           <h1
-            className="font-heading font-black text-3xl sm:text-5xl md:text-6xl lg:text-[85px] text-white leading-[0.85] mb-8 sm:mb-10 tracking-tighter uppercase"
+            className="font-heading font-black text-3xl sm:text-5xl md:text-6xl lg:text-[85px] text-transparent leading-[0.85] mb-8 sm:mb-10 tracking-tighter uppercase select-none pointer-events-none"
             data-testid="text-hero-title"
           >
             Construcción e<br />infraestructura<br />
-            <span className="text-white/60 text-2xl sm:text-4xl md:text-5xl lg:text-[65px]">de mediana y alta<br />complejidad.</span>
+            <span className="text-transparent text-2xl sm:text-4xl md:text-5xl lg:text-[65px]">de mediana y alta<br />complejidad.</span>
           </h1>
 
           {subtitle && (
@@ -61,7 +61,7 @@ export function Hero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: easing }}
-              className="text-sm sm:text-base lg:text-lg text-white/70 max-w-2xl mb-12 font-medium leading-relaxed tracking-wide"
+              className="text-sm sm:text-base lg:text-lg text-transparent max-w-2xl mb-12 font-medium leading-relaxed tracking-wide select-none pointer-events-none"
               data-testid="text-hero-subtitle"
             >
               Cuando una obra no puede fallar, el método importa.
