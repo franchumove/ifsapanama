@@ -5,25 +5,6 @@ import { IntentRoutes } from "@/components/IntentRoutes";
 import { CTASection } from "@/components/CTASection";
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckSquare } from "lucide-react";
-import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-
-const methodPilars = [
-  {
-    title: "Control",
-    description: "Verificación de lo crítico antes de avanzar.",
-  },
-  {
-    title: "Trazabilidad",
-    description: "Evidencia y validación por etapa.",
-  },
-  {
-    title: "Orden operativo",
-    description: "Coordinación real en campo.",
-  },
-];
 
 export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured).slice(0, 2);
@@ -33,7 +14,6 @@ export default function Home() {
       <Hero
         title="Construcción e infraestructura de mediana y alta complejidad."
         subtitle="Cuando una obra no puede fallar, el método importa."
-        backgroundImage="https://images.unsplash.com/photo-1541913053995-f195b3366d9a?w=1920&h=1080&fit=crop"
         size="large"
       />
 
