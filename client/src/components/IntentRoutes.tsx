@@ -48,28 +48,26 @@ const easing = [0.22, 1, 0.36, 1];
 
 export function IntentRoutes() {
   return (
-    <section className="relative -mt-24 lg:-mt-32 z-20 pb-24" data-testid="section-intent-routes">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div
-          className="relative shadow-2xl overflow-hidden"
-          style={{
-            backgroundImage: "url('/images/intent-card.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center top",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className="p-8 md:p-12 pt-14 md:pt-16">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold text-[#111] uppercase tracking-tighter mb-2">
+    <section className="relative -mt-24 lg:-mt-28 z-20 pb-16" data-testid="section-intent-routes">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        {/* Notch tab at top center */}
+        <div className="flex justify-center">
+          <div className="w-20 h-5 bg-[#2a2a2a] rounded-t-xl" />
+        </div>
+
+        <div className="bg-[#2a2a2a] rounded-2xl shadow-2xl overflow-hidden">
+          <div className="p-8 md:p-10">
+
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter mb-1">
                 Explora Proyectos
               </h2>
-              <p className="text-[#444] text-xs md:text-sm uppercase tracking-[0.2em] font-medium">
+              <p className="text-white/50 text-[11px] uppercase tracking-[0.2em] font-medium">
                 Según el tipo de obra
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-10">
               {routes.map((route, index) => {
                 const Icon = routeIcons[index];
                 return (
@@ -81,25 +79,21 @@ export function IntentRoutes() {
                     transition={{ duration: 0.6, delay: index * 0.1, ease: easing }}
                   >
                     <Link href={route.href}>
-                      <Card className="h-full border-0 bg-white/90 cursor-pointer group rounded-none overflow-hidden transition-transform duration-300 hover:-translate-y-1">
-                        <CardContent className="p-6 md:p-10 flex flex-col h-full relative">
-                          <div className="mb-6">
-                            <Icon className="h-8 w-8 text-black opacity-20" />
+                      <Card className="h-full border-0 bg-white cursor-pointer group rounded-sm overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+                        <CardContent className="p-5 md:p-7 flex flex-col h-full relative">
+                          <div className="mb-4">
+                            <Icon className="h-6 w-6 text-black opacity-20" />
                           </div>
-                          <h3 className="font-heading font-black text-xl text-black mb-4 uppercase leading-[1.1] tracking-tighter">
+                          <h3 className="font-heading font-black text-sm text-black mb-3 uppercase leading-[1.1] tracking-tighter">
                             {route.title}
                           </h3>
-                          <p className="text-[#666] mb-8 flex-grow text-sm leading-relaxed">
+                          <p className="text-[#666] mb-6 flex-grow text-xs leading-relaxed">
                             {route.description}
                           </p>
-                          <div className="flex items-center text-black font-black text-[10px] tracking-widest uppercase">
+                          <div className="flex items-center text-black font-black text-[9px] tracking-widest uppercase">
                             <span className="mr-2">→</span>
                             {route.cta}
                           </div>
-                          <div
-                            className="absolute bottom-0 right-0 w-12 h-12 bg-[#f5f5f5] -z-10 transition-colors group-hover:bg-black/5"
-                            style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }}
-                          />
                         </CardContent>
                       </Card>
                     </Link>
@@ -108,9 +102,9 @@ export function IntentRoutes() {
               })}
             </div>
 
-            <div className="w-full h-px bg-black/10 mb-16 max-w-2xl mx-auto" />
+            <div className="w-full h-px bg-white/10 mb-8 max-w-xs mx-auto" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-8">
               {methodPilars.map((pilar, index) => (
                 <motion.div
                   key={pilar.title}
@@ -121,16 +115,16 @@ export function IntentRoutes() {
                   className="h-full"
                 >
                   <Link href="/calidad-seguridad">
-                    <Card className="border-0 bg-black/10 rounded-none overflow-hidden h-full hover:bg-black/15 transition-colors cursor-pointer group">
-                      <CardContent className="p-8 flex items-start gap-5">
-                        <div className="mt-1">
-                          <pilar.icon className="h-6 w-6 text-[#555] group-hover:scale-110 transition-transform" />
+                    <Card className="border-0 bg-white/5 rounded-sm overflow-hidden h-full hover:bg-white/10 transition-colors cursor-pointer group">
+                      <CardContent className="p-5 flex items-start gap-4">
+                        <div className="mt-0.5">
+                          <pilar.icon className="h-5 w-5 text-[#C9A227] group-hover:scale-110 transition-transform" />
                         </div>
                         <div>
-                          <h4 className="font-heading font-black text-base text-[#111] uppercase tracking-tighter mb-2">
+                          <h4 className="font-heading font-black text-[13px] text-white uppercase tracking-tighter mb-1">
                             {pilar.title}
                           </h4>
-                          <p className="text-[#555] text-[11px] leading-relaxed font-medium">
+                          <p className="text-white/50 text-[10px] leading-relaxed font-medium">
                             {pilar.description}
                           </p>
                         </div>
@@ -143,12 +137,13 @@ export function IntentRoutes() {
 
             <div className="text-center">
               <Link href="/servicios">
-                <span className="text-[#444] hover:text-[#111] transition-colors text-[10px] font-black uppercase tracking-[0.2em] cursor-pointer inline-flex items-center">
+                <span className="text-white/40 hover:text-white transition-colors text-[9px] font-black uppercase tracking-[0.2em] cursor-pointer inline-flex items-center">
                   <span className="mr-2">→</span>
                   Conoce nuestros sistemas de calidad
                 </span>
               </Link>
             </div>
+
           </div>
         </div>
       </div>
