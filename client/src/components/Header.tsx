@@ -86,10 +86,6 @@ export function Header() {
               className="w-full sm:w-80 bg-background border-l border-border p-0"
             >
               <div className="flex flex-col h-full p-8">
-                <div className="flex flex-col gap-0 mb-8">
-                  <span className="text-foreground font-heading font-black text-2xl tracking-tighter leading-none">Ifsa</span>
-                  <span className="text-foreground/60 font-heading font-medium text-xs tracking-[0.2em] uppercase leading-none ml-0.5">Panamá</span>
-                </div>
                 <nav className="flex flex-col gap-2" data-testid="nav-mobile">
                   {navLinks.map((link) => (
                     <Link
@@ -98,8 +94,8 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                       className={`px-4 py-3 text-[10px] font-black uppercase tracking-[0.2em] transition-colors border border-transparent ${
                         location === link.href
-                        ? "text-foreground bg-foreground/10 border-border"
-                        : "text-foreground/60 hover:text-foreground hover:bg-foreground/5"
+                          ? "text-foreground bg-foreground/10 border-border"
+                          : "text-foreground/60 hover:text-foreground hover:bg-foreground/5"
                       }`}
                       data-testid={`link-mobile-${link.href.replace("/", "") || "home"}`}
                     >
