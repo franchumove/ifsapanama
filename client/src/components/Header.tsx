@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
+import logoImage from "@assets/image_1777492438140.png";
 
 const navLinks = [
   { href: "/proyectos", label: "Proyectos" },
@@ -37,31 +38,31 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex flex-col gap-0" data-testid="link-home-logo">
-            <span className="text-foreground font-heading font-black text-2xl tracking-tighter leading-none">Ifsa</span>
-            <span className="text-foreground/60 font-heading font-medium text-xs tracking-[0.2em] uppercase leading-none ml-0.5">Panamá</span>
-          </Link>
-
-          <nav className="hidden lg:flex items-center gap-1" data-testid="nav-desktop">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-3 py-2 text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${
-                  location === link.href
-                    ? "text-white underline underline-offset-8"
-                    : "text-foreground/60 hover:text-foreground"
-                }`}
-                data-testid={`link-nav-${link.href.replace("/", "") || "home"}`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="flex items-center gap-4">
+            <Link href="/" className="shrink-0" data-testid="link-home-logo">
+              <img src={logoImage} alt="IFSA Panamá" className="h-10 w-auto block" data-testid="img-logo-header" />
+            </Link>
+            <nav className="hidden lg:flex items-center gap-1" data-testid="nav-desktop">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`px-3 py-2 text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${
+                    location === link.href
+                      ? "text-foreground underline underline-offset-8"
+                      : "text-foreground/60 hover:text-foreground"
+                  }`}
+                  data-testid={`link-nav-${link.href.replace("/", "") || "home"}`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
           <div className="hidden lg:flex items-center gap-4">
             <Link href="/contacto" data-testid="link-cta-header">
-                <Button 
+              <Button
                 className="font-semibold"
                 data-testid="button-cta-header"
               >
@@ -86,9 +87,8 @@ export function Header() {
               className="w-full sm:w-80 bg-background border-l border-border p-0"
             >
               <div className="flex flex-col h-full p-8">
-                <div className="flex flex-col gap-0 mb-8">
-                  <span className="text-foreground font-heading font-black text-2xl tracking-tighter leading-none">Ifsa</span>
-                  <span className="text-foreground/60 font-heading font-medium text-xs tracking-[0.2em] uppercase leading-none ml-0.5">Panamá</span>
+                <div className="flex items-center gap-3 mb-8">
+                  <img src={logoImage} alt="IFSA Panamá" className="h-9 w-auto block" data-testid="img-logo-mobile" />
                 </div>
                 <nav className="flex flex-col gap-2" data-testid="nav-mobile">
                   {navLinks.map((link) => (
