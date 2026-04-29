@@ -1,6 +1,3 @@
-import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface HeroProps {
@@ -18,11 +15,8 @@ const easing = [0.22, 1, 0.36, 1];
 export function Hero({
   title,
   subtitle,
-  showCTAs = false,
   backgroundImage = "/images/hero-reference.jpg",
-  chips,
   size = "large",
-  showStats = false,
 }: HeroProps) {
   const heightClass = {
     large: "min-h-[100vh]",
@@ -37,10 +31,9 @@ export function Hero({
     >
       <div
         className="absolute inset-0 bg-cover bg-right sm:bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-reference.jpg')" }}
+        style={{ backgroundImage: `url('${backgroundImage}')` }}
       />
-      <div className="absolute inset-0 bg-black/20" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-black/35" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-32 lg:py-48 w-full flex flex-col justify-center min-h-[85vh] lg:min-h-[95vh]">
         <motion.div
@@ -49,25 +42,10 @@ export function Hero({
           transition={{ duration: 0.8, ease: easing }}
           className="max-w-4xl text-left -ml-2 md:-ml-4 lg:-ml-8"
         >
-          <h1
-            className="font-heading font-black text-3xl sm:text-5xl md:text-6xl lg:text-[85px] text-transparent leading-[0.85] mb-8 sm:mb-10 tracking-tighter uppercase select-none pointer-events-none"
-            data-testid="text-hero-title"
-          >
-            Construcción e<br />infraestructura<br />
-            <span className="text-transparent text-2xl sm:text-4xl md:text-5xl lg:text-[65px]">de mediana y alta<br />complejidad.</span>
+          <h1 className="sr-only" data-testid="text-hero-title">
+            {title}
           </h1>
-
-          {subtitle && (
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.15, ease: easing }}
-              className="text-sm sm:text-base lg:text-lg text-transparent max-w-2xl mb-12 font-medium leading-relaxed tracking-wide select-none pointer-events-none"
-              data-testid="text-hero-subtitle"
-            >
-              Cuando una obra no puede fallar, el método importa.
-            </motion.p>
-          )}
+          {subtitle && <p className="sr-only" data-testid="text-hero-subtitle">{subtitle}</p>}
         </motion.div>
       </div>
     </section>

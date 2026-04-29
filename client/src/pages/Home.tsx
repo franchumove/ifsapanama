@@ -5,6 +5,7 @@ import { IntentRoutes } from "@/components/IntentRoutes";
 import { CTASection } from "@/components/CTASection";
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 
 export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured).slice(0, 2);
@@ -15,25 +16,24 @@ export default function Home() {
         title="Construcción e infraestructura de mediana y alta complejidad."
         subtitle="Cuando una obra no puede fallar, el método importa."
         size="large"
+        backgroundImage="/images/hero-reference.jpg"
       />
 
       <IntentRoutes />
 
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <div className="space-y-2">
-              <div className="text-4xl font-bold tracking-tighter uppercase">+6 AÑOS</div>
-              <p className="text-muted-foreground uppercase tracking-widest text-[10px] font-bold">DE EXPERIENCIA</p>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold tracking-tighter uppercase">SÓLIDA</div>
-              <p className="text-muted-foreground uppercase tracking-widest text-[10px] font-bold">INFRAESTRUCTURA OPERATIVA</p>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold tracking-tighter uppercase">CALIFICADO</div>
-              <p className="text-muted-foreground uppercase tracking-widest text-[10px] font-bold">EQUIPO TÉCNICO</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              ["+6 AÑOS", "DE EXPERIENCIA"],
+              ["SÓLIDA", "INFRAESTRUCTURA OPERATIVA"],
+              ["CALIFICADO", "EQUIPO TÉCNICO"],
+            ].map(([value, label]) => (
+              <div key={label} className="border border-border p-8 text-center">
+                <div className="text-3xl font-bold tracking-tighter uppercase">{value}</div>
+                <p className="text-muted-foreground uppercase tracking-widest text-[10px] font-bold mt-2">{label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

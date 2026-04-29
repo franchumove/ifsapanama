@@ -75,7 +75,7 @@ export function IntentRoutes() {
                   transition={{ duration: 0.6, delay: index * 0.1, ease: easing }}
                 >
                   <Link href={route.href}>
-                    <Card className="h-full border-0 bg-white cursor-pointer group rounded-sm overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+                    <Card className="h-full border-0 bg-white cursor-pointer group rounded-none overflow-hidden transition-transform duration-300 hover:-translate-y-1">
                       <CardContent className="p-6 md:p-10 flex flex-col h-full relative">
                         <div className="mb-6">
                           <Icon className="h-8 w-8 text-black opacity-20" />
@@ -112,7 +112,7 @@ export function IntentRoutes() {
                 className="h-full"
               >
                 <Link href="/calidad-seguridad">
-                  <Card className="border-0 bg-white/5 rounded-sm overflow-hidden h-full hover:bg-white/10 transition-colors cursor-pointer group">
+                  <Card className="border-0 bg-white/5 rounded-none overflow-hidden h-full hover:bg-white/10 transition-colors cursor-pointer group">
                     <CardContent className="p-8 flex items-start gap-5">
                       <div className="mt-1">
                         <pilar.icon className="h-6 w-6 text-[#C9A227] group-hover:scale-110 transition-transform" />
