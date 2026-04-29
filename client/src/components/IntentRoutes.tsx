@@ -48,29 +48,27 @@ const easing = [0.22, 1, 0.36, 1];
 
 export function IntentRoutes() {
   return (
-    <section className="relative -mt-24 lg:-mt-28 z-20 pb-16" data-testid="section-intent-routes">
+    <section className="relative -mt-20 lg:-mt-24 z-20 pb-16" data-testid="section-intent-routes">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
-        {/* Card container using the shape image as background */}
-        <div
-          className="relative shadow-2xl"
-          style={{
-            backgroundImage: "url('/images/intent-card.png')",
-            backgroundSize: "100% 100%",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className="p-8 md:p-10 pt-10 md:pt-12">
+        {/* Small notch tab at top center */}
+        <div className="flex justify-center">
+          <div className="w-14 h-4 bg-[#2a2a2a] rounded-t-lg" />
+        </div>
 
-            <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#111] uppercase tracking-tighter mb-1">
+        {/* Dark card */}
+        <div className="bg-[#2a2a2a] rounded-2xl shadow-2xl overflow-hidden">
+          <div className="p-8 md:p-10">
+
+            <div className="text-center mb-8">
+              <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-tighter mb-1">
                 Explora Proyectos
               </h2>
-              <p className="text-[#555] text-[11px] uppercase tracking-[0.2em] font-medium">
+              <p className="text-white/50 text-[10px] uppercase tracking-[0.25em] font-medium">
                 Según el tipo de obra
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 mb-8">
               {routes.map((route, index) => {
                 const Icon = routeIcons[index];
                 return (
@@ -82,15 +80,15 @@ export function IntentRoutes() {
                     transition={{ duration: 0.6, delay: index * 0.1, ease: easing }}
                   >
                     <Link href={route.href}>
-                      <Card className="h-full border-0 bg-white/80 cursor-pointer group rounded-sm overflow-hidden transition-transform duration-300 hover:-translate-y-1">
-                        <CardContent className="p-5 md:p-6 flex flex-col h-full relative">
-                          <div className="mb-4">
-                            <Icon className="h-6 w-6 text-black opacity-20" />
+                      <Card className="h-full border-0 bg-white cursor-pointer group rounded-sm overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+                        <CardContent className="p-5 flex flex-col h-full">
+                          <div className="mb-3">
+                            <Icon className="h-5 w-5 text-black opacity-20" />
                           </div>
-                          <h3 className="font-heading font-black text-sm text-black mb-3 uppercase leading-[1.1] tracking-tighter">
+                          <h3 className="font-heading font-black text-[13px] text-black mb-2 uppercase leading-[1.1] tracking-tighter">
                             {route.title}
                           </h3>
-                          <p className="text-[#666] mb-6 flex-grow text-xs leading-relaxed">
+                          <p className="text-[#666] mb-5 flex-grow text-[11px] leading-relaxed">
                             {route.description}
                           </p>
                           <div className="flex items-center text-black font-black text-[9px] tracking-widest uppercase">
@@ -105,9 +103,9 @@ export function IntentRoutes() {
               })}
             </div>
 
-            <div className="w-full h-px bg-black/15 mb-8 max-w-xs mx-auto" />
+            <div className="w-48 h-px bg-white/15 mb-8 mx-auto" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 mb-7">
               {methodPilars.map((pilar, index) => (
                 <motion.div
                   key={pilar.title}
@@ -118,16 +116,16 @@ export function IntentRoutes() {
                   className="h-full"
                 >
                   <Link href="/calidad-seguridad">
-                    <Card className="border-0 bg-black/8 rounded-sm overflow-hidden h-full hover:bg-black/12 transition-colors cursor-pointer group">
-                      <CardContent className="p-5 flex items-start gap-4">
-                        <div className="mt-0.5">
+                    <Card className="border-0 bg-white/5 rounded-sm overflow-hidden h-full hover:bg-white/10 transition-colors cursor-pointer group">
+                      <CardContent className="p-5 flex items-start gap-3">
+                        <div className="mt-0.5 shrink-0">
                           <pilar.icon className="h-5 w-5 text-[#C9A227] group-hover:scale-110 transition-transform" />
                         </div>
                         <div>
-                          <h4 className="font-heading font-black text-[13px] text-[#111] uppercase tracking-tighter mb-1">
+                          <h4 className="font-heading font-black text-[12px] text-white uppercase tracking-tighter mb-1">
                             {pilar.title}
                           </h4>
-                          <p className="text-[#555] text-[10px] leading-relaxed font-medium">
+                          <p className="text-white/50 text-[10px] leading-relaxed font-medium">
                             {pilar.description}
                           </p>
                         </div>
@@ -138,9 +136,9 @@ export function IntentRoutes() {
               ))}
             </div>
 
-            <div className="text-center pb-2">
+            <div className="text-center">
               <Link href="/servicios">
-                <span className="text-[#555] hover:text-[#111] transition-colors text-[9px] font-black uppercase tracking-[0.2em] cursor-pointer inline-flex items-center">
+                <span className="text-white/35 hover:text-white transition-colors text-[9px] font-black uppercase tracking-[0.2em] cursor-pointer inline-flex items-center">
                   <span className="mr-2">→</span>
                   Conoce nuestros sistemas de calidad
                 </span>
