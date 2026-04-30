@@ -44,28 +44,26 @@ const methodPilars = [
   },
 ];
 
-const easing = [0.22, 1, 0.36, 1];
-
 export function IntentRoutes() {
   return (
     <section className="relative -mt-20 lg:-mt-24 z-20 pb-16" data-testid="section-intent-routes">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <div className="flex justify-center">
-          <div className="w-14 h-4 bg-[#2a2a2a] rounded-t-lg" />
+          <div className="w-14 h-4 bg-[#d9d9d9] rounded-t-lg" />
         </div>
 
-        <div className="bg-[#2a2a2a] rounded-2xl shadow-2xl overflow-hidden">
-          <div className="p-8 md:p-10">
-            <div className="text-center mb-8">
-              <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-tighter mb-1">
+        <div className="bg-[#3a3a3a] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+          <div className="px-8 py-10 md:px-12 md:py-12">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter mb-1">
                 Explora Proyectos
               </h2>
-              <p className="text-white/50 text-[10px] uppercase tracking-[0.25em] font-medium">
+              <p className="text-white/60 text-[10px] uppercase tracking-[0.25em] font-medium">
                 Según el tipo de obra
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-10">
               {routes.map((route, index) => {
                 const Icon = routeIcons[index];
                 return (
@@ -74,13 +72,13 @@ export function IntentRoutes() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1, ease: easing }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                   >
                     <Link href={route.href}>
-                      <Card className="h-full border-0 bg-white/92 cursor-pointer group rounded-sm overflow-hidden transition-transform duration-300 hover:-translate-y-1">
-                        <CardContent className="p-5 flex flex-col h-full">
-                          <div className="mb-3">
-                            <Icon className="h-5 w-5 text-[#f39a2e] opacity-90 group-hover:scale-110 transition-transform" />
+                      <Card className="h-full border-0 bg-[#f2f2f2] cursor-pointer group rounded-sm overflow-hidden">
+                        <CardContent className="p-5 flex flex-col h-full min-h-[170px]">
+                          <div className="mb-4">
+                            <Icon className="h-5 w-5 text-[#f39a2e] opacity-90" />
                           </div>
                           <h3 className="font-heading font-black text-[13px] text-black mb-2 uppercase leading-[1.1] tracking-tighter">
                             {route.title}
@@ -102,7 +100,7 @@ export function IntentRoutes() {
 
             <div className="w-48 h-px bg-white/15 mb-8 mx-auto" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 mb-7">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-8">
               {methodPilars.map((pilar, index) => (
                 <motion.div
                   key={pilar.title}
@@ -110,10 +108,9 @@ export function IntentRoutes() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="h-full"
                 >
                   <Link href="/calidad-seguridad">
-                    <Card className="border-0 bg-white/5 rounded-sm overflow-hidden h-full hover:bg-white/10 transition-colors cursor-pointer group">
+                    <Card className="border-0 bg-white/8 rounded-sm overflow-hidden hover:bg-white/12 transition-colors cursor-pointer group">
                       <CardContent className="p-5 flex items-start gap-3">
                         <div className="mt-0.5 shrink-0">
                           <pilar.icon className="h-5 w-5 text-[#f39a2e] group-hover:scale-110 transition-transform" />
@@ -122,7 +119,7 @@ export function IntentRoutes() {
                           <h4 className="font-heading font-black text-[12px] text-white uppercase tracking-tighter mb-1">
                             {pilar.title}
                           </h4>
-                          <p className="text-white/50 text-[10px] leading-relaxed font-medium">
+                          <p className="text-white/55 text-[10px] leading-relaxed font-medium">
                             {pilar.description}
                           </p>
                         </div>
@@ -135,7 +132,7 @@ export function IntentRoutes() {
 
             <div className="text-center">
               <Link href="/servicios">
-                <span className="text-white/35 hover:text-white transition-colors text-[9px] font-black uppercase tracking-[0.2em] cursor-pointer inline-flex items-center">
+                <span className="text-white/40 hover:text-white transition-colors text-[9px] font-black uppercase tracking-[0.2em] cursor-pointer inline-flex items-center">
                   <span className="mr-2">→</span>
                   Conoce nuestros sistemas de calidad
                 </span>
