@@ -50,15 +50,12 @@ export function IntentRoutes() {
   return (
     <section className="relative -mt-20 lg:-mt-24 z-20 pb-16" data-testid="section-intent-routes">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
-        {/* Small notch tab at top center */}
         <div className="flex justify-center">
           <div className="w-14 h-4 bg-[#2a2a2a] rounded-t-lg" />
         </div>
 
-        {/* Dark card */}
         <div className="bg-[#2a2a2a] rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-8 md:p-10">
-
             <div className="text-center mb-8">
               <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-tighter mb-1">
                 Explora Proyectos
@@ -80,10 +77,10 @@ export function IntentRoutes() {
                     transition={{ duration: 0.6, delay: index * 0.1, ease: easing }}
                   >
                     <Link href={route.href}>
-                      <Card className="h-full border-0 bg-white cursor-pointer group rounded-sm overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+                      <Card className="h-full border-0 bg-white/92 cursor-pointer group rounded-sm overflow-hidden transition-transform duration-300 hover:-translate-y-1">
                         <CardContent className="p-5 flex flex-col h-full">
                           <div className="mb-3">
-                            <Icon className="h-5 w-5 text-black opacity-20" />
+                            <Icon className="h-5 w-5 text-[#f39a2e] opacity-90 group-hover:scale-110 transition-transform" />
                           </div>
                           <h3 className="font-heading font-black text-[13px] text-black mb-2 uppercase leading-[1.1] tracking-tighter">
                             {route.title}
@@ -119,7 +116,7 @@ export function IntentRoutes() {
                     <Card className="border-0 bg-white/5 rounded-sm overflow-hidden h-full hover:bg-white/10 transition-colors cursor-pointer group">
                       <CardContent className="p-5 flex items-start gap-3">
                         <div className="mt-0.5 shrink-0">
-                          <pilar.icon className="h-5 w-5 text-[#C9A227] group-hover:scale-110 transition-transform" />
+                          <pilar.icon className="h-5 w-5 text-[#f39a2e] group-hover:scale-110 transition-transform" />
                         </div>
                         <div>
                           <h4 className="font-heading font-black text-[12px] text-white uppercase tracking-tighter mb-1">
@@ -144,7 +141,6 @@ export function IntentRoutes() {
                 </span>
               </Link>
             </div>
-
           </div>
         </div>
       </div>
