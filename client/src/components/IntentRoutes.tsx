@@ -50,13 +50,12 @@ export function IntentRoutes() {
         <div className="relative">
           {/* Asset as top decorative border */}
           <div 
-            className="relative min-h-[200px]"
+            className="relative min-h-[200px] rounded-[3rem] overflow-hidden"
             style={{ 
               backgroundImage: "url('/images/folder-card-bg.png')",
               backgroundSize: '100% 100%',
               backgroundRepeat: 'no-repeat',
-              // Corta el borde derecho y el borde superior derecho para quitar sombras fantasma de la imagen
-              clipPath: 'polygon(0 0, 75% 0, 75% 10px, 99.5% 10px, 99.5% 100%, 0 100%)'
+              clipPath: 'polygon(0 0, 75% 0, 76% 15px, 99.5% 15px, 99.5% 100%, 0 100%)'
             }}
           >
             <div className="px-8 py-16 md:px-16 md:py-20">
@@ -81,8 +80,7 @@ export function IntentRoutes() {
                     >
                       <Link href={route.href}>
                         <div 
-                          className="h-full bg-white/30 backdrop-blur-sm border border-white/40 cursor-pointer group transition-all duration-300 relative rounded-sm"
-                          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)' }}
+                          className="h-full bg-white/30 backdrop-blur-sm border border-white/40 cursor-pointer group transition-all duration-300 relative rounded-[2rem] overflow-hidden"
                         >
                           <div className="p-8 flex flex-col h-full min-h-[240px]">
                             <h3 className="font-heading font-black text-xl text-black/90 mb-4 uppercase leading-[1] tracking-tighter">
@@ -118,8 +116,7 @@ export function IntentRoutes() {
                   >
                     <Link href="/calidad-seguridad">
                       <div 
-                        className="bg-white/20 backdrop-blur-sm border border-white/30 group transition-all duration-300 relative rounded-sm"
-                        style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)' }}
+                        className="bg-white/20 backdrop-blur-sm border border-white/30 group transition-all duration-300 relative rounded-[2rem] overflow-hidden"
                       >
                         <div className="p-5 flex items-center gap-5 min-h-[90px]">
                           <div className="w-14 h-14 bg-black/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform rounded-sm">

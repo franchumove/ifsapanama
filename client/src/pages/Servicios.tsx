@@ -41,13 +41,13 @@ export default function Servicios() {
       {/* Folder Container */}
       <div className="w-full bg-black px-4 sm:px-6 md:px-8 pb-32 pt-8">
         <div 
-          className="relative w-full max-w-7xl mx-auto z-10"
+          className="relative w-full max-w-7xl mx-auto z-10 rounded-[3rem] overflow-hidden"
           style={{ 
             backgroundImage: 'url(/images/folder-card-bg.png)',
             backgroundSize: '100% 100%',
             backgroundPosition: 'center top',
             backgroundRepeat: 'no-repeat',
-            clipPath: 'polygon(0 0, 75% 0, 75% 10px, 99.5% 10px, 99.5% 100%, 0 100%)'
+            clipPath: 'polygon(0 0, 75% 0, 76% 15px, 99.5% 15px, 99.5% 100%, 0 100%)'
           }}
         >
           <div className="px-6 pt-32 pb-16 md:px-12 md:pt-40 md:pb-20 lg:px-16" data-testid="section-services-intro">
@@ -84,7 +84,7 @@ export default function Servicios() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <Card className="h-full border border-white/20 bg-black/40 backdrop-blur-sm rounded-none" data-testid={`card-service-detail-${service.id}`}>
+                    <Card className="h-full border border-white/20 bg-black/40 backdrop-blur-sm rounded-[2rem] overflow-hidden" data-testid={`card-service-detail-${service.id}`}>
                       <CardContent className="p-8">
                         <div className="w-16 h-16 bg-white/5 flex items-center justify-center mb-8 border border-white/10">
                           <IconComponent className="h-8 w-8 text-white" />

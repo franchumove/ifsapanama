@@ -32,12 +32,12 @@ export default function Proyectos() {
 
       <section className="py-12 lg:py-24 bg-black" data-testid="section-projects-list">
         <div 
-          className="max-w-6xl mx-auto relative min-h-[500px]"
+          className="max-w-6xl mx-auto relative min-h-[500px] rounded-[3rem] overflow-hidden"
           style={{ 
             backgroundImage: "url('/images/folder-card-bg.png')",
             backgroundSize: '100% 100%',
             backgroundRepeat: 'no-repeat',
-            clipPath: 'polygon(0 0, 75% 0, 75% 10px, 99.5% 10px, 99.5% 100%, 0 100%)'
+            clipPath: 'polygon(0 0, 75% 0, 76% 15px, 99.5% 15px, 99.5% 100%, 0 100%)'
           }}
         >
           <div className="px-6 pt-48 pb-16 md:px-12 md:pt-64 md:pb-20 lg:px-16">
