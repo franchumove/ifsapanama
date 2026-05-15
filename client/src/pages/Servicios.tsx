@@ -72,7 +72,7 @@ export default function Servicios() {
               </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-24">
               {services.map((service, index) => {
                 const IconComponent = (iconMap as any)[service.icon] || LucideIcons.Building2;
                 const isPngIcon = !iconMap[service.icon];
@@ -80,34 +80,34 @@ export default function Servicios() {
                 return (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex flex-col"
+                    transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                    className="flex flex-col group"
                   >
                     {/* Header Card */}
                     <div 
-                      className="h-20 flex items-center px-6 relative overflow-hidden"
+                      className="h-[100px] flex items-center px-8 relative border-t border-x border-white/20 rounded-t-[1.5rem] shadow-lg"
                       style={{ 
                         backgroundImage: "url('/images/service-header-bg.png')",
                         backgroundSize: '100% 100%',
                         backgroundRepeat: 'no-repeat'
                       }}
                     >
-                      <div className="flex items-center gap-4 z-10 w-full">
-                        <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                      <div className="flex items-center gap-6 z-10 w-full">
+                        <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
                           {isPngIcon ? (
                             <img 
                               src={`/images/icon-${service.icon}.png`} 
                               alt={service.title}
-                              className="w-10 h-10 object-contain" 
+                              className="w-14 h-14 object-contain" 
                             />
                           ) : (
-                            <IconComponent className="h-8 w-8 text-black" />
+                            <IconComponent className="h-10 w-10 text-black" />
                           )}
                         </div>
-                        <h3 className="font-heading font-black text-lg text-black leading-tight uppercase tracking-tighter">
+                        <h3 className="font-heading font-black text-xl text-black leading-[1.1] uppercase tracking-tighter">
                           {service.title}
                         </h3>
                       </div>
@@ -115,30 +115,31 @@ export default function Servicios() {
 
                     {/* Body Card (Folder Shape) */}
                     <div 
-                      className="flex-grow pt-12 pb-16 px-10 -mt-1 min-h-[480px]"
+                      className="flex-grow pt-10 pb-16 px-10 relative shadow-2xl"
                       style={{ 
                         backgroundImage: "url('/images/service-card-shape.png')",
                         backgroundSize: '100% 100%',
-                        backgroundRepeat: 'no-repeat'
+                        backgroundRepeat: 'no-repeat',
+                        marginTop: '-1px' // Unir perfectamente con el header
                       }}
                     >
-                      <div className="space-y-12">
+                      <div className="space-y-10 relative z-10">
                         <div>
-                          <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.2em] block mb-3">Resuelve</span>
+                          <span className="text-[10px] font-black text-black uppercase tracking-[0.1em] block mb-2">RESUELVE</span>
                           <p className="text-black/70 leading-relaxed text-[15px] font-medium">
                             {service.resuelve}
                           </p>
                         </div>
                         
                         <div>
-                          <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.2em] block mb-3">Cómo se ejecuta</span>
+                          <span className="text-[10px] font-black text-black uppercase tracking-[0.1em] block mb-2">CÓMO SE EJECUTA</span>
                           <p className="text-black/70 leading-relaxed text-[15px] font-medium">
                             {service.como}
                           </p>
                         </div>
                         
                         <div>
-                          <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.2em] block mb-3">Aplica cuando</span>
+                          <span className="text-[10px] font-black text-black uppercase tracking-[0.1em] block mb-2">APLICA CUANDO</span>
                           <p className="text-black/70 leading-relaxed text-[15px] font-medium">
                             {service.aplica}
                           </p>
