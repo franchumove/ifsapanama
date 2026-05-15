@@ -9,9 +9,9 @@ import { CheckSquare } from "lucide-react";
 export default function Capacidades() {
   return (
     <Layout>
-      <section className="bg-black py-20 min-h-screen flex justify-center items-start overflow-hidden" data-testid="section-capabilities">
+      <section className="bg-black pt-28 pb-40 overflow-hidden min-h-screen flex flex-col items-center">
         <div 
-          className="relative w-full max-w-4xl min-h-[1800px] pt-40 pb-32 px-12 md:px-20"
+          className="relative w-full max-w-[1100px] min-h-[2200px] flex flex-col pt-40 px-12 md:px-24"
           style={{ 
             backgroundImage: "url('/images/capabilities-container-bg.png')",
             backgroundSize: '100% 100%',
@@ -19,43 +19,43 @@ export default function Capacidades() {
           }}
         >
           {/* Section 1: Cómo respondemos en campo */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-40">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-48">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-5"
+              className="w-full"
             >
               <img 
                 src="/images/capabilities-image-1.png" 
                 alt="Ejecución en campo" 
-                className="rounded-[1.5rem] w-full shadow-2xl"
+                className="rounded-[2.5rem] w-full shadow-2xl border-4 border-white/5"
               />
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-7 pt-4"
+              className="flex flex-col gap-10"
             >
               <img 
                 src="/images/capabilities-title-1.png" 
                 alt="Cómo respondemos en campo" 
-                className="w-full max-w-[320px] mb-10 object-contain"
+                className="w-full max-w-[420px] object-contain"
               />
               
-              <div className="flex items-stretch gap-6">
-                <div className="flex-shrink-0 w-10">
+              <div className="flex gap-8">
+                <div className="flex-shrink-0 w-12">
                   <img 
                     src="/images/capabilities-checks-1.png" 
                     alt="Checkmarks" 
-                    className="h-full object-contain"
+                    className="w-full object-contain"
                   />
                 </div>
-                <div className="flex flex-col justify-between py-1">
+                <div className="flex flex-col justify-between py-1 gap-6">
                   {capabilities[0].items.map((item, i) => (
-                    <span key={i} className="text-[11px] font-black uppercase tracking-widest text-white/80 leading-relaxed py-2">
+                    <span key={i} className="text-[12px] md:text-[13px] font-black uppercase tracking-widest text-white leading-tight">
                       {item}
                     </span>
                   ))}
@@ -64,58 +64,60 @@ export default function Capacidades() {
             </motion.div>
           </div>
 
-          {/* Section 2: Placeholder based on mockup structure */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-40">
+          {/* Section 2: Capacidad Técnica */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-48">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-7 order-2 lg:order-1 pt-4 text-right"
+              className="flex flex-col items-end text-right gap-10"
             >
-              <h2 className="font-heading font-black text-4xl text-white mb-10 uppercase tracking-tighter">
+              <h2 className="font-heading font-black text-5xl text-white uppercase tracking-tighter leading-none max-w-[400px]">
                 CAPACIDAD TÉCNICA Y SUPERVISIÓN
               </h2>
-              <div className="flex flex-col items-end gap-4 text-white/60">
+              <div className="flex flex-col gap-6">
                 {capabilities[1].items.map((item, i) => (
-                  <span key={i} className="text-[11px] font-black uppercase tracking-widest leading-relaxed">
-                    {item} ✓
+                  <span key={i} className="text-[12px] md:text-[13px] font-black uppercase tracking-widest text-white/70">
+                    {item} <span className="text-white ml-2">✓</span>
                   </span>
                 ))}
               </div>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-5 order-1 lg:order-2"
+              className="w-full"
             >
               <img 
                 src="/images/capabilities-image-1.png" 
                 alt="Capacidad Técnica" 
-                className="rounded-[1.5rem] w-full shadow-2xl opacity-50 grayscale"
+                className="rounded-[2.5rem] w-full shadow-2xl opacity-60 grayscale border-4 border-white/5"
               />
             </motion.div>
           </div>
 
-          {/* Section 3: Placeholder for Topografía */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-40">
-            <div className="lg:col-span-5">
+          {/* Section 3: Topografía */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-48">
+            <div className="w-full">
               <img 
                 src="/images/capabilities-image-1.png" 
                 alt="Topografía" 
-                className="rounded-[1.5rem] w-full shadow-2xl opacity-50 grayscale"
+                className="rounded-[2.5rem] w-full shadow-2xl opacity-60 grayscale border-4 border-white/5"
               />
             </div>
-            <div className="lg:col-span-7 pt-4">
-              <h2 className="font-heading font-black text-4xl text-white mb-10 uppercase tracking-tighter">
+            <div className="flex flex-col gap-10 pl-4">
+              <h2 className="font-heading font-black text-5xl text-white uppercase tracking-tighter leading-none max-w-[400px]">
                 TOPOGRAFÍA Y PRECISIÓN
               </h2>
-              <div className="space-y-6">
+              <div className="flex flex-col gap-6">
                 {capabilities[2].items.map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 text-white/60">
-                    <span className="text-white/40">✓</span>
-                    <span className="text-[11px] font-black uppercase tracking-widest">{item}</span>
+                  <div key={i} className="flex items-center gap-4">
+                    <span className="text-white text-xl">✓</span>
+                    <span className="text-[12px] md:text-[13px] font-black uppercase tracking-widest text-white/70">
+                      {item}
+                    </span>
                   </div>
                 ))}
               </div>
