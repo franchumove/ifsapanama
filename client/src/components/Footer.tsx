@@ -48,8 +48,12 @@ export function Footer() {
 
           <div className="lg:col-span-4">
             <div 
-              className="bg-[#333333] rounded-[2.5rem] border border-white/10 p-10 min-h-[400px] relative overflow-hidden"
-              style={{ clipPath: 'polygon(0 0, 75% 0, 76% 10px, 100% 10px, 100% 100%, 0 100%)' }}
+              className="relative p-10 min-h-[450px] flex flex-col"
+              style={{ 
+                backgroundImage: "url('/images/footer-card-bg.png')",
+                backgroundSize: '100% 100%',
+                backgroundRepeat: 'no-repeat'
+              }}
             >
               <div className="relative z-10">
                 <h4 className="font-heading font-black uppercase tracking-tight text-xl text-white/40 mb-8 flex items-center gap-3">
@@ -73,8 +77,12 @@ export function Footer() {
 
           <div className="lg:col-span-4">
             <div 
-              className="bg-[#333333] rounded-[2.5rem] border border-white/10 p-10 min-h-[400px] relative overflow-hidden"
-              style={{ clipPath: 'polygon(0 0, 75% 0, 76% 10px, 100% 10px, 100% 100%, 0 100%)' }}
+              className="relative p-10 min-h-[450px] flex flex-col"
+              style={{ 
+                backgroundImage: "url('/images/footer-card-bg.png')",
+                backgroundSize: '100% 100%',
+                backgroundRepeat: 'no-repeat'
+              }}
             >
               <div className="relative z-10">
                 <h4 className="font-heading font-black uppercase tracking-tight text-xl text-white/40 mb-8 flex items-center gap-3">
