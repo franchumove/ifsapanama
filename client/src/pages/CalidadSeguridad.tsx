@@ -49,27 +49,34 @@ const qualityFaqs = [
 export default function CalidadSeguridad() {
   return (
     <Layout>
-      <Hero
-        title="Calidad y Seguridad"
-        subtitle="Cuando una obra no puede fallar, el método importa."
-        size="small"
-      />
+      {/* Hero Section */}
+      <section className="bg-black pt-32 pb-20 text-center px-6">
+        <h1 className="font-heading font-black text-6xl md:text-8xl text-white uppercase tracking-tighter leading-none mb-4">
+          SISTEMAS DE<br />EJECUCIÓN
+        </h1>
+        <p className="text-white/60 uppercase tracking-[0.3em] font-medium text-sm">
+          Cuando una obra no puede fallar, el método importa.
+        </p>
+      </section>
 
-      <section className="py-24 bg-background" data-testid="section-quality-principles">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-heading font-bold text-3xl text-foreground uppercase tracking-tighter">
-              Principios en Obra
+      <section className="bg-black pb-40 overflow-hidden flex flex-col items-center">
+        <div 
+          className="relative w-full max-w-[1100px] min-h-[1600px] flex flex-col pt-32 pb-24 px-12 md:px-20"
+          style={{ 
+            backgroundImage: "url('/images/quality-container-bg.png')",
+            backgroundSize: '100% 100%',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-black text-4xl text-white uppercase tracking-tighter">
+              PRINCIPIOS EN OBRA
             </h2>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+          {/* Principles Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
             {principles.map((principle, index) => (
               <motion.div
                 key={principle.title}
@@ -77,56 +84,91 @@ export default function CalidadSeguridad() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 relative overflow-hidden"
+                style={{
+                  clipPath: 'polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)'
+                }}
               >
-                <Card className="h-full border-border bg-card rounded-none" data-testid={`card-principle-${index}`}>
-                  <CardContent className="p-8">
-                    <div className="w-14 h-14 bg-foreground/5 flex items-center justify-center mb-6 border border-border">
-                      <principle.icon className="h-7 w-7 text-foreground" />
-                    </div>
-                    <h3 className="font-heading font-bold text-xl text-foreground mb-4 uppercase tracking-tighter">
-                      {principle.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {principle.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 flex items-center justify-center bg-black/20 rounded-lg">
+                    <img 
+                      src={`/images/icon-${principle.title.toLowerCase()}.png`} 
+                      alt={principle.title}
+                      className="w-8 h-8 object-contain brightness-0 invert"
+                    />
+                  </div>
+                  <h3 className="font-heading font-black text-lg text-white uppercase tracking-tighter">
+                    {principle.title}
+                  </h3>
+                </div>
+                <p className="text-white/70 text-sm leading-relaxed font-medium">
+                  {principle.description}
+                </p>
               </motion.div>
             ))}
           </div>
 
+          {/* Avoid Box */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-foreground/5 border border-border p-12 lg:p-16"
+            className="bg-white/90 rounded-[2rem] p-10 flex flex-col md:flex-row gap-12 items-center mb-32 shadow-2xl"
+            style={{
+              clipPath: 'polygon(0 0, 100% 0, 100% 88%, 92% 100%, 0 100%)'
+            }}
           >
-            <h2 className="font-heading font-bold text-2xl text-foreground mb-10 text-center uppercase tracking-tighter">
-              Lo que evitamos (porque cuesta caro)
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              {avoidItems.map((item, index) => (
-                <div key={index} className="flex items-center gap-4">
-                  <XCircle className="h-5 w-5 text-foreground/40 shrink-0" />
-                  <span className="text-foreground font-bold uppercase tracking-tight text-xs">{item}</span>
+            <div className="w-32 h-32 flex-shrink-0">
+              <img 
+                src="/images/icon-engineering.png" 
+                alt="Avoid Icon" 
+                className="w-full h-full object-contain brightness-0 grayscale opacity-80"
+              />
+            </div>
+            <div className="flex-grow">
+              <h2 className="font-heading font-black text-2xl text-black mb-6 uppercase tracking-tighter">
+                LO QUE EVITAMOS<br />(PORQUE CUESTA CARO)
+              </h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {avoidItems.map((item, index) => (
+                  <li key={index} className="flex items-center gap-3 text-black/70 text-[11px] font-black uppercase tracking-widest">
+                    <span className="text-black/30">●</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* FAQs Section */}
+          <div className="mt-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-heading font-black text-4xl text-white uppercase tracking-tighter mb-2">
+                PREGUNTAS FRECUENTES
+              </h2>
+              <p className="text-white/40 uppercase tracking-widest text-[10px] font-black">
+                LO QUE MÁS PREOCUPA ANTES DE CONTRATAR UNA CONSTRUCTORA
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-8">
+              {qualityFaqs.map((faq, index) => (
+                <div key={index} className="border-b border-white/10 pb-8 group cursor-pointer">
+                  <h3 className="text-white font-black uppercase tracking-widest text-xs mb-4 flex justify-between items-center group-hover:text-white/80 transition-colors">
+                    {faq.question}
+                    <span className="text-white/30 group-hover:translate-y-1 transition-transform">▼</span>
+                  </h3>
+                  <p className="text-white/50 text-xs leading-relaxed font-medium">
+                    {faq.answer}
+                  </p>
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      <FAQAccordion
-        faqs={qualityFaqs}
-        title="Preguntas frecuentes"
-        subtitle="Lo que más preocupa antes de contratar una constructora."
-      />
-
-      <CTASection 
-        title="EL PRIMER PASO ES TÉCNICO, NO COMERCIAL."
-        subtitle="Solicita una visita técnica y te respondemos con un diagnóstico claro de alcance y ejecución."
-      />
+      <CTASection />
     </Layout>
   );
 }
