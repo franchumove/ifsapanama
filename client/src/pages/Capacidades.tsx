@@ -72,15 +72,27 @@ export default function Capacidades() {
               viewport={{ once: true }}
               className="flex flex-col items-end text-right gap-10"
             >
-              <h2 className="font-heading font-black text-5xl text-white uppercase tracking-tighter leading-none max-w-[400px]">
-                CAPACIDAD TÉCNICA Y SUPERVISIÓN
-              </h2>
-              <div className="flex flex-col gap-6">
-                {capabilities[1].items.map((item, i) => (
-                  <span key={i} className="text-[12px] md:text-[13px] font-black uppercase tracking-widest text-white/70">
-                    {item} <span className="text-white ml-2">✓</span>
-                  </span>
-                ))}
+              <img 
+                src="/images/capabilities-title-2.png" 
+                alt="Capacidad Técnica y Supervisión" 
+                className="w-full max-w-[420px] object-contain"
+              />
+              
+              <div className="flex gap-8 justify-end">
+                <div className="flex flex-col justify-between py-1 gap-6">
+                  {capabilities[1].items.map((item, i) => (
+                    <span key={i} className="text-[12px] md:text-[13px] font-black uppercase tracking-widest text-white/80 leading-tight">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex-shrink-0 w-12">
+                  <img 
+                    src="/images/capabilities-checks-2.png" 
+                    alt="Checkmarks" 
+                    className="w-full object-contain"
+                  />
+                </div>
               </div>
             </motion.div>
             
@@ -100,28 +112,48 @@ export default function Capacidades() {
 
           {/* Section 3: Topografía */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-48">
-            <div className="w-full">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="w-full"
+            >
               <img 
                 src="/images/capabilities-image-1.png" 
                 alt="Topografía" 
                 className="rounded-[2.5rem] w-full shadow-2xl opacity-60 grayscale border-4 border-white/5"
               />
-            </div>
-            <div className="flex flex-col gap-10 pl-4">
-              <h2 className="font-heading font-black text-5xl text-white uppercase tracking-tighter leading-none max-w-[400px]">
-                TOPOGRAFÍA Y PRECISIÓN
-              </h2>
-              <div className="flex flex-col gap-6">
-                {capabilities[2].items.map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <span className="text-white text-xl">✓</span>
-                    <span className="text-[12px] md:text-[13px] font-black uppercase tracking-widest text-white/70">
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-10 pl-4"
+            >
+              <img 
+                src="/images/capabilities-title-3.png" 
+                alt="Topografía y Precisión" 
+                className="w-full max-w-[420px] object-contain"
+              />
+              
+              <div className="flex gap-8">
+                <div className="flex-shrink-0 w-12">
+                  <img 
+                    src="/images/capabilities-checks-3.png" 
+                    alt="Checkmarks" 
+                    className="w-full object-contain"
+                  />
+                </div>
+                <div className="flex flex-col justify-between py-1 gap-6">
+                  {capabilities[2].items.map((item, i) => (
+                    <span key={i} className="text-[12px] md:text-[13px] font-black uppercase tracking-widest text-white/80 leading-tight">
                       {item}
                     </span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
