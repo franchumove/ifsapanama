@@ -25,45 +25,53 @@ export default function Proyectos() {
   return (
     <Layout>
       <Hero
-        title="Proyectos"
-        subtitle="Filtra por tipo de obra para ver fichas con contexto, alcance y entregables."
+        title=""
         size="small"
-        backgroundImage="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=800&fit=crop"
+        backgroundVideo="/video_infraestructura.mp4"
       />
 
-      <section className="py-12 lg:py-16 bg-background" data-testid="section-projects-list">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8"
-          >
-            <h2 className="font-heading font-bold text-xl text-foreground mb-2">
-              Encuentra un proyecto similar al tuyo.
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              Si tu proyecto exige control y respuesta operativa, aquí verás cómo estructuramos la ejecución.
-            </p>
-            <ProjectFilters
-              selectedCategory={selectedCategory}
-              onCategoryChange={setSelectedCategory}
-            />
-          </motion.div>
+      <section className="py-12 lg:py-24 bg-black" data-testid="section-projects-list">
+        <div 
+          className="max-w-6xl mx-auto relative min-h-[500px]"
+          style={{ 
+            backgroundImage: "url('/images/folder-card-bg.png')",
+            backgroundSize: '100% 100%',
+            backgroundRepeat: 'no-repeat',
+            clipPath: 'polygon(0 0, 75% 0, 75% 10px, 99.5% 10px, 99.5% 100%, 0 100%)'
+          }}
+        >
+          <div className="px-6 pt-48 pb-16 md:px-12 md:pt-64 md:pb-20 lg:px-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-16 text-center flex flex-col items-center"
+            >
+              <img 
+                src="/images/title-proyectos.png" 
+                alt="Encuentra un proyecto similar al tuyo" 
+                className="w-full max-w-[800px] object-contain mb-14"
+              />
+              <ProjectFilters
+                selectedCategory={selectedCategory}
+                onCategoryChange={setSelectedCategory}
+              />
+            </motion.div>
 
-          {filteredProjects.length === 0 ? (
-            <div className="text-center py-12" data-testid="no-projects">
-              <p className="text-muted-foreground">
-                No hay proyectos en esta categoría todavía.
-              </p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {filteredProjects.map((project, index) => (
-                <ProjectCard key={project.slug} project={project} index={index} />
-              ))}
-            </div>
-          )}
+            {filteredProjects.length === 0 ? (
+              <div className="text-center py-12" data-testid="no-projects">
+                <p className="text-white/60">
+                  No hay proyectos en esta categoría todavía.
+                </p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                {filteredProjects.map((project, index) => (
+                  <ProjectCard key={project.slug} project={project} index={index} />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

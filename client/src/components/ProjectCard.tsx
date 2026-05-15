@@ -22,7 +22,8 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
     >
       <Link href={`/proyectos/${project.slug}`} data-testid={`link-project-${project.slug}`}>
         <Card 
-          className="overflow-hidden border-border/40 cursor-pointer group h-full transition-all duration-500 hover:border-primary/20 hover:shadow-lg"
+          className="border-0 cursor-pointer group h-full transition-all duration-500 rounded-none bg-[#e6e6e6]"
+          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)' }}
           data-testid={`card-project-${project.slug}`}
         >
           <div className="aspect-[4/3] relative overflow-hidden">
@@ -47,11 +48,11 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             </div>
           </div>
           <CardContent className="p-6 lg:p-7">
-            <h3 className="font-heading font-semibold text-lg lg:text-xl text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors duration-300">
+            <h3 className="font-heading font-black text-[13px] uppercase tracking-wider text-black mb-2 line-clamp-2 transition-colors duration-300">
               {project.title}
             </h3>
             {project.location && (
-              <p className="text-muted-foreground text-sm">{project.location}</p>
+              <p className="text-black/50 font-medium text-xs mt-3">{project.location}</p>
             )}
           </CardContent>
         </Card>

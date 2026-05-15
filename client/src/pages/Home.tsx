@@ -16,12 +16,12 @@ export default function Home() {
         title="Construcción e infraestructura de mediana y alta complejidad."
         subtitle="Cuando una obra no puede fallar, el método importa."
         size="large"
-        backgroundImage="/images/hero-reference.jpg"
+        backgroundImage="/images/hero-construction.png"
       />
 
       <IntentRoutes />
 
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -29,31 +29,22 @@ export default function Home() {
               ["SÓLIDA", "INFRAESTRUCTURA OPERATIVA"],
               ["CALIFICADO", "EQUIPO TÉCNICO"],
             ].map(([value, label]) => (
-              <div key={label} className="border border-border p-8 text-center">
-                <div className="text-3xl font-bold tracking-tighter uppercase">{value}</div>
-                <p className="text-muted-foreground uppercase tracking-widest text-[10px] font-bold mt-2">{label}</p>
+              <div key={label} className="p-8 text-center flex flex-col items-center">
+                <div className="text-4xl md:text-5xl font-black tracking-tighter text-white uppercase mb-2">
+                  {value}
+                </div>
+                <div className="text-[10px] md:text-[11px] font-black tracking-[0.4em] text-white/50 uppercase leading-tight text-center max-w-[200px]">
+                  {label}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-background border-t border-border">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-heading font-bold text-3xl sm:text-5xl text-foreground mb-6 uppercase tracking-tighter">
-              Proyectos que prueban ejecución.
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Cada proyecto muestra el reto, la solución y el alcance real.
-            </p>
-          </motion.div>
+      <section className="py-0 bg-black">
+        <div className="max-w-6xl mx-auto bg-[#4a4a4a] pb-24">
+
 
           <ProjectsGrid
             projects={featuredProjects}

@@ -7,26 +7,35 @@ interface ProjectFiltersProps {
 }
 
 export function ProjectFilters({ selectedCategory, onCategoryChange }: ProjectFiltersProps) {
+  const getCategoryImage = (val: string | null) => {
+    switch(val) {
+      case null: return "/images/btn-todos.png";
+      case "obra-civil": return "/images/btn-obra.png";
+      case "hidraulica": return "/images/btn-hidraulica.png";
+      case "industrial": return "/images/btn-galeras.png";
+      case "infraestructura": return "/images/btn-electrica.png";
+      default: return "";
+    }
+  }
+
   return (
-    <div className="flex flex-wrap gap-2" data-testid="project-filters">
-      <Button
-        variant={selectedCategory === null ? "default" : "outline"}
-        size="sm"
+    <div className="flex flex-wrap justify-center gap-2" data-testid="project-filters">
+      <button
         onClick={() => onCategoryChange(null)}
+        className={`transition-all duration-300 hover:scale-105 ${selectedCategory === null ? 'opacity-100 scale-105 drop-shadow-md' : 'opacity-100 hover:opacity-100 scale-95'}`}
         data-testid="filter-all"
       >
-        Todos
-      </Button>
+        <img src={getCategoryImage(null)} alt="Todos" className="h-[24px] md:h-[28px] object-contain" />
+      </button>
       {projectCategories.map((category) => (
-        <Button
+        <button
           key={category.value}
-          variant={selectedCategory === category.value ? "default" : "outline"}
-          size="sm"
           onClick={() => onCategoryChange(category.value)}
+          className={`transition-all duration-300 hover:scale-105 ${selectedCategory === category.value ? 'opacity-100 scale-105 drop-shadow-md' : 'opacity-100 hover:opacity-100 scale-95'}`}
           data-testid={`filter-${category.value}`}
         >
-          {category.label}
-        </Button>
+          <img src={getCategoryImage(category.value)} alt={category.label} className="h-[24px] md:h-[28px] object-contain" />
+        </button>
       ))}
     </div>
   );

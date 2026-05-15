@@ -1,9 +1,7 @@
 import { Link } from "wouter";
-import { Building2, Factory, Landmark, CheckSquare } from "lucide-react";
+import { Users, Route, ClipboardCheck, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-
-const routeIcons = [Building2, Factory, Landmark];
 
 const routes = [
   {
@@ -30,113 +28,126 @@ const methodPilars = [
   {
     title: "Control",
     description: "Verificación de lo crítico antes de avanzar",
-    icon: CheckSquare,
+    icon: Users,
   },
   {
     title: "Trazabilidad",
     description: "Verificación de lo crítico antes de avanzar",
-    icon: CheckSquare,
+    icon: Route,
   },
   {
     title: "Orden Operativo",
     description: "Coordinación real en campo.",
-    icon: CheckSquare,
+    icon: ClipboardCheck,
   },
 ];
 
 export function IntentRoutes() {
   return (
-    <section className="relative -mt-20 lg:-mt-24 z-20 pb-16" data-testid="section-intent-routes">
-      <div className="max-w-5xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-center">
-          <div className="w-14 h-4 bg-[#d9d9d9] rounded-t-lg" />
-        </div>
+    <section className="relative mt-8 lg:mt-12 z-20 pb-24" data-testid="section-intent-routes">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        {/* Folder card using the actual asset */}
+        <div className="relative">
+          {/* Asset as top decorative border */}
+          <div 
+            className="relative min-h-[200px]"
+            style={{ 
+              backgroundImage: "url('/images/folder-card-bg.png')",
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat',
+              // Corta el borde derecho y el borde superior derecho para quitar sombras fantasma de la imagen
+              clipPath: 'polygon(0 0, 75% 0, 75% 10px, 99.5% 10px, 99.5% 100%, 0 100%)'
+            }}
+          >
+            <div className="px-8 py-16 md:px-16 md:py-20">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-black/90 uppercase tracking-tighter mb-3">
+                  Explora Proyectos
+                </h2>
+                <p className="text-black/40 text-[11px] uppercase tracking-[0.4em] font-black">
+                  Según el tipo de obra
+                </p>
+              </div>
 
-        <div className="bg-[#3a3a3a] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-          <div className="px-8 py-10 md:px-12 md:py-12">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter mb-1">
-                Explora Proyectos
-              </h2>
-              <p className="text-white/60 text-[10px] uppercase tracking-[0.25em] font-medium">
-                Según el tipo de obra
-              </p>
-            </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                {routes.map((route, index) => {
+                  return (
+                    <motion.div
+                      key={route.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                    >
+                      <Link href={route.href}>
+                        <div 
+                          className="h-full bg-white/30 backdrop-blur-sm border border-white/40 cursor-pointer group transition-all duration-300 relative rounded-sm"
+                          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)' }}
+                        >
+                          <div className="p-8 flex flex-col h-full min-h-[240px]">
+                            <h3 className="font-heading font-black text-xl text-black/90 mb-4 uppercase leading-[1] tracking-tighter">
+                              {route.title}
+                            </h3>
+                            <p className="text-black/50 mb-8 flex-grow text-[13px] leading-snug font-medium">
+                              {route.description}
+                            </p>
+                            <div className="flex items-center text-black/70 font-black text-[10px] tracking-widest uppercase mt-auto group-hover:translate-x-2 transition-transform">
+                              <ArrowRight className="h-4 w-4 mr-2" />
+                              {route.cta}
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-10">
-              {routes.map((route, index) => {
-                const Icon = routeIcons[index];
-                return (
+              <div className="w-full flex justify-center mb-14">
+                <div className="w-24 h-px bg-black/10" />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                {methodPilars.map((pilar, index) => (
                   <motion.div
-                    key={route.title}
+                    key={pilar.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <Link href={route.href}>
-                      <Card className="h-full border-0 bg-[#f2f2f2] cursor-pointer group rounded-sm overflow-hidden">
-                        <CardContent className="p-5 flex flex-col h-full min-h-[170px]">
-                          <div className="mb-4">
-                            <Icon className="h-5 w-5 text-[#f39a2e] opacity-90" />
+                    <Link href="/calidad-seguridad">
+                      <div 
+                        className="bg-white/20 backdrop-blur-sm border border-white/30 group transition-all duration-300 relative rounded-sm"
+                        style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)' }}
+                      >
+                        <div className="p-5 flex items-center gap-5 min-h-[90px]">
+                          <div className="p-3.5 bg-[#FF9B26] shrink-0 group-hover:scale-110 transition-transform">
+                            <pilar.icon className="h-5 w-5 text-white" />
                           </div>
-                          <h3 className="font-heading font-black text-[13px] text-black mb-2 uppercase leading-[1.1] tracking-tighter">
-                            {route.title}
-                          </h3>
-                          <p className="text-[#666] mb-5 flex-grow text-[11px] leading-relaxed">
-                            {route.description}
-                          </p>
-                          <div className="flex items-center text-black font-black text-[9px] tracking-widest uppercase">
-                            <span className="mr-2">→</span>
-                            {route.cta}
+                          <div>
+                            <h4 className="font-heading font-black text-sm text-black/80 uppercase tracking-tighter mb-1">
+                              {pilar.title}
+                            </h4>
+                            <p className="text-black/50 text-[11px] leading-tight font-medium">
+                              {pilar.description}
+                            </p>
                           </div>
-                        </CardContent>
-                      </Card>
+                        </div>
+                      </div>
                     </Link>
                   </motion.div>
-                );
-              })}
-            </div>
+                ))}
+              </div>
 
-            <div className="w-48 h-px bg-white/15 mb-8 mx-auto" />
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-8">
-              {methodPilars.map((pilar, index) => (
-                <motion.div
-                  key={pilar.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Link href="/calidad-seguridad">
-                    <Card className="border-0 bg-white/8 rounded-sm overflow-hidden hover:bg-white/12 transition-colors cursor-pointer group">
-                      <CardContent className="p-5 flex items-start gap-3">
-                        <div className="mt-0.5 shrink-0">
-                          <pilar.icon className="h-5 w-5 text-[#f39a2e] group-hover:scale-110 transition-transform" />
-                        </div>
-                        <div>
-                          <h4 className="font-heading font-black text-[12px] text-white uppercase tracking-tighter mb-1">
-                            {pilar.title}
-                          </h4>
-                          <p className="text-white/55 text-[10px] leading-relaxed font-medium">
-                            {pilar.description}
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="text-center">
-              <Link href="/servicios">
-                <span className="text-white/40 hover:text-white transition-colors text-[9px] font-black uppercase tracking-[0.2em] cursor-pointer inline-flex items-center">
-                  <span className="mr-2">→</span>
-                  Conoce nuestros sistemas de calidad
-                </span>
-              </Link>
+              <div className="text-center">
+                <Link href="/calidad-seguridad">
+                  <span className="text-black/60 hover:text-black transition-colors text-[10px] font-black uppercase tracking-[0.3em] cursor-pointer inline-flex items-center group">
+                    <ArrowRight className="h-4 w-4 mr-3 group-hover:translate-x-1 transition-transform" />
+                    Conoce nuestros sistemas de calidad
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

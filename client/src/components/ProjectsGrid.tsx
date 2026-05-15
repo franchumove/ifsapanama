@@ -25,27 +25,26 @@ export function ProjectsGrid({
   const displayProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <section className="py-24 lg:py-32 bg-background" data-testid="section-projects-grid">
+    <section className="py-24 lg:py-32" data-testid="section-projects-grid">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: easing }}
-          className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 sm:mb-16"
+          className="flex flex-col items-center text-center gap-6 mb-12 sm:mb-16 pt-16 px-6 lg:px-8"
         >
-          <div>
-            <div className="divider-gold mb-6 mx-0" style={{ marginLeft: 0 }} />
-            <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-foreground mb-4 tracking-tighter uppercase">
+          <div className="max-w-3xl mx-auto flex flex-col items-center">
+            <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-4xl text-white mb-4 tracking-tighter uppercase">
               {title}
             </h2>
-            <p className="text-muted-foreground max-w-xl text-base sm:text-lg leading-relaxed">
+            <p className="text-white/60 max-w-xl text-base sm:text-lg leading-relaxed">
               {subtitle}
             </p>
           </div>
           {showViewAll && (
             <Link href="/proyectos" data-testid="link-view-all-projects">
-              <Button variant="outline" size="lg" className="gap-2 font-semibold transition-all duration-500 hover:border-primary/30 w-full sm:w-auto" data-testid="button-view-all-projects">
+              <Button variant="outline" size="sm" className="gap-2 font-black uppercase tracking-[0.2em] text-[10px] bg-transparent border-white/30 text-white hover:bg-white hover:text-black rounded-none px-6 py-4 mt-2 transition-all duration-300" data-testid="button-view-all-projects">
                 Ver todos los proyectos
                 <ArrowRight className="h-4 w-4" />
               </Button>
