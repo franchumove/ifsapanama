@@ -72,10 +72,10 @@ export default function Servicios() {
               </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
               {services.map((service, index) => {
-                const isPngIcon = service.icon === 'engineering' || service.icon === 'civil';
                 const IconComponent = (iconMap as any)[service.icon] || LucideIcons.Building2;
+                const isPngIcon = !iconMap[service.icon];
                 
                 return (
                   <motion.div
@@ -88,26 +88,26 @@ export default function Servicios() {
                   >
                     {/* Header Card */}
                     <div 
-                      className="h-28 flex items-center px-8 relative overflow-hidden"
+                      className="h-20 flex items-center px-6 relative overflow-hidden"
                       style={{ 
                         backgroundImage: "url('/images/service-header-bg.png')",
                         backgroundSize: '100% 100%',
                         backgroundRepeat: 'no-repeat'
                       }}
                     >
-                      <div className="flex items-center gap-6 z-10 w-full">
-                        <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
+                      <div className="flex items-center gap-4 z-10 w-full">
+                        <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
                           {isPngIcon ? (
                             <img 
                               src={`/images/icon-${service.icon}.png`} 
                               alt={service.title}
-                              className="w-14 h-14 object-contain brightness-0" 
+                              className="w-10 h-10 object-contain" 
                             />
                           ) : (
-                            <IconComponent className="h-10 w-10 text-black" />
+                            <IconComponent className="h-8 w-8 text-black" />
                           )}
                         </div>
-                        <h3 className="font-heading font-black text-xl text-black leading-[1.1] uppercase tracking-tighter">
+                        <h3 className="font-heading font-black text-lg text-black leading-tight uppercase tracking-tighter">
                           {service.title}
                         </h3>
                       </div>
@@ -115,31 +115,31 @@ export default function Servicios() {
 
                     {/* Body Card (Folder Shape) */}
                     <div 
-                      className="flex-grow pt-10 pb-16 px-10 -mt-2 min-h-[450px]"
+                      className="flex-grow pt-12 pb-16 px-10 -mt-1 min-h-[480px]"
                       style={{ 
                         backgroundImage: "url('/images/service-card-shape.png')",
                         backgroundSize: '100% 100%',
                         backgroundRepeat: 'no-repeat'
                       }}
                     >
-                      <div className="space-y-10">
+                      <div className="space-y-12">
                         <div>
                           <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.2em] block mb-3">Resuelve</span>
-                          <p className="text-black/60 leading-relaxed text-[15px] font-medium">
+                          <p className="text-black/70 leading-relaxed text-[15px] font-medium">
                             {service.resuelve}
                           </p>
                         </div>
                         
                         <div>
                           <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.2em] block mb-3">Cómo se ejecuta</span>
-                          <p className="text-black/60 leading-relaxed text-[15px] font-medium">
+                          <p className="text-black/70 leading-relaxed text-[15px] font-medium">
                             {service.como}
                           </p>
                         </div>
                         
                         <div>
                           <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.2em] block mb-3">Aplica cuando</span>
-                          <p className="text-black/60 leading-relaxed text-[15px] font-medium">
+                          <p className="text-black/70 leading-relaxed text-[15px] font-medium">
                             {service.aplica}
                           </p>
                         </div>

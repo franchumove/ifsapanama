@@ -22,7 +22,7 @@ export const services: Service[] = [
   {
     id: "infraestructura-sanitaria",
     title: "Infraestructura Sanitaria e Hidráulica",
-    icon: "Droplets",
+    icon: "sanitary",
     description: "Gestión, protección y conducción de recursos hídricos en obras de alta exigencia técnica.",
     resuelve: "Gestión, protección y conducción de recursos hídricos en obras de alta exigencia técnica.",
     como: "Instalación de tuberías HDPE / PVC, sistemas colectores, enrocados de protección, rellenos y compactaciones específicas.",
@@ -31,7 +31,7 @@ export const services: Service[] = [
   {
     id: "obras-viales",
     title: "Obras Viales y Pavimentos",
-    icon: "Milestone",
+    icon: "vials",
     description: "Construcción y rehabilitación de infraestructura vial segura y duradera.",
     resuelve: "Construcción y rehabilitación de infraestructura vial segura y duradera.",
     como: "Desarrollo de pavimentos, andenes, bordillos, accesos viales y control de materiales.",
@@ -40,7 +40,7 @@ export const services: Service[] = [
   {
     id: "estructuras-cimentaciones",
     title: "Estructuras y Cimentaciones",
-    icon: "Construction",
+    icon: "structures",
     description: "Estabilidad estructural y cerramiento seguro de predios e infraestructuras.",
     resuelve: "Estabilidad estructural y cerramiento seguro de predios e infraestructuras.",
     como: "Fundaciones especiales, estructuras de concreto reforzado, muros de contención y cercas perimetrales.",
@@ -49,7 +49,7 @@ export const services: Service[] = [
   {
     id: "mantenimientos-locativos",
     title: "Mantenimientos Locativos",
-    icon: "Settings2",
+    icon: "maintenance",
     description: "Preservación del valor, operatividad y seguridad de infraestructuras existentes.",
     resuelve: "Preservación del valor, operatividad y seguridad de infraestructuras existentes.",
     como: "Mantenimiento preventivo, correctivo y atención técnica especializada.",
