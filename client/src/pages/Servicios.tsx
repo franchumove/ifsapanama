@@ -72,8 +72,9 @@ export default function Servicios() {
               </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
               {services.map((service, index) => {
+                const isPngIcon = service.icon === 'engineering' || service.icon === 'civil';
                 const IconComponent = (iconMap as any)[service.icon] || LucideIcons.Building2;
                 
                 return (
@@ -83,40 +84,67 @@ export default function Servicios() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex flex-col"
                   >
-                    <Card className="h-full border border-white/20 bg-black/40 backdrop-blur-sm rounded-[2rem] overflow-hidden" data-testid={`card-service-detail-${service.id}`}>
-                      <CardContent className="p-8">
-                        <div className="w-16 h-16 bg-white/5 flex items-center justify-center mb-8 border border-white/10">
-                          <IconComponent className="h-8 w-8 text-white" />
+                    {/* Header Card */}
+                    <div 
+                      className="h-28 flex items-center px-8 relative overflow-hidden"
+                      style={{ 
+                        backgroundImage: "url('/images/service-header-bg.png')",
+                        backgroundSize: '100% 100%',
+                        backgroundRepeat: 'no-repeat'
+                      }}
+                    >
+                      <div className="flex items-center gap-6 z-10 w-full">
+                        <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
+                          {isPngIcon ? (
+                            <img 
+                              src={`/images/icon-${service.icon}.png`} 
+                              alt={service.title}
+                              className="w-14 h-14 object-contain brightness-0" 
+                            />
+                          ) : (
+                            <IconComponent className="h-10 w-10 text-black" />
+                          )}
                         </div>
-                        <h3 className="font-heading font-bold text-xl text-white mb-6 uppercase tracking-tighter min-h-[3rem] flex items-center">
+                        <h3 className="font-heading font-black text-xl text-black leading-[1.1] uppercase tracking-tighter">
                           {service.title}
                         </h3>
-                        
-                        <div className="space-y-8">
-                          <div>
-                            <span className="text-[10px] font-bold text-[#FF9B26] uppercase tracking-widest block mb-2 opacity-90">Resuelve</span>
-                            <p className="text-white/70 leading-relaxed text-sm font-light">
-                              {service.resuelve}
-                            </p>
-                          </div>
-                          
-                          <div>
-                            <span className="text-[10px] font-bold text-[#FF9B26] uppercase tracking-widest block mb-2 opacity-90">Cómo se ejecuta</span>
-                            <p className="text-white/70 leading-relaxed text-sm font-light">
-                              {service.como}
-                            </p>
-                          </div>
-                          
-                          <div>
-                            <span className="text-[10px] font-bold text-[#FF9B26] uppercase tracking-widest block mb-2 opacity-90">Aplica cuando</span>
-                            <p className="text-white/70 leading-relaxed text-sm font-light">
-                              {service.aplica}
-                            </p>
-                          </div>
+                      </div>
+                    </div>
+
+                    {/* Body Card (Folder Shape) */}
+                    <div 
+                      className="flex-grow pt-10 pb-16 px-10 -mt-2 min-h-[450px]"
+                      style={{ 
+                        backgroundImage: "url('/images/service-card-shape.png')",
+                        backgroundSize: '100% 100%',
+                        backgroundRepeat: 'no-repeat'
+                      }}
+                    >
+                      <div className="space-y-10">
+                        <div>
+                          <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.2em] block mb-3">Resuelve</span>
+                          <p className="text-black/60 leading-relaxed text-[15px] font-medium">
+                            {service.resuelve}
+                          </p>
                         </div>
-                      </CardContent>
-                    </Card>
+                        
+                        <div>
+                          <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.2em] block mb-3">Cómo se ejecuta</span>
+                          <p className="text-black/60 leading-relaxed text-[15px] font-medium">
+                            {service.como}
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.2em] block mb-3">Aplica cuando</span>
+                          <p className="text-black/60 leading-relaxed text-[15px] font-medium">
+                            {service.aplica}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </motion.div>
                 );
               })}

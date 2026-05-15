@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: "disenos-ingenieria",
     title: "Diseños de Ingeniería",
-    icon: "PencilRuler",
+    icon: "engineering",
     description: "Definición técnica y normativa del proyecto para evitar errores de diseño, sobrecostos y retrabajos.",
     resuelve: "Definición técnica y normativa del proyecto para evitar errores de diseño, sobrecostos y retrabajos.",
     como: "Cálculos estructurales y técnicos, consultoría especializada y diseño alineado a normativa y condiciones reales de campo.",
@@ -13,7 +13,7 @@ export const services: Service[] = [
   {
     id: "obra-civil-general",
     title: "Obra Civil General",
-    icon: "Building2",
+    icon: "civil",
     description: "Ejecución integral de obras civiles con control técnico, coordinación de frentes y cumplimiento de especificaciones.",
     resuelve: "Ejecución integral de obras civiles con control técnico, coordinación de frentes y cumplimiento de especificaciones.",
     como: "Movimiento de tierras, construcción civil, redes, estructuras metálicas y coordinación operativa en campo.",
