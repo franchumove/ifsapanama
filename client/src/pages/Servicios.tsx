@@ -102,9 +102,19 @@ export default function Servicios() {
                             <IconComponent className="h-10 w-10 text-white" />
                           )}
                         </div>
-                        <h3 className="font-heading font-black text-xl text-white leading-[1.1] uppercase tracking-tighter">
-                          {service.title}
-                        </h3>
+                        <div className="flex-grow">
+                          {index < 5 ? (
+                            <img 
+                              src={`/images/title-service-${index + 1}.png`} 
+                              alt={service.title}
+                              className="h-12 w-auto object-contain" 
+                            />
+                          ) : (
+                            <h3 className="font-heading font-black text-xl text-white leading-[1.1] uppercase tracking-tighter">
+                              {service.title}
+                            </h3>
+                          )}
+                        </div>
                       </div>
                     </div>
 
