@@ -88,21 +88,21 @@ export default function Servicios() {
                   >
                     {/* Header Card */}
                     <div 
-                      className="h-24 flex items-center px-8 relative bg-[#4a4a4a] border-t border-x border-white/20 rounded-t-[1.5rem] shadow-lg overflow-hidden"
+                      className="h-[100px] flex items-center px-8 relative bg-[#4a4a4a] border-t border-x border-white/20 rounded-t-[1.5rem] shadow-lg overflow-hidden"
                     >
-                      <div className="flex items-center gap-5 z-10 w-full">
-                        <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                      <div className="flex items-center gap-6 z-10 w-full">
+                        <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
                           {isPngIcon ? (
                             <img 
                               src={`/images/icon-${service.icon}.png`} 
                               alt={service.title}
-                              className="w-12 h-12 object-contain" 
+                              className="w-14 h-14 object-contain" 
                             />
                           ) : (
-                            <IconComponent className="h-10 w-10 text-black" />
+                            <IconComponent className="h-10 w-10 text-white" />
                           )}
                         </div>
-                        <h3 className="font-heading font-black text-lg text-white leading-tight uppercase tracking-tighter">
+                        <h3 className="font-heading font-black text-xl text-white leading-[1.1] uppercase tracking-tighter">
                           {service.title}
                         </h3>
                       </div>
@@ -121,21 +121,21 @@ export default function Servicios() {
                       <div className="space-y-10 relative z-10">
                         <div>
                           <span className="text-[10px] font-black text-black uppercase tracking-[0.1em] block mb-2">RESUELVE</span>
-                          <p className="text-black/70 leading-relaxed text-[15px] font-medium">
+                          <p className="text-black/80 leading-relaxed text-[15px] font-medium">
                             {service.resuelve}
                           </p>
                         </div>
                         
                         <div>
                           <span className="text-[10px] font-black text-black uppercase tracking-[0.1em] block mb-2">CÓMO SE EJECUTA</span>
-                          <p className="text-black/70 leading-relaxed text-[15px] font-medium">
+                          <p className="text-black/80 leading-relaxed text-[15px] font-medium">
                             {service.como}
                           </p>
                         </div>
                         
                         <div>
                           <span className="text-[10px] font-black text-black uppercase tracking-[0.1em] block mb-2">APLICA CUANDO</span>
-                          <p className="text-black/70 leading-relaxed text-[15px] font-medium">
+                          <p className="text-black/80 leading-relaxed text-[15px] font-medium">
                             {service.aplica}
                           </p>
                         </div>
