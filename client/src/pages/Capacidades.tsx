@@ -1,128 +1,135 @@
 import { Layout } from "@/components/Layout";
 import { CTASection } from "@/components/CTASection";
 import { capabilities } from "@/data/services";
+import { Check } from "lucide-react";
+
+const PAGE_BG = "#2b2b2b";
+const PHOTO = "/images/hero-construction.png";
+
+function FieldPhoto({ alt }: { alt: string }) {
+  return (
+    <img
+      src={PHOTO}
+      alt={alt}
+      className="w-full rounded-[15px] object-cover aspect-[4/3] shadow-md"
+    />
+  );
+}
+
+function ChecksListLeft({ items }: { items: string[] }) {
+  return (
+    <ul className="flex flex-col gap-4 sm:gap-5 list-none m-0 p-0">
+      {items.map((item, i) => (
+        <li key={i} className="flex gap-3 items-start">
+          <Check
+            className="w-5 h-5 sm:w-[22px] sm:h-[22px] shrink-0 text-white stroke-[2.5]"
+            aria-hidden
+          />
+          <span className="font-heading font-bold text-[11px] sm:text-xs uppercase tracking-[0.14em] text-white leading-snug pt-0.5">
+            {item}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function ChecksListRight({ items }: { items: string[] }) {
+  return (
+    <ul className="flex flex-col gap-4 sm:gap-5 list-none m-0 p-0 items-end">
+      {items.map((item, i) => (
+        <li key={i} className="flex gap-3 items-start justify-end max-w-full">
+          <span className="font-heading font-bold text-[11px] sm:text-xs uppercase tracking-[0.14em] text-white leading-snug pt-0.5 text-right">
+            {item}
+          </span>
+          <Check
+            className="w-5 h-5 sm:w-[22px] sm:h-[22px] shrink-0 text-white stroke-[2.5]"
+            aria-hidden
+          />
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function Capacidades() {
+  const cap = capabilities;
+  const machinery = cap[3];
+
   return (
     <Layout>
-      <div className="bg-black">
-        {/* Full-bleed capacidades: sin hero, espacio bajo header fijo */}
-        <section className="min-h-screen w-full pt-24 sm:pt-28 lg:pt-32">
+      <div className="min-h-screen" style={{ backgroundColor: PAGE_BG }}>
+        <section className="w-full pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-10 xl:px-16">
+          {/* Panel central: gradiente y borde sutil — sin PNG de carpeta ni línea azul */}
           <div
-            className="w-full max-w-[1920px] mx-auto min-h-[calc(100dvh-6rem)] bg-no-repeat px-4 sm:px-8 lg:px-14 xl:px-20 2xl:px-24 py-10 sm:py-14 lg:py-16 xl:py-20"
-            style={{
-              backgroundImage: "url('/images/capabilities-container-bg.png')",
-              backgroundSize: "100% 100%",
-            }}
+            className="max-w-6xl mx-auto rounded-t-3xl sm:rounded-[1.25rem] border border-white/15 shadow-xl px-5 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14 bg-gradient-to-b from-[#3d3d3d] via-[#353535] to-[#2e2e2e]"
           >
-            {/* Sección 1 — imagen izquierda, lista derecha */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center mb-16 sm:mb-20 lg:mb-28">
-              <img
-                src="/images/capabilities-title-1.png"
-                alt="Cómo respondemos en campo"
-                className="w-full rounded-2xl object-contain"
-              />
-              <div className="flex gap-3 sm:gap-4 items-start justify-center lg:justify-start">
-                <img
-                  src="/images/capabilities-checks-1.png"
-                  alt=""
-                  className="w-7 sm:w-8 shrink-0 object-contain mt-0.5"
-                />
-                <ul className="flex flex-col gap-3 sm:gap-4 pt-0.5 list-none m-0 p-0">
-                  {capabilities[0].items.map((item, i) => (
-                    <li
-                      key={i}
-                      className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] sm:tracking-widest text-white/90 leading-snug"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            {/* 1 — foto izquierda, texto derecha */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-11 xl:gap-14 items-center mb-14 sm:mb-16 lg:mb-20">
+              <FieldPhoto alt="Equipo en obra — cómo respondemos en campo" />
+              <div>
+                <h2 className="font-heading font-black text-lg sm:text-xl uppercase tracking-tight text-white mb-6 sm:mb-8 leading-tight">
+                  {cap[0].title}
+                </h2>
+                <ChecksListLeft items={cap[0].items} />
               </div>
             </div>
 
-            {/* Sección 2 — lista izquierda (alineada a la derecha), imagen derecha */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center mb-16 sm:mb-20 lg:mb-28">
-              <div className="flex gap-3 sm:gap-4 items-start justify-center lg:justify-end order-2 lg:order-1">
-                <ul className="flex flex-col gap-3 sm:gap-4 pt-0.5 list-none m-0 p-0 text-right">
-                  {capabilities[1].items.map((item, i) => (
-                    <li
-                      key={i}
-                      className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] sm:tracking-widest text-white/90 leading-snug"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <img
-                  src="/images/capabilities-checks-2.png"
-                  alt=""
-                  className="w-7 sm:w-8 shrink-0 object-contain mt-0.5"
-                />
+            {/* 2 — texto izquierda, foto derecha */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-11 xl:gap-14 items-center mb-14 sm:mb-16 lg:mb-20">
+              <div className="order-2 lg:order-1">
+                <h2 className="font-heading font-black text-lg sm:text-xl uppercase tracking-tight text-white mb-6 sm:mb-8 leading-tight text-right">
+                  {cap[1].title}
+                </h2>
+                <ChecksListRight items={cap[1].items} />
               </div>
-              <img
-                src="/images/capabilities-title-2.png"
-                alt="Capacidad técnica y supervisión"
-                className="w-full rounded-2xl object-contain order-1 lg:order-2"
-              />
-            </div>
-
-            {/* Sección 3 — imagen izquierda, lista derecha */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center mb-16 sm:mb-20 lg:mb-28">
-              <img
-                src="/images/capabilities-title-3.png"
-                alt="Topografía y precisión"
-                className="w-full rounded-2xl object-contain"
-              />
-              <div className="flex gap-3 sm:gap-4 items-start justify-center lg:justify-start">
-                <img
-                  src="/images/capabilities-checks-3.png"
-                  alt=""
-                  className="w-7 sm:w-8 shrink-0 object-contain mt-0.5"
-                />
-                <ul className="flex flex-col gap-3 sm:gap-4 pt-0.5 list-none m-0 p-0">
-                  {capabilities[2].items.map((item, i) => (
-                    <li
-                      key={i}
-                      className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] sm:tracking-widest text-white/90 leading-snug"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <div className="order-1 lg:order-2">
+                <FieldPhoto alt="Supervisión técnica en campo" />
               </div>
             </div>
 
-            {/* Sección 4 — tarjeta clara ancha */}
-            <div className="rounded-2xl bg-neutral-300/95 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-12 items-center shadow-lg">
-              <div className="relative shrink-0 w-full max-w-[200px] md:max-w-[220px] lg:w-[26%] lg:max-w-none aspect-square md:aspect-auto md:h-44 lg:h-52">
-                <img
-                  src="/images/capabilities-maquinaria-bg.png"
-                  alt=""
-                  className="w-full h-full object-contain"
-                />
-                <img
-                  src="/images/icon-maquinaria.png"
-                  alt="Maquinaria y apoyo operativo"
-                  className="absolute inset-0 m-auto w-16 sm:w-20 object-contain"
-                />
+            {/* 3 — foto izquierda, texto derecha */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-11 xl:gap-14 items-center mb-14 sm:mb-16 lg:mb-20">
+              <FieldPhoto alt="Trabajo de precisión y topografía" />
+              <div>
+                <h2 className="font-heading font-black text-lg sm:text-xl uppercase tracking-tight text-white mb-6 sm:mb-8 leading-tight">
+                  {cap[2].title}
+                </h2>
+                <ChecksListLeft items={cap[2].items} />
               </div>
-              <div className="flex flex-col gap-4 flex-1 min-w-0 w-full">
-                <img
-                  src="/images/capabilities-title-4.png"
-                  alt="Maquinaria y apoyo operativo"
-                  className="w-full max-w-2xl object-contain object-left"
-                />
-                <img
-                  src="/images/capabilities-desc-4.png"
-                  alt=""
-                  className="w-full max-w-3xl object-contain object-left"
-                />
-                <img
-                  src="/images/capabilities-checks-4.png"
-                  alt="Coordinación de recursos, transporte de materiales y equipos"
-                  className="w-full max-w-xl object-contain object-left"
-                />
+            </div>
+
+            {/* 4 — tarjeta clara */}
+            <div className="rounded-2xl bg-[#d4d4d4] p-6 sm:p-8 md:p-10 flex flex-col md:flex-row gap-8 md:gap-10 items-stretch md:items-center">
+              <div className="flex shrink-0 justify-center md:justify-start">
+                <div className="rounded-xl bg-zinc-800 w-36 h-36 sm:w-40 sm:h-40 flex items-center justify-center p-6">
+                  <img
+                    src="/images/icon-maquinaria.png"
+                    alt=""
+                    className="w-full max-w-[5.5rem] object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-4 min-w-0 text-zinc-900">
+                <h2 className="font-heading font-black text-lg sm:text-xl uppercase tracking-tight leading-tight text-balance">
+                  {machinery.title}
+                </h2>
+                <p className="text-sm sm:text-base leading-relaxed text-zinc-800">
+                  {machinery.description}
+                </p>
+                <ul className="flex flex-col gap-3 list-none m-0 p-0 mt-1">
+                  {machinery.items.map((item, i) => (
+                    <li key={i} className="flex gap-3 items-center">
+                      <span
+                        className="w-2.5 h-2.5 rounded-full shrink-0 bg-orange-500"
+                        aria-hidden
+                      />
+                      <span className="font-heading font-bold text-xs sm:text-sm uppercase tracking-[0.12em] text-zinc-900">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
