@@ -28,17 +28,17 @@ const methodPilars = [
   {
     title: "Control",
     description: "Verificación de lo crítico antes de avanzar",
-    icon: Users,
+    icon: "/images/icon-control.png",
   },
   {
     title: "Trazabilidad",
     description: "Verificación de lo crítico antes de avanzar",
-    icon: Route,
+    icon: "/images/icon-trazabilidad.png",
   },
   {
     title: "Orden Operativo",
     description: "Coordinación real en campo.",
-    icon: ClipboardCheck,
+    icon: "/images/icon-orden.png",
   },
 ];
 
@@ -122,8 +122,12 @@ export function IntentRoutes() {
                         style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)' }}
                       >
                         <div className="p-5 flex items-center gap-5 min-h-[90px]">
-                          <div className="p-3.5 bg-[#FF9B26] shrink-0 group-hover:scale-110 transition-transform">
-                            <pilar.icon className="h-5 w-5 text-white" />
+                          <div className="w-14 h-14 bg-black/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform rounded-sm">
+                            <img 
+                              src={pilar.icon} 
+                              alt={pilar.title} 
+                              className="w-7 h-7 object-contain"
+                            />
                           </div>
                           <div>
                             <h4 className="font-heading font-black text-sm text-black/80 uppercase tracking-tighter mb-1">
