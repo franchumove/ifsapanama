@@ -42,17 +42,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-black">
+      <section className="py-0 bg-black">
         <div 
-          className="max-w-6xl mx-auto relative min-h-[400px] rounded-[3rem] overflow-hidden"
+          className="max-w-6xl mx-auto relative min-h-[400px] rounded-b-[4rem] overflow-hidden bg-[#222222]"
           style={{ 
             backgroundImage: "url('/images/folder-card-bg.png')",
             backgroundSize: '100% 100%',
             backgroundRepeat: 'no-repeat',
-            clipPath: 'polygon(0 0, 75% 0, 76% 15px, 99.5% 15px, 99.5% 100%, 0 100%)'
           }}
         >
-          <div className="pt-24 pb-16">
+          <div className="py-20">
             <ProjectsGrid
               projects={featuredProjects}
               limit={2}
