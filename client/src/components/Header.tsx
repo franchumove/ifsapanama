@@ -8,8 +8,6 @@ const navLinks = [
   { href: "/proyectos", label: "Proyectos" },
   { href: "/servicios", label: "Servicios" },
   { href: "/capacidades", label: "Capacidades" },
-  { href: "/calidad-seguridad", label: "Calidad & Seguridad" },
-  { href: "/nosotros", label: "Nosotros" },
   { href: "/contacto", label: "Contacto" },
 ];
 

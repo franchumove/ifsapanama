@@ -114,7 +114,7 @@ export function IntentRoutes() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <Link href="/calidad-seguridad">
+                    <Link href="/capacidades">
                       <div 
                         className="bg-white/20 backdrop-blur-sm border border-white/50 group transition-all duration-300 relative rounded-[2rem] overflow-hidden"
                       >
@@ -142,10 +142,10 @@ export function IntentRoutes() {
               </div>
 
               <div className="text-center">
-                <Link href="/calidad-seguridad">
+                <Link href="/capacidades">
                   <span className="text-black/60 hover:text-black transition-colors text-[10px] font-black uppercase tracking-[0.3em] cursor-pointer inline-flex items-center group">
                     <ArrowRight className="h-4 w-4 mr-3 group-hover:translate-x-1 transition-transform" />
-                    Conoce nuestros sistemas de calidad
+                    Ver capacidades operativas
                   </span>
                 </Link>
               </div>

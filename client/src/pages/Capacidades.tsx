@@ -4,6 +4,9 @@ import { capabilities } from "@/data/services";
 
 /** Sustituye `client/public/images/capabilities-folder-bg.png` por la carpeta final (sin raya azul). */
 const FOLDER_BG = "/images/capabilities-folder-bg.png";
+/** Icono excavadora (naranja sobre negro) + foto de contexto — coloca los PNG en `client/public/images/`. */
+const MAQUINARIA_ICON = "/images/maquinaria-excavadora.png";
+const MAQUINARIA_FOTO = "/images/maquinaria-foto.png";
 
 export default function Capacidades() {
   const machinery = capabilities[3];
@@ -114,7 +117,7 @@ export default function Capacidades() {
                 </div>
               </div>
 
-              {/* 4 — tarjeta gris, esquina inferior derecha recortada; tipografía real (sin PNG con fondo negro) */}
+              {/* 4 — icono excavadora + foto; lista con el mismo icono repetido en cada ítem */}
               <div
                 className="relative w-full overflow-hidden rounded-2xl bg-[#c4c4c4] shadow-lg border border-black/10"
                 style={{
@@ -122,29 +125,35 @@ export default function Capacidades() {
                     "polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%)",
                 }}
               >
-                <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 md:gap-8 items-stretch sm:items-center p-5 sm:p-6 md:py-6 md:px-7">
-                  <div className="flex justify-center sm:justify-start shrink-0">
-                    <div className="rounded-xl bg-[#4a4a4a] w-[7.25rem] h-[7.25rem] sm:w-32 sm:h-32 flex items-center justify-center p-4 shadow-inner">
+                <div className="flex flex-col lg:flex-row gap-5 sm:gap-6 md:gap-7 items-stretch p-5 sm:p-6 md:py-6 md:px-7">
+                  <div className="flex flex-row flex-wrap justify-center sm:justify-start gap-4 shrink-0">
+                    <div className="rounded-xl bg-black w-[7.25rem] h-[7.25rem] sm:w-[7.75rem] sm:h-[7.75rem] flex items-center justify-center p-3 shadow-inner">
                       <img
-                        src="/images/icon-maquinaria.png"
+                        src={MAQUINARIA_ICON}
                         alt=""
-                        className="max-h-[4.25rem] sm:max-h-[4.75rem] w-auto max-w-full object-contain"
+                        className="max-h-[5rem] sm:max-h-[5.25rem] w-auto max-w-full object-contain"
                       />
                     </div>
+                    <img
+                      src={MAQUINARIA_FOTO}
+                      alt=""
+                      className="rounded-xl object-cover w-[7.25rem] h-[7.25rem] sm:w-[7.75rem] sm:h-[7.75rem] shadow-md border border-black/10"
+                    />
                   </div>
-                  <div className="flex-1 min-w-0 flex flex-col gap-2.5 sm:gap-3 text-left">
+                  <div className="flex-1 min-w-0 flex flex-col gap-2.5 sm:gap-3 text-left justify-center">
                     <h2 className="font-heading font-black text-base sm:text-lg uppercase tracking-tight text-black leading-tight">
                       {machinery.title}
                     </h2>
                     <p className="text-xs sm:text-sm text-zinc-800 leading-relaxed">
                       {machinery.description}
                     </p>
-                    <ul className="flex flex-col gap-2 list-none m-0 p-0 mt-1">
+                    <ul className="flex flex-col gap-2.5 sm:gap-3 list-none m-0 p-0 mt-1">
                       {machinery.items.map((item, i) => (
-                        <li key={i} className="flex gap-2.5 items-start">
-                          <span
-                            className="mt-1.5 w-2 h-2 rounded-full shrink-0 bg-orange-500"
-                            aria-hidden
+                        <li key={i} className="flex gap-3 items-center">
+                          <img
+                            src={MAQUINARIA_ICON}
+                            alt=""
+                            className="h-8 w-8 sm:h-9 sm:w-9 shrink-0 object-contain"
                           />
                           <span className="font-heading font-bold text-[11px] sm:text-xs uppercase tracking-[0.12em] text-zinc-900 leading-snug">
                             {item}

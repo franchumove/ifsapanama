@@ -28,8 +28,14 @@ import { apiRequest } from "@/lib/queryClient";
 import { leadFormSchema, type LeadFormData } from "@shared/schema";
 import { projectTypes, projectStages } from "@/data/services";
 import { WhatsAppLink } from "./WhatsAppButton";
+import { cn } from "@/lib/utils";
 
-export function LeadForm() {
+interface LeadFormProps {
+  /** Clases extra para la tarjeta principal (p. ej. en fondos oscuros). */
+  className?: string;
+}
+
+export function LeadForm({ className }: LeadFormProps = {}) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState<LeadFormData | null>(null);
   const { toast } = useToast();
@@ -95,7 +101,10 @@ export function LeadForm() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <Card className="border-border/50" data-testid="card-form-success">
+        <Card
+          className={cn("border-border/50", className)}
+          data-testid="card-form-success"
+        >
           <CardContent className="p-8 text-center">
             <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 className="h-8 w-8 text-green-600 dark:text-green-400" />
@@ -119,7 +128,10 @@ export function LeadForm() {
   }
 
   return (
-    <Card className="rounded-none border-border" data-testid="card-lead-form">
+    <Card
+      className={cn("rounded-none border-border bg-white", className)}
+      data-testid="card-lead-form"
+    >
       <CardHeader className="border-b border-border mb-6">
         <CardTitle className="font-heading text-xl uppercase tracking-widest">Solicitar visita técnica</CardTitle>
         <p className="text-muted-foreground text-[10px] uppercase tracking-wider">
