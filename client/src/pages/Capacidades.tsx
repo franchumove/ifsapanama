@@ -15,14 +15,14 @@ export default function Capacidades() {
       />
 
       {/* Folder — full-width background, all sections inside */}
-      <section className="bg-black flex justify-center pb-0">
+      <section className="bg-black pb-0">
         <div
-          className="w-full max-w-5xl"
+          className="w-full"
           style={{
             backgroundImage: "url('/images/capabilities-container-bg.png')",
             backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
-            padding: "80px 72px 100px",
+            padding: "80px 80px 120px",
           }}
         >
 
