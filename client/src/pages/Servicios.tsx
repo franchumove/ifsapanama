@@ -84,71 +84,60 @@ export default function Servicios() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex flex-col group"
+                    className="flex flex-col relative h-[650px]"
+                    style={{ 
+                      backgroundImage: "url('/images/service-card-shape.png')",
+                      backgroundSize: '100% 100%',
+                      backgroundRepeat: 'no-repeat'
+                    }}
                   >
-                    {/* Header Card */}
-                    <div 
-                      className="h-[100px] flex items-center px-8 relative bg-[#4a4a4a] border-t border-x border-white/20 rounded-t-[1.5rem] shadow-lg overflow-hidden"
-                    >
-                      <div className="flex items-center gap-6 z-10 w-full">
-                        <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
-                          {isPngIcon ? (
-                            <img 
-                              src={`/images/icon-${service.icon}.png`} 
-                              alt={service.title}
-                              className="w-14 h-14 object-contain" 
-                            />
-                          ) : (
-                            <IconComponent className="h-10 w-10 text-white" />
-                          )}
-                        </div>
-                        <div className="flex-grow">
-                          {index < 5 ? (
+                    {/* Floating Header Box */}
+                    <div className="p-4 pt-4">
+                      <div className="h-[120px] bg-[#4a4a4a] rounded-[1.2rem] flex items-center px-6 border border-white/10">
+                        <div className="flex items-center gap-5 w-full">
+                          <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
+                            {isPngIcon ? (
+                              <img 
+                                src={`/images/icon-${service.icon}.png`} 
+                                alt={service.title}
+                                className="w-14 h-14 object-contain" 
+                              />
+                            ) : (
+                              <IconComponent className="h-10 w-10 text-white" />
+                            )}
+                          </div>
+                          <div className="flex-grow">
                             <img 
                               src={`/images/title-service-${index + 1}.png`} 
                               alt={service.title}
                               className="h-12 w-auto object-contain" 
                             />
-                          ) : (
-                            <h3 className="font-heading font-black text-xl text-white leading-[1.1] uppercase tracking-tighter">
-                              {service.title}
-                            </h3>
-                          )}
+                          </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Body Card (Folder Shape) */}
-                    <div 
-                      className="flex-grow pt-10 pb-16 px-10 relative shadow-2xl"
-                      style={{ 
-                        backgroundImage: "url('/images/service-card-shape.png')",
-                        backgroundSize: '100% 100%',
-                        backgroundRepeat: 'no-repeat',
-                        marginTop: '-1px'
-                      }}
-                    >
-                      <div className="space-y-10 relative z-10">
-                        <div>
-                          <span className="text-[10px] font-black text-black uppercase tracking-[0.1em] block mb-2">RESUELVE</span>
-                          <p className="text-black/80 leading-relaxed text-[15px] font-medium">
-                            {service.resuelve}
-                          </p>
-                        </div>
-                        
-                        <div>
-                          <span className="text-[10px] font-black text-black uppercase tracking-[0.1em] block mb-2">CÓMO SE EJECUTA</span>
-                          <p className="text-black/80 leading-relaxed text-[15px] font-medium">
-                            {service.como}
-                          </p>
-                        </div>
-                        
-                        <div>
-                          <span className="text-[10px] font-black text-black uppercase tracking-[0.1em] block mb-2">APLICA CUANDO</span>
-                          <p className="text-black/80 leading-relaxed text-[15px] font-medium">
-                            {service.aplica}
-                          </p>
-                        </div>
+                    {/* Body Content */}
+                    <div className="px-10 pt-4 pb-16 space-y-10 flex-grow">
+                      <div>
+                        <span className="text-[11px] font-black text-black uppercase tracking-[0.1em] block mb-2">RESUELVE</span>
+                        <p className="text-black/80 leading-relaxed text-[15px] font-medium">
+                          {service.resuelve}
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <span className="text-[11px] font-black text-black uppercase tracking-[0.1em] block mb-2">CÓMO SE EJECUTA</span>
+                        <p className="text-black/80 leading-relaxed text-[15px] font-medium">
+                          {service.como}
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <span className="text-[11px] font-black text-black uppercase tracking-[0.1em] block mb-2">APLICA CUANDO</span>
+                        <p className="text-black/80 leading-relaxed text-[15px] font-medium">
+                          {service.aplica}
+                        </p>
                       </div>
                     </div>
                   </motion.div>
