@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowDownLeft } from "lucide-react";
 
 const quickLinks = [
   { href: "/proyectos", label: "Proyectos" },
@@ -13,78 +13,89 @@ export function Footer() {
   return (
     <footer className="bg-ifsa-black text-white" data-testid="footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex flex-col gap-0 mb-6" data-testid="link-footer-logo">
-              <span className="text-white font-heading font-black text-2xl tracking-tighter leading-none">Ifsa</span>
-              <span className="text-white/60 font-heading font-medium text-xs tracking-[0.2em] uppercase leading-none ml-0.5">Panamá</span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="lg:col-span-4">
+            <Link href="/" className="inline-block mb-10" data-testid="link-footer-logo">
+              <div className="flex flex-col">
+                <span className="text-white font-heading font-black text-5xl tracking-tighter leading-[0.8]">Ifsa</span>
+                <span className="text-white font-heading font-medium text-2xl tracking-[0.1em] uppercase leading-none mt-1">Panamá</span>
+              </div>
             </Link>
-            <p className="text-white/70 text-sm max-w-md mb-6">
+            <p className="text-white/60 text-sm font-medium leading-relaxed max-w-xs mb-10">
               Construcción e infraestructura con control real. Obra civil, arquitectura, 
               topografía y maquinaria para proyectos públicos y privados en Panamá.
             </p>
-            <div className="flex flex-col gap-3">
-              <a
-                href="tel:+50765519061"
-                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
-                data-testid="link-phone"
-              >
-                <Phone className="h-4 w-4 text-white/40" />
-                (507) 6551-9061
+            <div className="space-y-5">
+              <a href="tel:+50765519061" className="flex items-center gap-4 text-white hover:text-[#FF9B26] transition-colors group">
+                <Phone className="h-5 w-5 text-white" />
+                <span className="text-base font-black">(507) 6551-9061</span>
               </a>
-              <a
-                href="tel:+5073972914"
-                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
-                data-testid="link-phone-2"
-              >
-                <Phone className="h-4 w-4 text-white/40" />
-                (507) 397-2914
+              <a href="tel:+5073972914" className="flex items-center gap-4 text-white hover:text-[#FF9B26] transition-colors group">
+                <Phone className="h-5 w-5 text-white" />
+                <span className="text-base font-black">(507) 397-2914</span>
               </a>
-              <a
-                href="mailto:fillette@ifsapanama.com"
-                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
-                data-testid="link-email"
-              >
-                <Mail className="h-4 w-4 text-white/40" />
-                fillette@ifsapanama.com
+              <a href="mailto:fillette@ifsapanama.com" className="flex items-center gap-4 text-white hover:text-[#FF9B26] transition-colors group">
+                <Mail className="h-5 w-5 text-white" />
+                <span className="text-base font-black uppercase tracking-tight">fillette@ifsapanama.com</span>
               </a>
-              <div className="flex items-start gap-3 text-white/70 text-sm" data-testid="text-address">
-                <MapPin className="h-4 w-4 text-white/40 mt-0.5" />
-                <span>Panamá Pacifico - Veracruz</span>
+              <div className="flex items-start gap-4 text-white group">
+                <MapPin className="h-5 w-5 text-white mt-1" />
+                <span className="text-base font-black uppercase tracking-tight">Panamá Pacifico - Veracruz</span>
               </div>
             </div>
           </div>
 
-          <div data-testid="footer-quick-links">
-            <h4 className="font-heading font-bold uppercase tracking-widest text-[10px] text-white/40 mb-6">
-              Enlaces Rápidos
-            </h4>
-            <nav className="flex flex-col gap-3">
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-white/70 hover:text-white transition-colors text-sm font-medium"
-                  data-testid={`link-footer-${link.href.replace("/", "")}`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+          <div className="lg:col-span-4">
+            <div 
+              className="bg-[#333333] rounded-[2.5rem] border border-white/10 p-10 min-h-[400px] relative overflow-hidden"
+              style={{ clipPath: 'polygon(0 0, 75% 0, 76% 10px, 100% 10px, 100% 100%, 0 100%)' }}
+            >
+              <div className="relative z-10">
+                <h4 className="font-heading font-black uppercase tracking-tight text-xl text-white/40 mb-8 flex items-center gap-3">
+                  Enlaces Rápidos
+                  <ArrowDownLeft className="h-6 w-6" />
+                </h4>
+                <nav className="flex flex-col gap-5">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="text-white hover:text-[#FF9B26] transition-colors text-sm font-black uppercase tracking-widest"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+              </div>
+            </div>
           </div>
 
-          <div data-testid="footer-services-list">
-            <h4 className="font-heading font-bold uppercase tracking-widest text-[10px] text-white/40 mb-6">
-              Servicios Core
-            </h4>
-            <nav className="flex flex-col gap-3">
-              <span className="text-white/70 text-sm font-medium">Diseños de Ingeniería</span>
-              <span className="text-white/70 text-sm font-medium">Obra Civil General</span>
-              <span className="text-white/70 text-sm font-medium">Infraestructura Sanitaria</span>
-              <span className="text-white/70 text-sm font-medium">Obras Viales</span>
-              <span className="text-white/70 text-sm font-medium">Estructuras y Cimentaciones</span>
-              <span className="text-white/70 text-sm font-medium">Mantenimientos Locativos</span>
-            </nav>
+          <div className="lg:col-span-4">
+            <div 
+              className="bg-[#333333] rounded-[2.5rem] border border-white/10 p-10 min-h-[400px] relative overflow-hidden"
+              style={{ clipPath: 'polygon(0 0, 75% 0, 76% 10px, 100% 10px, 100% 100%, 0 100%)' }}
+            >
+              <div className="relative z-10">
+                <h4 className="font-heading font-black uppercase tracking-tight text-xl text-white/40 mb-8 flex items-center gap-3">
+                  Servicios Core
+                  <ArrowDownLeft className="h-6 w-6" />
+                </h4>
+                <nav className="flex flex-col gap-5">
+                  {[
+                    "Diseños de Ingeniería",
+                    "Obra Civil General",
+                    "Infraestructura Sanitaria",
+                    "Obras Viales",
+                    "Estructuras y Cimentaciones",
+                    "Mantenimientos Locativos"
+                  ].map((service) => (
+                    <span key={service} className="text-white hover:text-[#FF9B26] transition-colors text-sm font-black uppercase tracking-widest cursor-default">
+                      {service}
+                    </span>
+                  ))}
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
 

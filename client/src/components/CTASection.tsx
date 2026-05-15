@@ -38,37 +38,35 @@ export function CTASection({
             className="h-1 bg-primary mx-auto mb-10"
           />
           
-          <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-6 tracking-tighter uppercase">
+          <h2 className="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-white mb-12 tracking-tighter uppercase max-w-4xl mx-auto leading-[1.1]">
             {title}
           </h2>
-          <p className="text-white/70 max-w-2xl mx-auto mb-10 sm:mb-12 text-base sm:text-lg leading-relaxed">
-            {subtitle}
-          </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8">
             <Link href={buttonLink} data-testid="link-cta-final">
               <Button 
                 size="lg" 
-                className="font-semibold gap-2 w-full sm:w-auto shadow-sm transition-all duration-500 bg-[#2F2F2F] hover:bg-black text-white border-0"
+                className="h-16 px-8 font-black text-sm uppercase tracking-widest gap-4 w-full sm:w-auto shadow-2xl transition-all duration-500 bg-[#333333] hover:bg-black text-white border border-white/10 rounded-xl group"
                 data-testid="button-cta-final"
               >
                 {buttonText}
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Button>
             </Link>
-
+            
             {showWhatsApp && (
               <WhatsAppLink 
                 message="Hola IFSA PANAMÁ, quiero solicitar una visita técnica para mi proyecto."
-                className="inline-flex"
+                className="inline-flex w-full sm:w-auto"
               >
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="font-semibold gap-2 w-full sm:w-auto border-white/20 text-white hover:bg-white/10 hover:text-white hover:border-white/30 backdrop-blur-sm transition-all duration-500"
+                  className="h-16 px-8 font-black text-sm uppercase tracking-widest gap-4 w-full sm:w-auto shadow-2xl transition-all duration-500 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-90 text-white border-0 rounded-xl"
                   data-testid="button-cta-whatsapp"
                 >
-                  <MessageCircle className="h-5 w-5" />
+                  <div className="bg-white rounded-full p-1.5">
+                    <MessageCircle className="h-6 w-6 text-[#25D366] fill-[#25D366]" />
+                  </div>
                   Hablar por WhatsApp
                 </Button>
               </WhatsAppLink>
