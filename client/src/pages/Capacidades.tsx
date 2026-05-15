@@ -14,7 +14,7 @@ export default function Capacidades() {
         size="small"
       />
 
-      {/* Folder — full-width background, all sections inside */}
+      {/* Single folder — full width, all designed assets inside */}
       <section className="bg-black pb-0">
         <div
           className="w-full"
@@ -26,128 +26,99 @@ export default function Capacidades() {
           }}
         >
 
-          {/* ── SECTION 1: Cómo respondemos en campo ──────────────────────
-               Photo LEFT (35%) | title + checks+items RIGHT (65%) */}
+          {/* SECTION 1 */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex gap-10 items-start mb-24"
+            className="flex gap-8 items-start mb-24"
           >
             <img
-              src="/images/capabilities-image-1.png"
-              alt="Ejecución en campo"
-              className="w-[35%] flex-shrink-0 rounded-2xl shadow-xl"
+              src="/images/capabilities-title-1.png"
+              alt="Cómo respondemos en campo"
+              className="flex-1 object-contain"
             />
-            <div className="flex flex-col gap-6 flex-1">
+            <div className="flex gap-4 items-start flex-1">
               <img
-                src="/images/capabilities-title-1.png"
-                alt="Cómo respondemos en campo"
-                className="w-full object-contain"
+                src="/images/capabilities-checks-1.png"
+                alt="checks"
+                className="w-8 flex-shrink-0 object-contain"
               />
-              <div className="flex gap-4 items-start">
-                <img
-                  src="/images/capabilities-checks-1.png"
-                  alt="checkmarks"
-                  className="w-8 flex-shrink-0 object-contain"
-                />
-                <div className="flex flex-col gap-4 pt-1">
-                  {capabilities[0].items.map((item, i) => (
-                    <span key={i} className="text-[11px] font-black uppercase tracking-widest text-white/85 leading-tight">
-                      {item}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex flex-col gap-4 pt-1">
+                {capabilities[0].items.map((item, i) => (
+                  <span key={i} className="text-[11px] font-black uppercase tracking-widest text-white/85 leading-tight">
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
           </motion.div>
 
-          {/* ── SECTION 2: Capacidad Técnica y Supervisión ─────────────────
-               title + items+checks LEFT (65%) | Photo RIGHT (35%) */}
+          {/* SECTION 2 */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex gap-10 items-start mb-24"
+            className="flex gap-8 items-start mb-24"
           >
-            <div className="flex flex-col gap-6 flex-1">
-              <img
-                src="/images/capabilities-title-2.png"
-                alt="Capacidad Técnica y Supervisión"
-                className="w-full object-contain"
-              />
-              <div className="flex gap-4 items-start justify-end">
-                <div className="flex flex-col gap-4 pt-1 text-right">
-                  {capabilities[1].items.map((item, i) => (
-                    <span key={i} className="text-[11px] font-black uppercase tracking-widest text-white/85 leading-tight">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-                <img
-                  src="/images/capabilities-checks-2.png"
-                  alt="checkmarks"
-                  className="w-8 flex-shrink-0 object-contain"
-                />
+            <div className="flex gap-4 items-start flex-1 justify-end">
+              <div className="flex flex-col gap-4 pt-1 text-right">
+                {capabilities[1].items.map((item, i) => (
+                  <span key={i} className="text-[11px] font-black uppercase tracking-widest text-white/85 leading-tight">
+                    {item}
+                  </span>
+                ))}
               </div>
+              <img
+                src="/images/capabilities-checks-2.png"
+                alt="checks"
+                className="w-8 flex-shrink-0 object-contain"
+              />
             </div>
             <img
-              src="/images/capabilities-image-1.png"
-              alt="Capacidad Técnica"
-              className="w-[35%] flex-shrink-0 rounded-2xl shadow-xl"
+              src="/images/capabilities-title-2.png"
+              alt="Capacidad Técnica y Supervisión"
+              className="flex-1 object-contain"
             />
           </motion.div>
 
-          {/* ── SECTION 3: Topografía y Precisión ─────────────────────────
-               Photo LEFT (35%) | title + checks+items RIGHT (65%) */}
+          {/* SECTION 3 */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex gap-10 items-start mb-24"
+            className="flex gap-8 items-start mb-24"
           >
             <img
-              src="/images/capabilities-image-1.png"
+              src="/images/capabilities-title-3.png"
               alt="Topografía y Precisión"
-              className="w-[35%] flex-shrink-0 rounded-2xl shadow-xl"
+              className="flex-1 object-contain"
             />
-            <div className="flex flex-col gap-6 flex-1">
+            <div className="flex gap-4 items-start flex-1">
               <img
-                src="/images/capabilities-title-3.png"
-                alt="Topografía y Precisión"
-                className="w-full object-contain"
+                src="/images/capabilities-checks-3.png"
+                alt="checks"
+                className="w-8 flex-shrink-0 object-contain"
               />
-              <div className="flex gap-4 items-start">
-                <img
-                  src="/images/capabilities-checks-3.png"
-                  alt="checkmarks"
-                  className="w-8 flex-shrink-0 object-contain"
-                />
-                <div className="flex flex-col gap-4 pt-1">
-                  {capabilities[2].items.map((item, i) => (
-                    <span key={i} className="text-[11px] font-black uppercase tracking-widest text-white/85 leading-tight">
-                      {item}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex flex-col gap-4 pt-1">
+                {capabilities[2].items.map((item, i) => (
+                  <span key={i} className="text-[11px] font-black uppercase tracking-widest text-white/85 leading-tight">
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
           </motion.div>
 
-          {/* ── SECTION 4: Maquinaria y Apoyo Operativo ───────────────────
-               Gray card with icon LEFT | title + desc + checks RIGHT */}
+          {/* SECTION 4: Maquinaria */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex gap-10 items-center"
+            className="flex gap-8 items-center"
           >
-            {/* Gray card with orange excavator icon centered on it */}
-            <div className="w-[35%] flex-shrink-0 relative">
+            {/* Gray card + icon */}
+            <div className="relative flex-shrink-0 w-[30%]">
               <img
                 src="/images/capabilities-maquinaria-bg.png"
                 alt=""
@@ -159,8 +130,7 @@ export default function Capacidades() {
                 className="absolute inset-0 m-auto w-20 object-contain"
               />
             </div>
-
-            {/* Content assets — all images, no text rendered */}
+            {/* Content assets only */}
             <div className="flex flex-col gap-4 flex-1">
               <img
                 src="/images/capabilities-title-4.png"
@@ -169,7 +139,7 @@ export default function Capacidades() {
               />
               <img
                 src="/images/capabilities-desc-4.png"
-                alt="Descripción maquinaria"
+                alt="Descripción"
                 className="w-full object-contain"
               />
               <img
@@ -183,7 +153,6 @@ export default function Capacidades() {
         </div>
       </section>
 
-      {/* CTA */}
       <CTASection
         title="Si tu obra no puede fallar, empecemos con una visita técnica."
       />
