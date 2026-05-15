@@ -88,26 +88,21 @@ export default function Servicios() {
                   >
                     {/* Header Card */}
                     <div 
-                      className="h-[100px] flex items-center px-8 relative border-t border-x border-white/20 rounded-t-[1.5rem] shadow-lg"
-                      style={{ 
-                        backgroundImage: "url('/images/service-header-bg.png')",
-                        backgroundSize: '100% 100%',
-                        backgroundRepeat: 'no-repeat'
-                      }}
+                      className="h-24 flex items-center px-8 relative bg-[#4a4a4a] border-t border-x border-white/20 rounded-t-[1.5rem] shadow-lg overflow-hidden"
                     >
-                      <div className="flex items-center gap-6 z-10 w-full">
-                        <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
+                      <div className="flex items-center gap-5 z-10 w-full">
+                        <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
                           {isPngIcon ? (
                             <img 
                               src={`/images/icon-${service.icon}.png`} 
                               alt={service.title}
-                              className="w-14 h-14 object-contain" 
+                              className="w-12 h-12 object-contain" 
                             />
                           ) : (
                             <IconComponent className="h-10 w-10 text-black" />
                           )}
                         </div>
-                        <h3 className="font-heading font-black text-xl text-black leading-[1.1] uppercase tracking-tighter">
+                        <h3 className="font-heading font-black text-lg text-white leading-tight uppercase tracking-tighter">
                           {service.title}
                         </h3>
                       </div>
@@ -120,7 +115,7 @@ export default function Servicios() {
                         backgroundImage: "url('/images/service-card-shape.png')",
                         backgroundSize: '100% 100%',
                         backgroundRepeat: 'no-repeat',
-                        marginTop: '-1px' // Unir perfectamente con el header
+                        marginTop: '-1px'
                       }}
                     >
                       <div className="space-y-10 relative z-10">
