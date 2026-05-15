@@ -16,10 +16,11 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-10" data-testid="link-footer-logo">
-              <div className="flex flex-col">
-                <span className="text-white font-heading font-black text-5xl tracking-tighter leading-[0.8]">Ifsa</span>
-                <span className="text-white font-heading font-medium text-2xl tracking-[0.1em] uppercase leading-none mt-1">Panamá</span>
-              </div>
+              <img 
+                src="/images/logo-footer.png" 
+                alt="IFSA Panamá" 
+                className="h-20 w-auto object-contain brightness-200" 
+              />
             </Link>
             <p className="text-white/60 text-sm font-medium leading-relaxed max-w-xs mb-10">
               Construcción e infraestructura con control real. Obra civil, arquitectura, 
