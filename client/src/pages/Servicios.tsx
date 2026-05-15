@@ -41,13 +41,13 @@ export default function Servicios() {
       {/* Folder Container */}
       <div className="w-full bg-black px-4 sm:px-6 md:px-8 pb-32 pt-8">
         <div 
-          className="relative w-full max-w-7xl mx-auto z-10 rounded-[3rem] overflow-hidden"
+          className="relative w-full max-w-7xl mx-auto z-10 rounded-[3rem] overflow-hidden border border-white/10"
           style={{ 
             backgroundImage: 'url(/images/folder-card-bg.png)',
             backgroundSize: '100% 100%',
             backgroundPosition: 'center top',
             backgroundRepeat: 'no-repeat',
-            clipPath: 'polygon(0 0, 75% 0, 76% 15px, 99.5% 15px, 99.5% 100%, 0 100%)'
+            clipPath: 'polygon(0 0, 75% 0, 76% 15px, 100% 15px, 100% 100%, 0 100%)'
           }}
         >
           <div className="px-6 pt-32 pb-16 md:px-12 md:pt-40 md:pb-20 lg:px-16" data-testid="section-services-intro">
