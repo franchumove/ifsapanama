@@ -44,7 +44,7 @@ export default function Home() {
 
       <section className="py-0 bg-black">
         <div 
-          className="max-w-6xl mx-auto relative min-h-[400px] rounded-b-[4rem] overflow-hidden bg-[#222222] border-x border-b border-white/10"
+          className="max-w-6xl mx-auto relative min-h-[400px] rounded-[4rem] overflow-hidden bg-[#4a4a4a] border border-white/10"
         >
           <div className="py-20">
             <ProjectsGrid
