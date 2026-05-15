@@ -9,72 +9,79 @@ import { CheckSquare } from "lucide-react";
 export default function Capacidades() {
   return (
     <Layout>
-      <Hero
-        title="Capacidades"
-        subtitle="Cuando una obra no puede fallar, el método importa."
-        size="small"
-      />
+      <section className="bg-black pt-20 pb-32 overflow-hidden" data-testid="section-capabilities">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div 
+            className="relative min-h-[1000px] rounded-[3rem] overflow-hidden pt-32 pb-24 px-8 md:px-16"
+            style={{ 
+              backgroundImage: "url('/images/capabilities-container-bg.png')",
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat'
+            }}
+          >
+            {/* Folder Tab Shape */}
+            <div 
+              className="absolute top-0 left-0 w-full h-16 bg-transparent"
+              style={{ clipPath: 'polygon(0 0, 75% 0, 76% 15px, 100% 15px, 100% 100%, 0 100%)' }}
+            ></div>
 
-      <section className="py-24 bg-background" data-testid="section-capabilities">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-20">
-            {capabilities.slice(0, 3).map((capability, index) => (
+            {/* Section 1: Cómo respondemos en campo */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
               <motion.div
-                key={capability.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.8 }}
+                className="relative"
               >
-                <Card className="h-full border-border bg-card rounded-none" data-testid={`card-capability-${capability.id}`}>
-                  <CardContent className="p-8 lg:p-10">
-                    <h3 className="font-heading font-bold text-2xl text-foreground mb-8 uppercase tracking-tighter">
-                      {capability.title}
-                    </h3>
-                    <ul className="space-y-4">
-                      {capability.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-4">
-                          <CheckSquare className="h-5 w-5 text-foreground/40 mt-0.5 shrink-0" />
-                          <span className="text-muted-foreground leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+                <img 
+                  src="/images/capabilities-image-1.png" 
+                  alt="Ejecución en campo" 
+                  className="rounded-[2rem] w-full shadow-2xl"
+                />
               </motion.div>
-            ))}
-          </div>
 
-          {capabilities[3] && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="p-12 lg:p-16 border border-border bg-foreground/5"
-            >
-              <h2 className="font-heading font-bold text-3xl text-foreground mb-6 uppercase tracking-tighter">
-                {capabilities[3].title}
-              </h2>
-              <p className="text-muted-foreground max-w-4xl text-lg leading-relaxed mb-8">
-                {capabilities[3].description}
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {capabilities[3].items.map((item, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckSquare className="h-5 w-5 text-foreground/40 shrink-0" />
-                    <span className="text-foreground font-bold uppercase tracking-tight text-xs">{item}</span>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="flex flex-col gap-8"
+              >
+                <img 
+                  src="/images/capabilities-title-1.png" 
+                  alt="Cómo respondemos en campo" 
+                  className="w-full max-w-[400px] object-contain"
+                />
+                
+                <div className="flex gap-6">
+                  <div className="flex-shrink-0">
+                    <img 
+                      src="/images/capabilities-checks-1.png" 
+                      alt="Checkmarks" 
+                      className="h-full max-h-[300px] object-contain"
+                    />
                   </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
+                  <div className="flex flex-col justify-between py-2 text-white/70">
+                    {capabilities[0].items.map((item, i) => (
+                      <span key={i} className="text-[11px] md:text-xs font-black uppercase tracking-widest leading-relaxed">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Placeholder for other sections */}
+            <div className="text-center text-white/20 uppercase tracking-[1em] font-black py-20">
+              PRÓXIMAS SECCIONES EN DESARROLLO
+            </div>
+          </div>
         </div>
       </section>
 
-      <CTASection 
-        title="Si tu obra no puede fallar, empecemos con una visita técnica."
-      />
+      <CTASection />
     </Layout>
   );
 }
