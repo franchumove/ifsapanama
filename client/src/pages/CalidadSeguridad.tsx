@@ -12,14 +12,21 @@ const FOLDER_BG = "/images/folder-card-bg.png";
 const FOLDER_CLIP =
   "polygon(0 0, 75% 0, 76% 15px, 100% 15px, 100% 100%, 0 100%)";
 
-/** Contenedor estrecho ~832px — proporción vertical tipo referencia 5/8 */
+const CARD_DARK_BG = "/images/quality-card-dark-bg.png";
+const AVOID_TITLE_IMG = "/images/quality-avoid-title.png";
+
+/** Contenedor estrecho ~832px */
 const NARROW_MAX = "max-w-[52rem]";
 
 const CARD_CLIP_BOTTOM =
   "polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%)";
 
-const ICON_BOX_CLIP =
-  "polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%)";
+const DARK_TILE_STYLE = {
+  backgroundImage: `url(${CARD_DARK_BG})`,
+  backgroundSize: "100% 100%" as const,
+  backgroundPosition: "center" as const,
+  backgroundRepeat: "no-repeat" as const,
+};
 
 const principlesInField = [
   {
@@ -99,7 +106,7 @@ function SectionTitle({
   );
 }
 
-/** Tarjeta clara — icono centrado arriba, esquina inferior derecha recortada */
+/** Tarjeta clara — cabecera oscura horizontal (icono izq + título der), img 9 */
 function LightPrincipleCard({
   icon,
   title,
@@ -111,32 +118,31 @@ function LightPrincipleCard({
 }) {
   return (
     <article
-      className="flex flex-col h-full overflow-hidden border border-black/10 bg-[#d4d4d4] shadow-md"
+      className="flex flex-col h-full overflow-hidden rounded-xl border border-black/10 bg-[#d4d4d4] shadow-md"
       style={{ clipPath: CARD_CLIP_BOTTOM }}
     >
-      <div className="bg-[#b5b5b5] px-3 py-5 flex flex-col items-center text-center border-b border-black/10">
+      <div className="p-2.5 sm:p-3">
         <div
-          className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center bg-[#c4c4c4] mb-3"
-          style={{ clipPath: ICON_BOX_CLIP }}
+          className="flex flex-row items-center gap-3 px-3 py-3.5 sm:px-4 sm:py-4 rounded-[10px]"
+          style={DARK_TILE_STYLE}
         >
           <img
             src={icon}
             alt=""
-            className="w-9 h-9 sm:w-10 sm:h-10 object-contain"
+            className="w-9 h-9 sm:w-10 sm:h-10 object-contain shrink-0"
           />
+          <h3 className="font-heading font-black text-[11px] sm:text-xs uppercase tracking-tight text-black leading-tight">
+            {title}
+          </h3>
         </div>
-        <h3 className="font-heading font-black text-[11px] sm:text-xs uppercase tracking-tight text-black leading-tight">
-          {title}
-        </h3>
       </div>
-      <p className="px-3 py-4 text-[10px] sm:text-[11px] text-zinc-800 leading-relaxed flex-1">
+      <p className="px-3 sm:px-4 pb-4 sm:pb-5 text-[10px] sm:text-[11px] text-zinc-800 leading-relaxed flex-1">
         {description}
       </p>
     </article>
   );
 }
 
-/** Tarjeta oscura vertical — mismas proporciones que las claras */
 function DarkPrincipleCard({
   icon,
   title,
@@ -146,23 +152,23 @@ function DarkPrincipleCard({
 }) {
   return (
     <article
-      className="flex flex-col items-center text-center overflow-hidden border border-white/15 bg-[#3a3a3a] shadow-md min-h-[9rem]"
+      className="flex flex-col items-center text-center overflow-hidden rounded-xl border border-white/15 bg-[#3a3a3a] shadow-md min-h-[9rem]"
       style={{ clipPath: CARD_CLIP_BOTTOM }}
     >
-      <div className="px-3 py-5 flex flex-col items-center w-full">
+      <div className="p-2.5 sm:p-3 w-full">
         <div
-          className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-[#2a2a2a] mb-3"
-          style={{ clipPath: ICON_BOX_CLIP }}
+          className="flex flex-row items-center justify-center gap-2.5 px-3 py-3.5 rounded-[10px]"
+          style={DARK_TILE_STYLE}
         >
           <img
             src={icon}
             alt=""
-            className="w-8 h-8 sm:w-9 sm:h-9 object-contain brightness-0 invert opacity-90"
+            className="w-8 h-8 sm:w-9 sm:h-9 object-contain brightness-0 invert opacity-90 shrink-0"
           />
+          <h3 className="font-heading font-black text-[8px] sm:text-[9px] uppercase tracking-[0.08em] text-white leading-snug">
+            {title}
+          </h3>
         </div>
-        <h3 className="font-heading font-black text-[9px] sm:text-[10px] uppercase tracking-[0.1em] text-white leading-snug px-1">
-          {title}
-        </h3>
       </div>
     </article>
   );
@@ -170,9 +176,9 @@ function DarkPrincipleCard({
 
 function AvoidXList({ items }: { items: string[] }) {
   return (
-    <ul className="flex flex-col gap-2.5 list-none m-0 p-0">
+    <ul className="flex flex-col gap-3 list-none m-0 p-0">
       {items.map((item) => (
-        <li key={item} className="flex gap-2.5 items-start">
+        <li key={item} className="flex gap-3 items-start">
           <span
             className="mt-0.5 w-5 h-5 rounded-full shrink-0 bg-zinc-900 flex items-center justify-center text-white text-xs font-bold leading-none"
             aria-hidden
@@ -188,41 +194,74 @@ function AvoidXList({ items }: { items: string[] }) {
   );
 }
 
-/** Bloque compacto icono izquierda + texto derecha (Lo que evitamos / Capacidad técnica) */
+/** Lo que evitamos — título PNG + bloque oscuro ancho (~35%) */
+function AvoidSection({ items }: { items: string[] }) {
+  return (
+    <article
+      className="overflow-hidden rounded-xl bg-[#d4d4d4] border border-black/10 shadow-lg"
+      style={{ clipPath: CARD_CLIP_BOTTOM }}
+      aria-labelledby="lo-que-evitamos"
+    >
+      <div className="flex flex-row items-stretch gap-5 sm:gap-7 p-5 sm:p-7 md:p-8">
+        <div
+          className="shrink-0 w-[32%] sm:w-[35%] aspect-square flex items-center justify-center p-4 sm:p-6 rounded-[10px]"
+          style={DARK_TILE_STYLE}
+        >
+          <img
+            src="/images/quality-icon-warning-gear.png"
+            alt=""
+            className="w-full max-w-[5.5rem] sm:max-w-[6.5rem] h-auto object-contain"
+          />
+        </div>
+        <div className="flex-1 min-w-0 flex flex-col justify-center py-1 sm:py-2">
+          <img
+            id="lo-que-evitamos"
+            src={AVOID_TITLE_IMG}
+            alt="Lo que evitamos (porque cuesta caro)"
+            className="w-full max-w-lg object-contain object-left"
+          />
+          <div className="mt-4 sm:mt-5">
+            <AvoidXList items={items} />
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+/** Bloque compacto icono izquierda + texto derecha */
 function CompactWideCard({
   iconSrc,
   iconAlt = "",
   title,
   children,
-  iconBoxClass = "bg-[#5a5a5a]",
 }: {
   iconSrc: string;
   iconAlt?: string;
   title: string;
   children: ReactNode;
-  iconBoxClass?: string;
 }) {
   return (
     <article
-      className="overflow-hidden bg-[#d4d4d4] border border-black/10 shadow-lg"
+      className="overflow-hidden rounded-xl bg-[#d4d4d4] border border-black/10 shadow-lg"
       style={{ clipPath: CARD_CLIP_BOTTOM }}
     >
-      <div className="flex flex-row gap-4 sm:gap-5 items-stretch p-4 sm:p-5">
+      <div className="flex flex-row items-stretch gap-5 sm:gap-7 p-5 sm:p-7 md:p-8">
         <div
-          className={`shrink-0 w-24 sm:w-28 min-h-[7.5rem] flex items-center justify-center p-3 ${iconBoxClass}`}
-          style={{ clipPath: ICON_BOX_CLIP }}
+          className="shrink-0 w-[32%] sm:w-[35%] aspect-square flex items-center justify-center p-4 sm:p-6 rounded-[10px]"
+          style={DARK_TILE_STYLE}
         >
           <img
             src={iconSrc}
             alt={iconAlt}
-            className="max-h-[4.5rem] w-auto max-w-full object-contain"
+            className="w-full max-w-[4.5rem] sm:max-w-[5.5rem] h-auto object-contain"
           />
         </div>
-        <div className="flex-1 min-w-0 py-1">
+        <div className="flex-1 min-w-0 flex flex-col justify-center py-1 sm:py-2">
           <h3 className="font-heading font-black text-sm sm:text-base uppercase tracking-tight text-black leading-tight">
             {title}
           </h3>
-          <div className="mt-3">{children}</div>
+          <div className="mt-4 sm:mt-5">{children}</div>
         </div>
       </div>
     </article>
@@ -270,7 +309,6 @@ export default function CalidadSeguridad() {
               clipPath: FOLDER_CLIP,
             }}
           >
-            {/* Panel estrecho centrado — todo el contenido */}
             <div
               className={`relative ${NARROW_MAX} mx-auto flex flex-col gap-8 sm:gap-10 lg:gap-12 px-5 pt-20 pb-10 sm:px-6 sm:pt-24 sm:pb-12 md:pt-28 md:pb-14`}
             >
@@ -283,14 +321,8 @@ export default function CalidadSeguridad() {
                 </div>
               </section>
 
-              <section aria-labelledby="lo-que-evitamos">
-                <CompactWideCard
-                  iconSrc="/images/quality-icon-warning-gear.png"
-                  title="Lo que evitamos (porque cuesta caro)"
-                  iconBoxClass="bg-[#5a5a5a]"
-                >
-                  <AvoidXList items={avoidItems} />
-                </CompactWideCard>
+              <section>
+                <AvoidSection items={avoidItems} />
               </section>
 
               <section aria-labelledby="principios-operativos">
@@ -305,7 +337,6 @@ export default function CalidadSeguridad() {
                 <CompactWideCard
                   iconSrc="/images/quality-icon-orden.png"
                   title="Capacidad técnica y supervisión"
-                  iconBoxClass="bg-[#9a9a9a]/90"
                 >
                   <p className="text-[10px] sm:text-[11px] text-zinc-800 leading-relaxed">
                     Equipo técnico altamente calificado, supervisión de proyectos de alta
