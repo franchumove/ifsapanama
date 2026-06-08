@@ -8,49 +8,51 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Mismo contenedor carpeta que Capacidades / Contacto — sin quality-container-bg (traía títulos duplicados). */
 const FOLDER_BG = "/images/folder-card-bg.png";
 const FOLDER_CLIP =
   "polygon(0 0, 75% 0, 76% 15px, 100% 15px, 100% 100%, 0 100%)";
 
-/** Esquina inferior derecha recortada — tarjetas claras del sitio */
+/** Contenedor estrecho ~832px — proporción vertical tipo referencia 5/8 */
+const NARROW_MAX = "max-w-[52rem]";
+
 const CARD_CLIP_BOTTOM =
   "polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%)";
 
+const ICON_BOX_CLIP =
+  "polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%)";
+
 const principlesInField = [
   {
-    icon: "/images/icon-control.png",
+    icon: "/images/quality-icon-control.png",
     title: "CONTROL",
     description:
       "Verificar lo crítico antes de avanzar cada etapa de obra. Todo avance se valida contra planos y especificaciones antes de su ejecución.",
   },
   {
-    icon: "/images/icon-orden.png",
+    icon: "/images/quality-icon-orden.png",
     title: "ORDEN",
     description:
       "Coordinación de frentes, recursos y seguridad operativa. La planificación evita interferencias y retrabajos durante la ejecución.",
   },
   {
-    icon: "/images/icon-trazabilidad.png",
+    icon: "/images/quality-icon-trazabilidad.png",
     title: "TRAZABILIDAD",
     description:
-      "Evidencia técnica y entregables por etapa. Cada fase queda documentada mediante reportes y controles verificables.",
+      "Evidencias técnicas y entregables por etapa. Cada fase queda documentada mediante reportes y controles verificables.",
   },
 ];
 
-const avoidCol1 = [
+const avoidItems = [
   "IMPROVISACIÓN SIN CONTROL TÉCNICO",
-  "RETRABAJOS DEBIDO A MALA PLANIFICACIÓN",
-];
-const avoidCol2 = [
-  "EXCESOS EN MATERIALES",
-  "EJECUCIÓN SIN VERIFICACIÓN PREVIA",
+  "CAMBIOS SIN TRAZABILIDAD",
+  "RETRABAJOS POR FALTA DE REPLANTEO",
+  "AVANCES SIN VERIFICACIÓN PREVIA",
 ];
 
 const operationalPrinciples = [
-  { icon: "/images/icon-trazabilidad.png", title: "RESPONSABILIDAD OPERATIVA" },
-  { icon: "/images/icon-orden.png", title: "EFICIENCIA TÉCNICA" },
-  { icon: "/images/icon-control.png", title: "CONTROL DE CALIDAD" },
+  { icon: "/images/quality-icon-trazabilidad.png", title: "RESPONSABILIDAD OPERATIVA" },
+  { icon: "/images/quality-icon-orden.png", title: "EFICIENCIA TÉCNICA" },
+  { icon: "/images/quality-icon-control.png", title: "CONTROL DE CALIDAD" },
 ];
 
 const qualityFaqs = [
@@ -81,15 +83,15 @@ function SectionTitle({
   id?: string;
 }) {
   return (
-    <div className="text-center mb-8 sm:mb-10">
+    <div className="text-center mb-6 sm:mb-8">
       <h2
         id={id}
-        className="font-heading font-black text-xl sm:text-2xl text-white uppercase tracking-tighter"
+        className="font-heading font-black text-lg sm:text-xl text-white uppercase tracking-tighter"
       >
         {children}
       </h2>
       {subtitle && (
-        <p className="mt-2 text-white/50 uppercase tracking-[0.18em] text-[10px] sm:text-[11px] font-bold">
+        <p className="mt-2 text-white/50 uppercase tracking-[0.16em] text-[10px] sm:text-[11px] font-bold leading-relaxed">
           {subtitle}
         </p>
       )}
@@ -97,6 +99,7 @@ function SectionTitle({
   );
 }
 
+/** Tarjeta clara — icono centrado arriba, esquina inferior derecha recortada */
 function LightPrincipleCard({
   icon,
   title,
@@ -108,26 +111,32 @@ function LightPrincipleCard({
 }) {
   return (
     <article
-      className="flex flex-col h-full overflow-hidden rounded-t-xl border border-black/10 border-t-2 border-t-sky-400 bg-[#d4d4d4] shadow-md"
+      className="flex flex-col h-full overflow-hidden border border-black/10 bg-[#d4d4d4] shadow-md"
       style={{ clipPath: CARD_CLIP_BOTTOM }}
     >
-      <div className="bg-[#b5b5b5] px-4 sm:px-5 py-4 flex items-center gap-3 border-b border-black/10">
-        <img
-          src={icon}
-          alt=""
-          className="w-9 h-9 sm:w-10 sm:h-10 object-contain shrink-0"
-        />
-        <h3 className="font-heading font-black text-xs sm:text-sm uppercase tracking-tight text-black">
+      <div className="bg-[#b5b5b5] px-3 py-5 flex flex-col items-center text-center border-b border-black/10">
+        <div
+          className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center bg-[#c4c4c4] mb-3"
+          style={{ clipPath: ICON_BOX_CLIP }}
+        >
+          <img
+            src={icon}
+            alt=""
+            className="w-9 h-9 sm:w-10 sm:h-10 object-contain"
+          />
+        </div>
+        <h3 className="font-heading font-black text-[11px] sm:text-xs uppercase tracking-tight text-black leading-tight">
           {title}
         </h3>
       </div>
-      <p className="px-4 sm:px-5 py-4 text-[11px] sm:text-xs text-zinc-800 leading-relaxed flex-1">
+      <p className="px-3 py-4 text-[10px] sm:text-[11px] text-zinc-800 leading-relaxed flex-1">
         {description}
       </p>
     </article>
   );
 }
 
+/** Tarjeta oscura vertical — mismas proporciones que las claras */
 function DarkPrincipleCard({
   icon,
   title,
@@ -136,25 +145,41 @@ function DarkPrincipleCard({
   title: string;
 }) {
   return (
-    <article className="rounded-xl border border-white/15 bg-black/45 backdrop-blur-sm px-4 py-6 flex flex-col items-center justify-center gap-3 text-center min-h-[7.5rem]">
-      <img src={icon} alt="" className="w-9 h-9 sm:w-10 sm:h-10 object-contain" />
-      <h3 className="font-heading font-black text-[10px] sm:text-[11px] uppercase tracking-[0.12em] text-white leading-snug">
-        {title}
-      </h3>
+    <article
+      className="flex flex-col items-center text-center overflow-hidden border border-white/15 bg-[#3a3a3a] shadow-md min-h-[9rem]"
+      style={{ clipPath: CARD_CLIP_BOTTOM }}
+    >
+      <div className="px-3 py-5 flex flex-col items-center w-full">
+        <div
+          className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-[#2a2a2a] mb-3"
+          style={{ clipPath: ICON_BOX_CLIP }}
+        >
+          <img
+            src={icon}
+            alt=""
+            className="w-8 h-8 sm:w-9 sm:h-9 object-contain brightness-0 invert opacity-90"
+          />
+        </div>
+        <h3 className="font-heading font-black text-[9px] sm:text-[10px] uppercase tracking-[0.1em] text-white leading-snug px-1">
+          {title}
+        </h3>
+      </div>
     </article>
   );
 }
 
-function AvoidList({ items }: { items: string[] }) {
+function AvoidXList({ items }: { items: string[] }) {
   return (
     <ul className="flex flex-col gap-2.5 list-none m-0 p-0">
       {items.map((item) => (
         <li key={item} className="flex gap-2.5 items-start">
           <span
-            className="mt-1.5 w-2 h-2 rounded-full shrink-0 bg-zinc-800"
+            className="mt-0.5 w-5 h-5 rounded-full shrink-0 bg-zinc-900 flex items-center justify-center text-white text-xs font-bold leading-none"
             aria-hidden
-          />
-          <span className="font-heading font-bold text-[10px] sm:text-[11px] uppercase tracking-[0.1em] text-zinc-900 leading-snug">
+          >
+            ×
+          </span>
+          <span className="font-heading font-bold text-[10px] sm:text-[11px] uppercase tracking-[0.08em] text-zinc-900 leading-snug">
             {item}
           </span>
         </li>
@@ -163,11 +188,51 @@ function AvoidList({ items }: { items: string[] }) {
   );
 }
 
+/** Bloque compacto icono izquierda + texto derecha (Lo que evitamos / Capacidad técnica) */
+function CompactWideCard({
+  iconSrc,
+  iconAlt = "",
+  title,
+  children,
+  iconBoxClass = "bg-[#5a5a5a]",
+}: {
+  iconSrc: string;
+  iconAlt?: string;
+  title: string;
+  children: ReactNode;
+  iconBoxClass?: string;
+}) {
+  return (
+    <article
+      className="overflow-hidden bg-[#d4d4d4] border border-black/10 shadow-lg"
+      style={{ clipPath: CARD_CLIP_BOTTOM }}
+    >
+      <div className="flex flex-row gap-4 sm:gap-5 items-stretch p-4 sm:p-5">
+        <div
+          className={`shrink-0 w-24 sm:w-28 min-h-[7.5rem] flex items-center justify-center p-3 ${iconBoxClass}`}
+          style={{ clipPath: ICON_BOX_CLIP }}
+        >
+          <img
+            src={iconSrc}
+            alt={iconAlt}
+            className="max-h-[4.5rem] w-auto max-w-full object-contain"
+          />
+        </div>
+        <div className="flex-1 min-w-0 py-1">
+          <h3 className="font-heading font-black text-sm sm:text-base uppercase tracking-tight text-black leading-tight">
+            {title}
+          </h3>
+          <div className="mt-3">{children}</div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export default function CalidadSeguridad() {
   return (
     <Layout>
       <div className="bg-black min-h-screen">
-        {/* Hero — título solo aquí, una vez */}
         <section
           className="relative isolate w-full min-h-[36vh] sm:min-h-[42vh] md:min-h-[48vh] flex items-end overflow-hidden bg-black pt-24 sm:pt-28"
           aria-labelledby="calidad-heading"
@@ -194,7 +259,6 @@ export default function CalidadSeguridad() {
           </div>
         </section>
 
-        {/* Contenedor carpeta — flujo vertical limpio, sin capas duplicadas */}
         <div className="relative w-full px-4 sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
           <div
             className="relative w-full max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.25rem] overflow-hidden border border-white/10"
@@ -206,86 +270,51 @@ export default function CalidadSeguridad() {
               clipPath: FOLDER_CLIP,
             }}
           >
-            <div className="relative flex flex-col gap-10 sm:gap-12 lg:gap-14 px-5 pt-20 pb-10 sm:px-8 sm:pt-24 sm:pb-12 md:px-10 md:pt-28 md:pb-14 lg:px-12">
-              {/* A — Principios en obra */}
+            {/* Panel estrecho centrado — todo el contenido */}
+            <div
+              className={`relative ${NARROW_MAX} mx-auto flex flex-col gap-8 sm:gap-10 lg:gap-12 px-5 pt-20 pb-10 sm:px-6 sm:pt-24 sm:pb-12 md:pt-28 md:pb-14`}
+            >
               <section aria-labelledby="principios-obra">
                 <SectionTitle id="principios-obra">Principios en obra</SectionTitle>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
                   {principlesInField.map((p) => (
                     <LightPrincipleCard key={p.title} {...p} />
                   ))}
                 </div>
               </section>
 
-              {/* B — Lo que evitamos */}
               <section aria-labelledby="lo-que-evitamos">
-                <article
-                  className="overflow-hidden rounded-2xl bg-[#d4d4d4] border border-black/10 shadow-lg"
-                  style={{ clipPath: CARD_CLIP_BOTTOM }}
+                <CompactWideCard
+                  iconSrc="/images/quality-icon-warning-gear.png"
+                  title="Lo que evitamos (porque cuesta caro)"
+                  iconBoxClass="bg-[#5a5a5a]"
                 >
-                  <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 items-stretch sm:items-center p-5 sm:p-6 md:p-8">
-                    <div className="flex justify-center sm:justify-start shrink-0">
-                      <div className="rounded-xl bg-[#9a9a9a]/90 w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center p-4 shadow-inner">
-                        <img
-                          src="/images/icon-engineering.png"
-                          alt=""
-                          className="max-h-[4.5rem] w-auto max-w-full object-contain"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h2
-                        id="lo-que-evitamos"
-                        className="font-heading font-black text-base sm:text-lg uppercase tracking-tight text-black leading-tight"
-                      >
-                        Lo que evitamos (porque cuesta caro)
-                      </h2>
-                      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-0">
-                        <AvoidList items={avoidCol1} />
-                        <AvoidList items={avoidCol2} />
-                      </div>
-                    </div>
-                  </div>
-                </article>
+                  <AvoidXList items={avoidItems} />
+                </CompactWideCard>
               </section>
 
-              {/* C — Principios operativos + capacidad técnica */}
               <section aria-labelledby="principios-operativos">
                 <SectionTitle id="principios-operativos">
                   Principios operativos
                 </SectionTitle>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-5 sm:mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-5">
                   {operationalPrinciples.map((p) => (
                     <DarkPrincipleCard key={p.title} {...p} />
                   ))}
                 </div>
-                <article
-                  className="overflow-hidden rounded-2xl bg-[#d4d4d4] border border-black/10 shadow-lg"
-                  style={{ clipPath: CARD_CLIP_BOTTOM }}
+                <CompactWideCard
+                  iconSrc="/images/quality-icon-orden.png"
+                  title="Capacidad técnica y supervisión"
+                  iconBoxClass="bg-[#9a9a9a]/90"
                 >
-                  <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 items-center p-5 sm:p-6 md:p-8">
-                    <div className="shrink-0 rounded-xl bg-[#9a9a9a]/90 w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center p-4 shadow-inner">
-                      <img
-                        src="/images/icon-engineering.png"
-                        alt=""
-                        className="max-h-[4.5rem] w-auto max-w-full object-contain"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0 text-center sm:text-left">
-                      <h3 className="font-heading font-black text-base sm:text-lg uppercase tracking-tight text-black leading-tight">
-                        Capacidad técnica y supervisión
-                      </h3>
-                      <p className="mt-3 text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                        Equipo técnico altamente calificado, supervisión de proyectos de alta
-                        complejidad y control de calidad en cada fase de ejecución.
-                      </p>
-                    </div>
-                  </div>
-                </article>
+                  <p className="text-[10px] sm:text-[11px] text-zinc-800 leading-relaxed">
+                    Equipo técnico altamente calificado, supervisión de proyectos de alta
+                    complejidad y control de calidad en cada fase de ejecución.
+                  </p>
+                </CompactWideCard>
               </section>
 
-              {/* D — FAQ */}
-              <section aria-labelledby="faq-calidad" className="max-w-3xl w-full mx-auto">
+              <section aria-labelledby="faq-calidad" className="w-full">
                 <SectionTitle
                   id="faq-calidad"
                   subtitle="Lo que más preguntan antes de contratar una constructora"
@@ -304,10 +333,10 @@ export default function CalidadSeguridad() {
                       value={`faq-${index}`}
                       className="border-b border-white/10"
                     >
-                      <AccordionTrigger className="text-left font-heading font-bold text-[11px] sm:text-xs uppercase tracking-[0.1em] text-white hover:text-white/90 hover:no-underline py-5 [&>svg]:text-white/50">
+                      <AccordionTrigger className="text-left font-heading font-bold text-[10px] sm:text-[11px] uppercase tracking-[0.08em] text-white hover:text-white/90 hover:no-underline py-4 sm:py-5 [&>svg]:text-white/50">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-white/65 text-xs sm:text-sm leading-relaxed pb-5 font-medium">
+                      <AccordionContent className="text-white/65 text-[11px] sm:text-xs leading-relaxed pb-4 sm:pb-5 font-medium">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
