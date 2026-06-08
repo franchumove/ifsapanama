@@ -1,142 +1,252 @@
+import type { ReactNode } from "react";
 import { Layout } from "@/components/Layout";
-import { Hero } from "@/components/Hero";
 import { CTASection } from "@/components/CTASection";
-import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import { Shield, Zap, CheckSquare } from "lucide-react";
 
-const principles = [
+const FOLDER_BG = "/images/folder-card-bg.png";
+const FOLDER_CLIP =
+  "polygon(0 0, 75% 0, 76% 15px, 100% 15px, 100% 100%, 0 100%)";
+
+const CARD_DARK_BG = "/images/quality-card-dark-bg.png";
+
+const CARD_CLIP_BOTTOM =
+  "polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%)";
+
+const DARK_TILE_STYLE = {
+  backgroundImage: `url(${CARD_DARK_BG})`,
+  backgroundSize: "100% 100%" as const,
+  backgroundPosition: "center" as const,
+  backgroundRepeat: "no-repeat" as const,
+};
+
+const operationalPrinciples = [
   {
-    icon: Shield,
-    title: "Responsabilidad Operativa",
-    description: "Compromiso absoluto con los plazos y especificaciones técnicas del proyecto.",
+    icon: "/images/about-icon-shield-check.png",
+    title: "RESPONSABILIDAD OPERATIVA",
+    description:
+      "Compromiso absoluto con los plazos y especificaciones técnicas del proyecto.",
   },
   {
-    icon: Zap,
-    title: "Eficiencia Técnica",
-    description: "Optimización de recursos mediante planificación rigurosa y supervisión en campo.",
+    icon: "/images/about-icon-gear-check.png",
+    title: "EFICIENCIA TÉCNICA",
+    description:
+      "Optimización de recursos mediante planificación rigurosa y supervisión en campo.",
   },
   {
-    icon: CheckSquare,
-    title: "Control de Calidad",
-    description: "Verificación constante de normativas y estándares de ingeniería en cada etapa.",
+    icon: "/images/about-icon-gear-check.png",
+    title: "CONTROL DE CALIDAD",
+    description:
+      "Verificación constante de normativas y estándares de ingeniería en cada etapa.",
   },
 ];
+
+function SectionTitle({
+  children,
+  id,
+}: {
+  children: ReactNode;
+  id?: string;
+}) {
+  return (
+    <div className="text-center mb-6 sm:mb-8">
+      <h2
+        id={id}
+        className="font-heading font-black text-lg sm:text-xl text-white uppercase tracking-tighter"
+      >
+        {children}
+      </h2>
+    </div>
+  );
+}
+
+/** Mismo componente que Principios en Obra — cabecera oscura + cuerpo claro */
+function LightPrincipleCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <article
+      className="flex flex-col h-full overflow-hidden rounded-xl border border-black/10 bg-[#d4d4d4] shadow-md"
+      style={{ clipPath: CARD_CLIP_BOTTOM }}
+    >
+      <div className="p-2.5 sm:p-3">
+        <div
+          className="flex flex-row items-center gap-3 px-3 py-3.5 sm:px-4 sm:py-4 rounded-[10px]"
+          style={DARK_TILE_STYLE}
+        >
+          <img
+            src={icon}
+            alt=""
+            className="w-9 h-9 sm:w-10 sm:h-10 object-contain shrink-0"
+          />
+          <h3 className="font-heading font-black text-[11px] sm:text-xs uppercase tracking-tight text-black leading-tight">
+            {title}
+          </h3>
+        </div>
+      </div>
+      <p className="px-3 sm:px-4 pb-4 sm:pb-5 text-[10px] sm:text-[11px] text-zinc-800 leading-relaxed flex-1">
+        {description}
+      </p>
+    </article>
+  );
+}
+
+/** Mismo patrón que Lo que evitamos / Capacidad en Calidad */
+function CompactWideCard({
+  iconSrc,
+  title,
+  children,
+  titleId,
+}: {
+  iconSrc: string;
+  title: string;
+  children: ReactNode;
+  titleId?: string;
+}) {
+  return (
+    <article
+      className="overflow-hidden rounded-xl bg-[#d4d4d4] border border-black/10 shadow-lg"
+      style={{ clipPath: CARD_CLIP_BOTTOM }}
+    >
+      <div className="flex flex-row items-stretch gap-5 sm:gap-7 p-5 sm:p-7 md:p-8">
+        <div
+          className="shrink-0 w-[32%] sm:w-[35%] aspect-square flex items-center justify-center p-4 sm:p-6 rounded-[10px]"
+          style={DARK_TILE_STYLE}
+        >
+          <img
+            src={iconSrc}
+            alt=""
+            className="w-full max-w-[5.5rem] sm:max-w-[6.5rem] h-auto object-contain"
+          />
+        </div>
+        <div className="flex-1 min-w-0 flex flex-col justify-center py-1 sm:py-2">
+          <h3
+            id={titleId}
+            className="font-heading font-black text-sm sm:text-base uppercase tracking-tight text-black leading-tight"
+          >
+            {title}
+          </h3>
+          <div className="mt-4 sm:mt-5">{children}</div>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default function Nosotros() {
   return (
     <Layout>
-      <Hero
-        title="Método y Ejecución"
-        subtitle="Cuando una obra no puede fallar, el método importa."
-        size="small"
-      />
-
-      <section className="py-24 bg-background" data-testid="section-about">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-32">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+      <div className="bg-black min-h-screen">
+        <section
+          className="relative isolate w-full min-h-[36vh] sm:min-h-[42vh] md:min-h-[48vh] flex items-end overflow-hidden bg-black pt-24 sm:pt-28"
+          aria-labelledby="nosotros-heading"
+        >
+          <img
+            src="/images/hero-construction.png"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-[72%_28%] sm:object-[78%_22%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-8 sm:pb-10">
+            <h1
+              id="nosotros-heading"
+              className="font-heading font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tighter leading-[0.95]"
             >
-              <h2 className="font-heading font-bold text-3xl sm:text-5xl text-foreground mb-8 uppercase tracking-tighter">
-                Nuestra Filosofía
-              </h2>
-              <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-                <p>
-                  IFSA PANAMÁ nace para responder a proyectos donde el control técnico 
-                  y la capacidad operativa marcan la diferencia. No vendemos sueños, 
-                  ejecutamos obras que no pueden fallar.
-                </p>
-                <p>
-                  Nos especializamos en obra civil, infraestructura, topografía y apoyo 
-                  de maquinaria para proyectos que exigen precisión absoluta. Nuestra filosofía 
-                  no se basa en promesas comerciales, sino en la aplicación estricta de métodos de ingeniería.
-                </p>
-              </div>
-            </motion.div>
+              Método y
+              <br />
+              ejecución
+            </h1>
+            <p className="mt-4 max-w-xl text-white/80 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
+              Cuando una obra no puede fallar, el método importa.
+            </p>
+          </div>
+        </section>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <div className="aspect-[4/3] border border-border bg-card">
+        <div className="relative w-full px-4 sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
+          <div
+            className="relative w-full max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.25rem] overflow-hidden border border-white/10"
+            style={{
+              backgroundImage: `url(${FOLDER_BG})`,
+              backgroundSize: "100% 100%",
+              backgroundPosition: "center top",
+              backgroundRepeat: "no-repeat",
+              clipPath: FOLDER_CLIP,
+            }}
+          >
+            <div className="relative max-w-[52rem] mx-auto flex flex-col gap-10 sm:gap-12 lg:gap-14 px-5 pt-20 pb-10 sm:px-6 sm:pt-24 sm:pb-12 md:pt-28 md:pb-14">
+              <section
+                aria-labelledby="nuestra-filosofia"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center"
+              >
+                <div>
+                  <h2
+                    id="nuestra-filosofia"
+                    className="font-heading font-black text-xl sm:text-2xl text-white uppercase tracking-tighter mb-5 sm:mb-6"
+                  >
+                    Nuestra filosofía
+                  </h2>
+                  <div className="space-y-4 text-white/70 text-sm sm:text-[15px] leading-relaxed">
+                    <p>
+                      IFSA PANAMÁ nace para responder a proyectos donde el control
+                      técnico y la capacidad operativa marcan la diferencia. No
+                      vendemos sueños, ejecutamos obras que no pueden fallar.
+                    </p>
+                    <p>
+                      Nos especializamos en obra civil, infraestructura, topografía y
+                      apoyo de maquinaria para proyectos que exigen precisión absoluta.
+                      Nuestra filosofía no se basa en promesas comerciales, sino en la
+                      aplicación estricta de métodos de ingeniería.
+                    </p>
+                  </div>
+                </div>
                 <img
-                  src="https://images.unsplash.com/photo-1621955964441-c173e01c135b?w=800&h=600&fit=crop"
-                  alt="Equipo IFSA PANAMÁ"
-                  className="w-full h-full object-cover grayscale"
+                  src="/images/about-engineers-photo.png"
+                  alt="Ingenieros revisando planos en obra"
+                  className="w-full rounded-[12px] object-cover aspect-[4/3] grayscale shadow-md"
                   loading="lazy"
                 />
-              </div>
-            </motion.div>
+              </section>
+
+              <section aria-labelledby="principios-operativos">
+                <SectionTitle id="principios-operativos">
+                  Principios operativos
+                </SectionTitle>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+                  {operationalPrinciples.map((p) => (
+                    <LightPrincipleCard key={p.title} {...p} />
+                  ))}
+                </div>
+              </section>
+
+              <section aria-labelledby="capacidad-tecnica">
+                <CompactWideCard
+                  iconSrc="/images/about-icon-head-gear.png"
+                  title="Capacidad técnica y supervisión"
+                  titleId="capacidad-tecnica"
+                >
+                  <p className="text-[10px] sm:text-[11px] text-zinc-800 leading-relaxed">
+                    Contamos con un equipo técnico y operativo orientado
+                    exclusivamente a la ejecución en campo. Nuestra infraestructura de
+                    maquinaria y transporte nos permite mantener un control total sobre
+                    los costos y tiempos de cada proyecto, garantizando responsabilidad
+                    operativa de principio a fin.
+                  </p>
+                </CompactWideCard>
+              </section>
+            </div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-heading font-bold text-3xl text-foreground uppercase tracking-tighter">
-              Principios Operativos
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
-            {principles.map((principle, index) => (
-              <motion.div
-                key={principle.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className="h-full border-border bg-card rounded-none text-center" data-testid={`card-about-principle-${index}`}>
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-foreground/5 flex items-center justify-center mx-auto mb-8 border border-border">
-                      <principle.icon className="h-8 w-8 text-foreground" />
-                    </div>
-                    <h3 className="font-heading font-bold text-xl text-foreground mb-4 uppercase tracking-tighter">
-                      {principle.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {principle.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-foreground/5 border border-border p-12 lg:p-16 text-center"
-          >
-            <h2 className="font-heading font-bold text-3xl text-foreground mb-8 uppercase tracking-tighter">
-              Capacidad Técnica y Supervisión
-            </h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
-              Contamos con un equipo técnico y operativo orientado exclusivamente a la ejecución en campo. 
-              Nuestra infraestructura de maquinaria y transporte nos permite mantener un control total 
-              sobre los costos y tiempos de cada proyecto, garantizando responsabilidad operativa de principio a fin.
-            </p>
-          </motion.div>
         </div>
-      </section>
 
-      <CTASection
-        title="Si tu obra no puede fallar, empecemos con una visita técnica."
-        subtitle="Hablemos de los requerimientos técnicos de tu proyecto."
-      />
+        <CTASection
+          title="Si tu obra no puede fallar, empecemos con una visita técnica."
+          subtitle="Hablemos de los requerimientos técnicos de tu proyecto."
+        />
+      </div>
     </Layout>
   );
 }
