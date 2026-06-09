@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { motion } from "framer-motion";
 import { Layout } from "@/components/Layout";
 import { CTASection } from "@/components/CTASection";
 import {
@@ -273,13 +274,23 @@ export default function CalidadSeguridad() {
     <Layout>
       <div className="bg-black min-h-screen">
         <section
-          className="relative isolate w-full min-h-[50vh] flex flex-col justify-center overflow-hidden bg-black pt-[140px]"
+          className="relative isolate w-full min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center overflow-hidden bg-black pt-[140px]"
           aria-labelledby="calidad-heading"
         >
-          <img
-            src="/images/hero-construction.png"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover object-[72%_28%] sm:object-[78%_22%]"
+          <motion.video
+            src="/video-calidad.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            initial={{ objectPosition: "50% 100%" }}
+            animate={{ objectPosition: "50% 50%" }}
+            transition={{
+              delay: 3,
+              duration: 2,
+              ease: "easeInOut",
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
