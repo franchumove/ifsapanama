@@ -29,7 +29,7 @@ export default function Servicios() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover -scale-x-100"
           initial={{ objectPosition: "50% 100%" }}
-          animate={{ objectPosition: "50% 0%" }}
+          animate={{ objectPosition: "50% 50%" }}
           transition={{
             delay: 3,
             duration: 2,
