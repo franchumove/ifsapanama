@@ -12,7 +12,7 @@ export const services: Service[] = [
   },
   {
     id: "obra-civil-general",
-    title: "Obra Civil General",
+    title: "Obra Civil Infraestructura",
     icon: "civil",
     description: "Ejecución integral de obras civiles con control técnico, coordinación de frentes y cumplimiento de especificaciones.",
     resuelve: "Ejecución integral de obras civiles con control técnico, coordinación de frentes y cumplimiento de especificaciones.",
@@ -21,7 +21,7 @@ export const services: Service[] = [
   },
   {
     id: "infraestructura-sanitaria",
-    title: "Infraestructura Sanitaria e Hidráulica",
+    title: "Infraestructura Redes",
     icon: "sanitary",
     description: "Gestión, protección y conducción de recursos hídricos en obras de alta exigencia técnica.",
     resuelve: "Gestión, protección y conducción de recursos hídricos en obras de alta exigencia técnica.",

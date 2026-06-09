@@ -20,7 +20,7 @@ const iconPngMap: Record<string, string> = {
 export default function Servicios() {
   return (
     <Layout>
-      <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden bg-black flex items-center justify-center">
+      <section className="relative w-full min-h-[50vh] md:min-h-[60vh] overflow-hidden bg-black flex flex-col justify-center pt-[140px]">
         <motion.video
           src="/video_helicoptero.mp4"
           autoPlay
@@ -78,9 +78,14 @@ export default function Servicios() {
                 // Resolver el icono PNG — siempre usar PNG del mapeo
                 const iconSrc = iconPngMap[service.icon] || "/images/icon-engineering.png";
                 
-                // Para tarjetas 1-3 y 6 que tienen PNGs de título válidos,
-                // seguimos usando la imagen. Para 4 y 5 (nuevas), usamos texto.
-                const hasValidTitlePng = [0, 1, 2, 5].includes(index);
+                // PNG solo en tarjetas 1 y 6; el resto usa texto negro legible
+                const hasValidTitlePng = [0, 5].includes(index);
+                const titleText =
+                  index === 1
+                    ? "OBRA CIVIL INFRAESTRUCTURA"
+                    : index === 2
+                      ? "INFRAESTRUCTURA REDES"
+                      : service.title;
                 
                 return (
                   <motion.div
@@ -119,8 +124,8 @@ export default function Servicios() {
                                 className="h-12 w-auto object-contain" 
                               />
                             ) : (
-                              <h3 className="text-white font-black text-[15px] md:text-[17px] uppercase tracking-tight leading-tight">
-                                {service.title}
+                              <h3 className="text-black font-black text-[15px] md:text-[17px] uppercase tracking-tight leading-tight">
+                                {titleText}
                               </h3>
                             )}
                           </div>

@@ -142,7 +142,7 @@ export default function Nosotros() {
     <Layout>
       <div className="bg-black min-h-screen">
         <section
-          className="relative isolate w-full min-h-[36vh] sm:min-h-[42vh] md:min-h-[48vh] flex items-end overflow-hidden bg-black pt-24 sm:pt-28"
+          className="relative isolate w-full min-h-[50vh] flex flex-col justify-center overflow-hidden bg-black pt-[140px]"
           aria-labelledby="nosotros-heading"
         >
           <img

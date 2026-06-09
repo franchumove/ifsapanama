@@ -92,11 +92,11 @@ export function Footer() {
                 <nav className="flex flex-col gap-5">
                   {[
                     "Diseños de Ingeniería",
-                    "Obra Civil General",
-                    "Infraestructura Sanitaria",
-                    "Obras Viales",
-                    "Estructuras y Cimentaciones",
-                    "Mantenimientos Locativos"
+                    "Obra Civil Infraestructura",
+                    "Infraestructura Redes",
+                    "Infraestructura Industrial",
+                    "Servicios Especiales",
+                    "Mantenimientos Locativos",
                   ].map((service) => (
                     <span key={service} className="text-white hover:text-[#FF9B26] transition-colors text-sm font-black uppercase tracking-widest cursor-default">
                       {service}

@@ -38,7 +38,7 @@ export default function Contacto() {
     <Layout>
       <div className="bg-black min-h-screen">
         <section
-          className="relative w-full min-h-[32vh] sm:min-h-[36vh] md:min-h-[40vh] flex items-end overflow-hidden bg-black pt-24 sm:pt-28"
+          className="relative w-full min-h-[50vh] flex flex-col justify-center overflow-hidden bg-black pt-[140px]"
           aria-labelledby="contacto-heading"
         >
           <img
