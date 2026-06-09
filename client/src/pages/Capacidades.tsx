@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { HeroVideo } from "@/components/HeroVideo";
 import { CTASection } from "@/components/CTASection";
 import { capabilities } from "@/data/services";
 import { motion } from "framer-motion";
@@ -16,39 +17,22 @@ export default function Capacidades() {
   return (
     <Layout>
       <div className="bg-black">
-        {/* Superior — video hero como en Servicios */}
-        <section
-          className="relative w-full min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center overflow-hidden bg-black pt-[140px]"
-          aria-labelledby="capacidades-heading"
+        <HeroVideo
+          src="/video-capacidades.mp4"
+          overlay="gradient"
+          objectPosition="center 40%"
+          ariaLabelledBy="capacidades-heading"
         >
-          <motion.video
-            src="/video-capacidades.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            initial={{ objectPosition: "50% 100%" }}
-            animate={{ objectPosition: "50% 50%" }}
-            transition={{
-              delay: 3,
-              duration: 2,
-              ease: "easeInOut"
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/40" />
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-6 sm:pb-8">
-            <h1
-              id="capacidades-heading"
-              className="font-heading font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tighter leading-none"
-            >
-              Capacidades
-            </h1>
-            <p className="mt-3 max-w-xl text-white/75 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
-              Cuando una obra no puede fallar, el método importa.
-            </p>
-          </div>
-        </section>
+          <h1
+            id="capacidades-heading"
+            className="font-heading font-black heading-hero-page text-white uppercase tracking-tighter"
+          >
+            Capacidades
+          </h1>
+          <p className="mt-3 max-w-xl text-white/75 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
+            Cuando una obra no puede fallar, el método importa.
+          </p>
+        </HeroVideo>
 
         {/* Carpeta — padding y huecos reducidos */}
         <div className="w-full px-4 sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">

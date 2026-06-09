@@ -229,6 +229,21 @@
   .divider-gold {
     @apply w-16 h-1 mx-auto bg-foreground mb-8;
   }
+
+  .mobile-gutter {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .heading-section {
+    font-size: clamp(1.35rem, 5.5vw, 2.25rem);
+    line-height: 1.1;
+  }
+
+  .heading-hero-page {
+    font-size: clamp(1.75rem, 7vw, 3.75rem);
+    line-height: 0.95;
+  }
 }
 
 @layer utilities {

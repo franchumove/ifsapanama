@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import { motion } from "framer-motion";
 import { Layout } from "@/components/Layout";
+import { HeroVideo } from "@/components/HeroVideo";
 import { CTASection } from "@/components/CTASection";
 import {
   Accordion,
@@ -94,7 +94,7 @@ function SectionTitle({
     <div className="text-center mb-6 sm:mb-8">
       <h2
         id={id}
-        className="font-heading font-black text-lg sm:text-xl text-white uppercase tracking-tighter"
+        className="font-heading font-black heading-section text-white uppercase tracking-tighter"
       >
         {children}
       </h2>
@@ -273,43 +273,26 @@ export default function CalidadSeguridad() {
   return (
     <Layout>
       <div className="bg-black min-h-screen">
-        <section
-          className="relative isolate w-full min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center overflow-hidden bg-black pt-[140px]"
-          aria-labelledby="calidad-heading"
+        <HeroVideo
+          src="/video-calidad.mp4"
+          overlay="gradient"
+          objectPosition="center 35%"
+          ariaLabelledBy="calidad-heading"
         >
-          <motion.video
-            src="/video-calidad.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            initial={{ objectPosition: "50% 100%" }}
-            animate={{ objectPosition: "50% 50%" }}
-            transition={{
-              delay: 3,
-              duration: 2,
-              ease: "easeInOut",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-8 sm:pb-10">
-            <h1
-              id="calidad-heading"
-              className="font-heading font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tighter leading-[0.95]"
-            >
-              Sistemas de
-              <br />
-              ejecución
-            </h1>
-            <p className="mt-4 max-w-xl text-white/80 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
-              Cuando una obra no puede fallar, el método importa.
-            </p>
-          </div>
-        </section>
+          <h1
+            id="calidad-heading"
+            className="font-heading font-black heading-hero-page text-white uppercase tracking-tighter"
+          >
+            Sistemas de
+            <br />
+            ejecución
+          </h1>
+          <p className="mt-4 max-w-xl text-white/80 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
+            Cuando una obra no puede fallar, el método importa.
+          </p>
+        </HeroVideo>
 
-        <div className="relative w-full px-4 sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
+        <div className="relative w-full px-[15px] sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
           <div
             className="relative w-full max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.25rem] overflow-hidden border border-white/10"
             style={{

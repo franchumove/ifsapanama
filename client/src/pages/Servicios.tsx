@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { Hero } from "@/components/Hero";
+import { HeroVideo } from "@/components/HeroVideo";
 import { CTASection } from "@/components/CTASection";
 import { services } from "@/data/services";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,27 +20,15 @@ const iconPngMap: Record<string, string> = {
 export default function Servicios() {
   return (
     <Layout>
-      <section className="relative w-full min-h-[50vh] md:min-h-[60vh] overflow-hidden bg-black flex flex-col justify-center pt-[140px]">
-        <motion.video
-          src="/video_servicios.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover -scale-x-100"
-          initial={{ objectPosition: "50% 100%" }}
-          animate={{ objectPosition: "50% 50%" }}
-          transition={{
-            delay: 3,
-            duration: 2,
-            ease: "easeInOut"
-          }}
-        />
-        <div className="absolute inset-0 bg-black/20" />
-      </section>
+      <HeroVideo
+        src="/video_servicios.mp4"
+        flip
+        overlay="minimal"
+        objectPosition="center 40%"
+      />
 
       {/* Folder Container */}
-      <div className="w-full bg-black px-4 sm:px-6 md:px-8 pb-32 pt-8">
+      <div className="w-full bg-black px-[15px] sm:px-6 md:px-8 pb-32 pt-8">
         <div 
           className="relative w-full max-w-7xl mx-auto z-10 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10"
           style={{ 
@@ -51,22 +39,22 @@ export default function Servicios() {
             clipPath: 'polygon(0 0, 75% 0, 76% 15px, 100% 15px, 100% 100%, 0 100%)'
           }}
         >
-          <div className="px-6 pt-32 pb-16 md:px-12 md:pt-40 md:pb-20 lg:px-16" data-testid="section-services-intro">
+          <div className="px-[15px] sm:px-6 pt-20 sm:pt-32 pb-12 sm:pb-16 md:px-12 md:pt-40 md:pb-20 lg:px-16" data-testid="section-services-intro">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-center mb-20 flex flex-col items-center"
+              className="text-center mb-12 sm:mb-20 flex flex-col items-center w-full"
             >
-              <h2 className="font-heading font-bold text-3xl sm:text-5xl text-white mb-6 uppercase tracking-tighter">
+              <h2 className="font-heading font-bold heading-section sm:text-5xl text-white mb-4 sm:mb-6 uppercase tracking-tighter w-full">
                 Sistemas de Ejecución
               </h2>
-              <div className="max-w-3xl mx-auto space-y-4">
-                <p className="text-white font-bold text-xl md:text-2xl leading-snug uppercase tracking-tight">
+              <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4 w-full">
+                <p className="text-white font-bold text-[clamp(1rem,4.5vw,1.5rem)] leading-snug uppercase tracking-tight">
                   Un servicio no es una lista.
                 </p>
-                <p className="text-white/70 text-[14px] md:text-[15px] leading-relaxed uppercase tracking-wider font-light">
+                <p className="text-white/70 text-[13px] sm:text-[14px] md:text-[15px] leading-relaxed uppercase tracking-wider font-light px-0">
                   Es un sistema de ejecución definido por el problema que resuelve,
                   su método y su aplicación en campo.
                 </p>
