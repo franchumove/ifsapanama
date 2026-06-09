@@ -7,6 +7,8 @@ interface HeroVideoProps {
   /** minimal = overlay ligero (Servicios); gradient = título legible (Capacidades/Calidad) */
   overlay?: "minimal" | "gradient";
   objectPosition?: string;
+  /** Escala ancho del media (>1 = más cobertura lateral, sin estirar píxeles) */
+  horizontalExpand?: number;
   ariaLabelledBy?: string;
   children?: ReactNode;
 }
@@ -19,10 +21,32 @@ export function HeroVideo({
   flip = false,
   overlay = "gradient",
   objectPosition = "center center",
+  horizontalExpand = 1,
   ariaLabelledBy,
   children,
 }: HeroVideoProps) {
   const [ready, setReady] = useState(false);
+
+  const expandedMediaStyle =
+    horizontalExpand > 1
+      ? {
+          objectPosition,
+          width: `${horizontalExpand * 100}%`,
+          height: "100%",
+          top: 0,
+          left: "50%",
+          transform: flip
+            ? `translateX(-50%) scaleX(-1)`
+            : "translateX(-50%)",
+        }
+      : { objectPosition };
+
+  const expandedMediaClass =
+    horizontalExpand > 1
+      ? "absolute object-cover transition-opacity duration-300"
+      : `absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+          flip ? "-scale-x-100" : ""
+        }`;
 
   return (
     <section
@@ -33,10 +57,8 @@ export function HeroVideo({
         src={poster}
         alt=""
         aria-hidden
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
-          ready ? "opacity-0" : "opacity-100"
-        }`}
-        style={{ objectPosition }}
+        className={`${expandedMediaClass} ${ready ? "opacity-0" : "opacity-100"}`}
+        style={expandedMediaStyle}
       />
 
       <video
@@ -50,10 +72,8 @@ export function HeroVideo({
         fetchPriority="high"
         onLoadedData={() => setReady(true)}
         onCanPlay={() => setReady(true)}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
-          flip ? "-scale-x-100" : ""
-        } ${ready ? "opacity-100" : "opacity-0"}`}
-        style={{ objectPosition }}
+        className={`${expandedMediaClass} ${ready ? "opacity-100" : "opacity-0"}`}
+        style={expandedMediaStyle}
       />
 
       {overlay === "minimal" ? (

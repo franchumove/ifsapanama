@@ -276,7 +276,8 @@ export default function CalidadSeguridad() {
         <HeroVideo
           src="/video-calidad.mp4"
           overlay="gradient"
-          objectPosition="center 35%"
+          objectPosition="center 38%"
+          horizontalExpand={1.18}
           ariaLabelledBy="calidad-heading"
         >
           <h1
