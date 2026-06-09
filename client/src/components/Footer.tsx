@@ -19,7 +19,7 @@ export function Footer() {
               <img 
                 src="/images/logo-footer.png" 
                 alt="IFSA Panamá" 
-                className="h-20 w-auto object-contain brightness-200" 
+                className="h-20 w-auto object-contain" 
               />
             </Link>
             <p className="text-white/60 text-sm font-medium leading-relaxed max-w-xs mb-10">
