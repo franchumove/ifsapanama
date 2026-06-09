@@ -25,7 +25,7 @@ export function ProjectsGrid({
   const displayProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <section className="py-24 lg:py-32" data-testid="section-projects-grid">
+    <section className="py-12 lg:py-16" data-testid="section-projects-grid">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

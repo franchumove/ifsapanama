@@ -63,7 +63,7 @@ export function IntentRoutes() {
                 <h2 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter mb-3">
                   Explora Proyectos
                 </h2>
-                <p className="text-black/40 text-[11px] uppercase tracking-[0.4em] font-black">
+                <p className="text-white/60 text-[11px] uppercase tracking-[0.4em] font-black">
                   Según el tipo de obra
                 </p>
               </div>
