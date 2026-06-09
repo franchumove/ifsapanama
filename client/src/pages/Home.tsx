@@ -49,9 +49,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-0 bg-black">
+      <section className="py-0 bg-black px-4 sm:px-6 lg:px-8">
         <div 
-          className="max-w-6xl mx-auto relative min-h-[400px] rounded-[4rem] overflow-hidden bg-[#4a4a4a] border-2 border-white/20 shadow-[0_0_0_1px_rgba(255,255,255,0.1)]"
+          className="max-w-6xl mx-auto relative min-h-[400px] rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[4rem] overflow-hidden bg-[#4a4a4a] border-2 border-white/20 shadow-[0_0_0_1px_rgba(255,255,255,0.1)]"
         >
           <div className="py-20">
             <ProjectsGrid projects={featuredProjects} showViewAll />

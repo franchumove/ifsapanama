@@ -94,7 +94,7 @@ export default function Servicios() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex flex-col relative min-h-[500px] sm:min-h-[600px] md:h-[700px]"
+                    className="flex flex-col relative h-auto min-h-0 sm:min-h-[600px] md:h-[700px] w-full"
                     style={{ 
                       backgroundImage: "url('/images/service-card-shape.png')",
                       backgroundSize: '100% 100%',
