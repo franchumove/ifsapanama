@@ -22,7 +22,7 @@ export default function Servicios() {
     <Layout>
       <section className="relative w-full min-h-[50vh] md:min-h-[60vh] overflow-hidden bg-black flex flex-col justify-center pt-[140px]">
         <motion.video
-          src="/video_helicoptero.mp4"
+          src="/video_servicios.mp4"
           autoPlay
           loop
           muted
