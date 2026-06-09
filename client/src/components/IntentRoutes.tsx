@@ -50,7 +50,7 @@ export function IntentRoutes() {
         <div className="relative">
           {/* Asset as top decorative border */}
           <div 
-            className="relative min-h-[200px] rounded-[3rem] overflow-hidden border-2 border-black/20 shadow-[0_0_0_1px_rgba(0,0,0,0.05)]"
+            className="relative min-h-[200px] rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[3rem] overflow-hidden border-2 border-black/20 shadow-[0_0_0_1px_rgba(0,0,0,0.05)]"
             style={{ 
               backgroundImage: "url('/images/folder-card-bg.png')",
               backgroundSize: '100% 100%',
@@ -58,7 +58,7 @@ export function IntentRoutes() {
               clipPath: 'polygon(-1% -1%, 75% -1%, 76% 15px, 101% 15px, 101% 101%, -1% 101%)'
             }}
           >
-            <div className="px-8 py-16 md:px-16 md:py-20">
+            <div className="px-5 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter mb-3">
                   Explora Proyectos
@@ -82,7 +82,7 @@ export function IntentRoutes() {
                         <div 
                           className="h-full bg-white/30 backdrop-blur-sm border-2 border-white/60 cursor-pointer group transition-all duration-300 relative rounded-[2rem] overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.1)]"
                         >
-                          <div className="p-8 flex flex-col h-full min-h-[240px]">
+                          <div className="p-5 sm:p-8 flex flex-col h-full min-h-[180px] sm:min-h-[240px]">
                             <h3 className="font-heading font-black text-xl text-black/90 mb-4 uppercase leading-[1] tracking-tighter">
                               {route.title}
                             </h3>
@@ -116,7 +116,7 @@ export function IntentRoutes() {
                   >
                     <Link href="/calidad-seguridad">
                       <div 
-                        className="bg-white/20 backdrop-blur-sm border border-white/50 group transition-all duration-300 relative rounded-[2rem] overflow-hidden"
+                        className="bg-white/20 backdrop-blur-sm border border-white/50 group transition-all duration-300 relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden"
                       >
                         <div className="p-5 flex items-center gap-5 min-h-[90px]">
                           <div className="w-14 h-14 bg-black/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform rounded-sm">

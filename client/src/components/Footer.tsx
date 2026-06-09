@@ -12,7 +12,7 @@ const quickLinks = [
 export function Footer() {
   return (
     <footer className="bg-ifsa-black text-white" data-testid="footer">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-10" data-testid="link-footer-logo">
@@ -48,7 +48,7 @@ export function Footer() {
 
           <div className="lg:col-span-4">
             <div 
-              className="relative p-10 min-h-[450px] flex flex-col"
+              className="relative p-6 sm:p-10 min-h-[300px] sm:min-h-[450px] flex flex-col"
               style={{ 
                 backgroundImage: "url('/images/footer-card-bg.png')",
                 backgroundSize: '100% 100%',
@@ -77,7 +77,7 @@ export function Footer() {
 
           <div className="lg:col-span-4">
             <div 
-              className="relative p-10 min-h-[450px] flex flex-col"
+              className="relative p-6 sm:p-10 min-h-[300px] sm:min-h-[450px] flex flex-col"
               style={{ 
                 backgroundImage: "url('/images/footer-card-bg.png')",
                 backgroundSize: '100% 100%',

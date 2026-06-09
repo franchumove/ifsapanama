@@ -19,7 +19,7 @@ export function ProjectFilters({ selectedCategory, onCategoryChange }: ProjectFi
     >
       <button
         onClick={() => onCategoryChange(null)}
-        className={`transition-all duration-300 rounded-[25px] px-[20px] py-[8px] cursor-pointer text-sm md:text-base ${
+        className={`transition-all duration-300 rounded-[25px] px-[14px] py-[6px] sm:px-[20px] sm:py-[8px] cursor-pointer text-xs sm:text-sm md:text-base ${
           selectedCategory === null 
             ? "bg-[#FF6600] border-transparent text-black font-bold" 
             : "bg-transparent border border-white text-white font-normal hover:bg-[#FF6600] hover:border-transparent hover:text-black hover:font-bold"
@@ -35,7 +35,7 @@ export function ProjectFilters({ selectedCategory, onCategoryChange }: ProjectFi
           <button
             key={category.value}
             onClick={() => onCategoryChange(category.value)}
-            className={`transition-all duration-300 rounded-[25px] px-[20px] py-[8px] cursor-pointer text-sm md:text-base ${
+            className={`transition-all duration-300 rounded-[25px] px-[14px] py-[6px] sm:px-[20px] sm:py-[8px] cursor-pointer text-xs sm:text-sm md:text-base ${
               isActive 
                 ? "bg-[#FF6600] border-transparent text-black font-bold" 
                 : "bg-transparent border border-white text-white font-normal hover:bg-[#FF6600] hover:border-transparent hover:text-black hover:font-bold"

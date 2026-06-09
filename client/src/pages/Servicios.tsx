@@ -42,7 +42,7 @@ export default function Servicios() {
       {/* Folder Container */}
       <div className="w-full bg-black px-4 sm:px-6 md:px-8 pb-32 pt-8">
         <div 
-          className="relative w-full max-w-7xl mx-auto z-10 rounded-[3rem] overflow-hidden border border-white/10"
+          className="relative w-full max-w-7xl mx-auto z-10 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10"
           style={{ 
             backgroundImage: 'url(/images/folder-card-bg.png)',
             backgroundSize: '100% 100%',
@@ -94,7 +94,7 @@ export default function Servicios() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex flex-col relative h-[700px]"
+                    className="flex flex-col relative min-h-[500px] sm:min-h-[600px] md:h-[700px]"
                     style={{ 
                       backgroundImage: "url('/images/service-card-shape.png')",
                       backgroundSize: '100% 100%',
@@ -134,7 +134,7 @@ export default function Servicios() {
                     </div>
 
                     {/* Body Content — padding-bottom: 40px+ para que respire antes del corte diagonal */}
-                    <div className="px-10 pt-4 pb-[40px] space-y-10 flex-grow">
+                    <div className="px-5 sm:px-8 md:px-10 pt-4 pb-[40px] space-y-6 sm:space-y-10 flex-grow">
                       <div>
                         <span className="text-[11px] font-black text-[#FF6600] uppercase tracking-[0.1em] block mb-2">RESUELVE</span>
                         <p className="text-black/80 leading-relaxed text-[15px] font-medium">
