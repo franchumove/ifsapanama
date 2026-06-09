@@ -32,7 +32,7 @@ export function ProjectsGrid({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: easing }}
-          className="flex flex-col items-center text-center gap-6 mb-12 sm:mb-16 pt-16 px-6 lg:px-8"
+          className="flex flex-col items-center text-center gap-4 mb-6 sm:mb-8 pt-4 px-6 lg:px-8"
         >
           <div className="max-w-3xl mx-auto flex flex-col items-center">
             <h2 className="font-heading font-bold text-2xl sm:text-4xl lg:text-4xl text-white mb-4 tracking-tighter uppercase">

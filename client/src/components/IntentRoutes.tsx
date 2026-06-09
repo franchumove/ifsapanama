@@ -60,7 +60,7 @@ export function IntentRoutes() {
           >
             <div className="px-8 py-16 md:px-16 md:py-20">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-black/90 uppercase tracking-tighter mb-3">
+                <h2 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter mb-3">
                   Explora Proyectos
                 </h2>
                 <p className="text-black/40 text-[11px] uppercase tracking-[0.4em] font-black">
@@ -143,7 +143,7 @@ export function IntentRoutes() {
 
               <div className="text-center">
                 <Link href="/calidad-seguridad">
-                  <span className="text-black/60 hover:text-black transition-colors text-[10px] font-black uppercase tracking-[0.3em] cursor-pointer inline-flex items-center group">
+                  <span className="text-white hover:text-white/80 transition-colors text-[10px] font-black uppercase tracking-[0.3em] cursor-pointer inline-flex items-center group">
                     <ArrowRight className="h-4 w-4 mr-3 group-hover:translate-x-1 transition-transform" />
                     Conoce nuestros sistemas de calidad
                   </span>
