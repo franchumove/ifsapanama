@@ -42,14 +42,6 @@ export function ProjectsGrid({
               {subtitle}
             </p>
           </div>
-          {showViewAll && (
-            <Link href="/proyectos" data-testid="link-view-all-projects">
-              <Button variant="outline" size="sm" className="gap-2 font-black uppercase tracking-[0.2em] text-[10px] bg-transparent border-white/30 text-white hover:bg-white hover:text-black rounded-none px-6 py-4 mt-2 transition-all duration-300" data-testid="button-view-all-projects">
-                Ver todos los proyectos
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          )}
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
@@ -57,6 +49,28 @@ export function ProjectsGrid({
             <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
+
+        {showViewAll && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: easing }}
+            className="flex justify-center mt-12 sm:mt-16"
+          >
+            <Link href="/proyectos" data-testid="link-view-all-projects">
+              <Button
+                variant="outline"
+                size="sm"
+                className="gap-2 font-black uppercase tracking-[0.2em] text-[10px] bg-transparent border-white/30 text-white hover:bg-white hover:text-black rounded-none px-6 py-4 transition-all duration-300"
+                data-testid="button-view-all-projects"
+              >
+                Ver todos los proyectos
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   );

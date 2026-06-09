@@ -8,7 +8,14 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 
 export default function Home() {
-  const featuredProjects = projects.filter((p) => p.featured).slice(0, 2);
+  const featuredSlugs = [
+    "tanque-digestor-lipp",
+    "bordillos-metro-panama",
+    "evaluacion-estructural-muro",
+  ] as const;
+  const featuredProjects = featuredSlugs
+    .map((slug) => projects.find((p) => p.slug === slug))
+    .filter((p): p is (typeof projects)[number] => Boolean(p));
 
   return (
     <Layout>
@@ -47,11 +54,7 @@ export default function Home() {
           className="max-w-6xl mx-auto relative min-h-[400px] rounded-[4rem] overflow-hidden bg-[#4a4a4a] border-2 border-white/20 shadow-[0_0_0_1px_rgba(255,255,255,0.1)]"
         >
           <div className="py-20">
-            <ProjectsGrid
-              projects={featuredProjects}
-              limit={2}
-              showViewAll
-            />
+            <ProjectsGrid projects={featuredProjects} showViewAll />
           </div>
         </div>
       </section>
