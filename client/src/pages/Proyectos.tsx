@@ -25,7 +25,7 @@ export default function Proyectos() {
         Contenedor Maestro y Fondo gris oscuro corporativo
         Max-width centrado (max-w-7xl es approx 1280px)
       */}
-      <section className="min-h-screen bg-[#111111] pt-32 pb-24" data-testid="section-projects-list">
+      <section className="min-h-screen bg-[#111111] pt-[160px] pb-24" data-testid="section-projects-list">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Cabecera (Header) */}

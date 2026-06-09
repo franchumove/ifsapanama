@@ -6,13 +6,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import * as LucideIcons from "lucide-react";
 
-const iconMap: Record<string, LucideIcons.LucideIcon> = {
-  PencilRuler: LucideIcons.PencilRuler,
-  Building2: LucideIcons.Building2,
-  Droplets: LucideIcons.Droplets,
-  Milestone: LucideIcons.Milestone,
-  Construction: LucideIcons.Construction,
-  Settings2: LucideIcons.Settings2,
+// Mapeo de iconos PNG existentes en /images/
+// Para tarjetas que NO tienen su PNG, se usa un fallback válido
+const iconPngMap: Record<string, string> = {
+  engineering: "/images/icon-engineering.png",
+  civil: "/images/icon-civil.png",
+  sanitary: "/images/icon-sanitary.png",
+  industrial: "/images/icon-structures.png",   // Usa structures como fallback
+  especiales: "/images/icon-engineering.png",   // Usa engineering como fallback
+  maintenance: "/images/icon-maintenance.png",
 };
 
 export default function Servicios() {
@@ -29,12 +31,11 @@ export default function Servicios() {
           initial={{ objectPosition: "50% 100%" }}
           animate={{ objectPosition: "50% 0%" }}
           transition={{
-            delay: 3, // Espera 3 segundos
-            duration: 2, // Tarda 2 segundos en subir
+            delay: 3,
+            duration: 2,
             ease: "easeInOut"
           }}
         />
-        {/* Capa de oscurecimiento muy leve para integrarlo con la web */}
         <div className="absolute inset-0 bg-black/20" />
       </section>
 
@@ -74,8 +75,12 @@ export default function Servicios() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-24">
               {services.map((service, index) => {
-                const IconComponent = (iconMap as any)[service.icon] || LucideIcons.Building2;
-                const isPngIcon = !iconMap[service.icon];
+                // Resolver el icono PNG — siempre usar PNG del mapeo
+                const iconSrc = iconPngMap[service.icon] || "/images/icon-engineering.png";
+                
+                // Para tarjetas 1-3 y 6 que tienen PNGs de título válidos,
+                // seguimos usando la imagen. Para 4 y 5 (nuevas), usamos texto.
+                const hasValidTitlePng = [0, 1, 2, 5].includes(index);
                 
                 return (
                   <motion.div
@@ -84,41 +89,47 @@ export default function Servicios() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex flex-col relative h-[650px]"
+                    className="flex flex-col relative h-[700px]"
                     style={{ 
                       backgroundImage: "url('/images/service-card-shape.png')",
                       backgroundSize: '100% 100%',
                       backgroundRepeat: 'no-repeat'
                     }}
                   >
-                    {/* Floating Header Box */}
+                    {/* Floating Header Box — ESTRUCTURA CORRECTA:
+                        1. <img> para el ICONO (PNG restaurado, no texto)
+                        2. <h3> o <img> para el TÍTULO según corresponda */}
                     <div className="p-4 pt-4">
                       <div className="h-[120px] bg-[#4a4a4a] rounded-[1.2rem] flex items-center px-6 border border-white/10">
                         <div className="flex items-center gap-5 w-full">
+                          {/* 1. ICONO — Siempre un <img> con PNG válido */}
                           <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
-                            {isPngIcon ? (
+                            <img 
+                              src={iconSrc} 
+                              alt={`Icono ${service.title}`}
+                              className="w-14 h-14 object-contain" 
+                            />
+                          </div>
+                          {/* 2. TÍTULO — PNG para tarjetas 1,2,3,6 / Texto para 4,5 */}
+                          <div className="flex-grow">
+                            {hasValidTitlePng ? (
                               <img 
-                                src={`/images/icon-${service.icon}.png`} 
+                                src={`/images/title-service-${index + 1}.png`} 
                                 alt={service.title}
-                                className="w-14 h-14 object-contain" 
+                                className="h-12 w-auto object-contain" 
                               />
                             ) : (
-                              <IconComponent className="h-10 w-10 text-white" />
+                              <h3 className="text-white font-black text-[15px] md:text-[17px] uppercase tracking-tight leading-tight">
+                                {service.title}
+                              </h3>
                             )}
-                          </div>
-                          <div className="flex-grow">
-                            <img 
-                              src={`/images/title-service-${index + 1}.png`} 
-                              alt={service.title}
-                              className="h-12 w-auto object-contain" 
-                            />
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Body Content */}
-                    <div className="px-10 pt-4 pb-24 space-y-10 flex-grow">
+                    {/* Body Content — padding-bottom: 40px+ para que respire antes del corte diagonal */}
+                    <div className="px-10 pt-4 pb-[40px] space-y-10 flex-grow">
                       <div>
                         <span className="text-[11px] font-black text-[#FF6600] uppercase tracking-[0.1em] block mb-2">RESUELVE</span>
                         <p className="text-black/80 leading-relaxed text-[15px] font-medium">
