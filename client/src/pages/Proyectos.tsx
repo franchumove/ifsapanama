@@ -23,17 +23,16 @@ export default function Proyectos() {
     <Layout>
       <div className="bg-black min-h-screen">
         <section
-          className="relative isolate w-full min-h-[50vh] flex flex-col justify-center overflow-hidden bg-black pt-[140px]"
+          className="hero-container"
           aria-labelledby="proyectos-heading"
         >
           <img
             src="/images/hero-construction.png"
             alt=""
-            className="absolute inset-0 w-full h-full object-cover object-[72%_28%] sm:object-[78%_22%]"
+            className="hero-media"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-10 sm:pb-12">
+          <div className="hero-overlay-gradient" />
+          <div className="hero-content text-center pb-10 sm:pb-12">
             <h1
               id="proyectos-heading"
               className="font-heading font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white uppercase tracking-tight leading-tight text-center"
@@ -51,7 +50,7 @@ export default function Proyectos() {
           className="bg-[#111111] pb-24 pt-10 sm:pt-12"
           data-testid="section-projects-list"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-[15px] sm:px-6 lg:px-8">
             <ProjectFilters
               selectedCategory={selectedCategory}
               onCategoryChange={setSelectedCategory}

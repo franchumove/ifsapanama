@@ -142,32 +142,31 @@ export default function Nosotros() {
     <Layout>
       <div className="bg-black min-h-screen">
         <section
-          className="relative isolate w-full min-h-[50vh] flex flex-col justify-center overflow-hidden bg-black pt-[140px]"
+          className="hero-container"
           aria-labelledby="nosotros-heading"
         >
           <img
             src="/images/hero-construction.png"
             alt=""
-            className="absolute inset-0 w-full h-full object-cover object-[72%_28%] sm:object-[78%_22%]"
+            className="hero-media"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-8 sm:pb-10">
+          <div className="hero-overlay-gradient" />
+          <div className="hero-content">
             <h1
               id="nosotros-heading"
-              className="font-heading font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tighter leading-[0.95]"
+              className="font-heading font-black heading-hero-page text-white uppercase tracking-tighter"
             >
               Método y
               <br />
               ejecución
             </h1>
-            <p className="mt-4 max-w-xl text-white/80 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
+            <p className="mt-3 max-w-xl text-white/75 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
               Cuando una obra no puede fallar, el método importa.
             </p>
           </div>
         </section>
 
-        <div className="relative w-full px-4 sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
+        <div className="relative w-full px-[15px] sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
           <div
             className="relative w-full max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.25rem] overflow-hidden border border-white/10"
             style={{

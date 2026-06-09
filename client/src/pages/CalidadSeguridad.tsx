@@ -276,8 +276,6 @@ export default function CalidadSeguridad() {
         <HeroVideo
           src="/video-calidad.mp4"
           overlay="gradient"
-          objectPosition="center 38%"
-          horizontalExpand={1.18}
           ariaLabelledBy="calidad-heading"
         >
           <h1
@@ -288,7 +286,7 @@ export default function CalidadSeguridad() {
             <br />
             ejecución
           </h1>
-          <p className="mt-4 max-w-xl text-white/80 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
+          <p className="mt-3 max-w-xl text-white/75 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
             Cuando una obra no puede fallar, el método importa.
           </p>
         </HeroVideo>

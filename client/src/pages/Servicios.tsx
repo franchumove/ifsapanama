@@ -24,7 +24,6 @@ export default function Servicios() {
         src="/video_servicios.mp4"
         flip
         overlay="minimal"
-        objectPosition="center 40%"
       />
 
       {/* Folder Container */}

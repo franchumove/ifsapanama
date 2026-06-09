@@ -38,16 +38,16 @@ export default function Contacto() {
     <Layout>
       <div className="bg-black min-h-screen">
         <section
-          className="relative w-full min-h-[50vh] flex flex-col justify-center overflow-hidden bg-black pt-[140px]"
+          className="hero-container"
           aria-labelledby="contacto-heading"
         >
           <img
             src="/images/hero-construction.png"
             alt=""
-            className="absolute inset-0 w-full h-full object-cover"
+            className="hero-media"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/45" />
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-6 sm:pb-8">
+          <div className="hero-overlay-gradient" />
+          <div className="hero-content">
             <h1
               id="contacto-heading"
               className="font-heading font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tighter leading-none"
@@ -61,7 +61,7 @@ export default function Contacto() {
           </div>
         </section>
 
-        <div className="w-full px-4 sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
+        <div className="w-full px-[15px] sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
           <div
             className="relative w-full max-w-7xl mx-auto z-10 rounded-[2rem] sm:rounded-[2.25rem] overflow-hidden border border-white/10"
             style={FOLDER_STYLE}

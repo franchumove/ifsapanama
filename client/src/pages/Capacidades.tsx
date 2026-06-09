@@ -20,7 +20,6 @@ export default function Capacidades() {
         <HeroVideo
           src="/video-capacidades.mp4"
           overlay="gradient"
-          objectPosition="center 40%"
           ariaLabelledBy="capacidades-heading"
         >
           <h1
@@ -35,7 +34,7 @@ export default function Capacidades() {
         </HeroVideo>
 
         {/* Carpeta — padding y huecos reducidos */}
-        <div className="w-full px-4 sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
+        <div className="w-full px-[15px] sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
           <div
             className="relative w-full max-w-7xl mx-auto z-10 rounded-[2rem] sm:rounded-[2.25rem] overflow-hidden border border-white/10"
             style={{
