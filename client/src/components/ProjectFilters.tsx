@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { projectCategories } from "@/data/projects";
 
 interface ProjectFiltersProps {
@@ -7,36 +6,46 @@ interface ProjectFiltersProps {
 }
 
 export function ProjectFilters({ selectedCategory, onCategoryChange }: ProjectFiltersProps) {
-  const getCategoryImage = (val: string | null) => {
-    switch(val) {
-      case null: return "/images/btn-todos.png";
-      case "obra-civil": return "/images/btn-obra.png";
-      case "hidraulica": return "/images/btn-hidraulica.png";
-      case "industrial": return "/images/btn-galeras.png";
-      case "infraestructura": return "/images/btn-electrica.png";
-      default: return "";
-    }
-  }
-
+  // Using exactly the CSS layout rules requested:
+  // Container: display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 40px;
+  // Buttons (inactivos): background: transparent; border: 1px solid white; border-radius: 25px; padding: 8px 20px; color: white; cursor: pointer; transition: all 0.3s ease;
+  // Botones (Activo): background-color: var(--naranja-corporativo); border-color: transparent; color: #000; font-weight: bold;
+  
   return (
-    <div className="flex flex-wrap justify-center gap-2" data-testid="project-filters">
+    <div 
+      className="flex justify-center flex-wrap gap-[15px] mb-[40px] w-full"
+      style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "15px", marginBottom: "40px" }}
+      data-testid="project-filters"
+    >
       <button
         onClick={() => onCategoryChange(null)}
-        className={`transition-all duration-300 hover:scale-105 ${selectedCategory === null ? 'opacity-100 scale-105 drop-shadow-md' : 'opacity-100 hover:opacity-100 scale-95'}`}
+        className={`transition-all duration-300 rounded-[25px] px-[20px] py-[8px] cursor-pointer text-sm md:text-base ${
+          selectedCategory === null 
+            ? "bg-[#FF6600] border-transparent text-black font-bold" 
+            : "bg-transparent border border-white text-white font-normal hover:bg-[#FF6600] hover:border-transparent hover:text-black hover:font-bold"
+        }`}
         data-testid="filter-all"
       >
-        <img src={getCategoryImage(null)} alt="Todos" className="h-[24px] md:h-[28px] object-contain" />
+        TODOS
       </button>
-      {projectCategories.map((category) => (
-        <button
-          key={category.value}
-          onClick={() => onCategoryChange(category.value)}
-          className={`transition-all duration-300 hover:scale-105 ${selectedCategory === category.value ? 'opacity-100 scale-105 drop-shadow-md' : 'opacity-100 hover:opacity-100 scale-95'}`}
-          data-testid={`filter-${category.value}`}
-        >
-          <img src={getCategoryImage(category.value)} alt={category.label} className="h-[24px] md:h-[28px] object-contain" />
-        </button>
-      ))}
+      
+      {projectCategories.map((category) => {
+        const isActive = selectedCategory === category.value;
+        return (
+          <button
+            key={category.value}
+            onClick={() => onCategoryChange(category.value)}
+            className={`transition-all duration-300 rounded-[25px] px-[20px] py-[8px] cursor-pointer text-sm md:text-base ${
+              isActive 
+                ? "bg-[#FF6600] border-transparent text-black font-bold" 
+                : "bg-transparent border border-white text-white font-normal hover:bg-[#FF6600] hover:border-transparent hover:text-black hover:font-bold"
+            }`}
+            data-testid={`filter-${category.value}`}
+          >
+            {category.label}
+          </button>
+        );
+      })}
     </div>
   );
 }

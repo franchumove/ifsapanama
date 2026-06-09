@@ -118,23 +118,23 @@ export default function Servicios() {
                     </div>
 
                     {/* Body Content */}
-                    <div className="px-10 pt-4 pb-16 space-y-10 flex-grow">
+                    <div className="px-10 pt-4 pb-24 space-y-10 flex-grow">
                       <div>
-                        <span className="text-[11px] font-black text-black uppercase tracking-[0.1em] block mb-2">RESUELVE</span>
+                        <span className="text-[11px] font-black text-[#FF6600] uppercase tracking-[0.1em] block mb-2">RESUELVE</span>
                         <p className="text-black/80 leading-relaxed text-[15px] font-medium">
                           {service.resuelve}
                         </p>
                       </div>
                       
                       <div>
-                        <span className="text-[11px] font-black text-black uppercase tracking-[0.1em] block mb-2">CÓMO SE EJECUTA</span>
+                        <span className="text-[11px] font-black text-[#FF6600] uppercase tracking-[0.1em] block mb-2">CÓMO SE EJECUTA</span>
                         <p className="text-black/80 leading-relaxed text-[15px] font-medium">
                           {service.como}
                         </p>
                       </div>
                       
                       <div>
-                        <span className="text-[11px] font-black text-black uppercase tracking-[0.1em] block mb-2">APLICA CUANDO</span>
+                        <span className="text-[11px] font-black text-[#FF6600] uppercase tracking-[0.1em] block mb-2">APLICA CUANDO</span>
                         <p className="text-black/80 leading-relaxed text-[15px] font-medium">
                           {service.aplica}
                         </p>

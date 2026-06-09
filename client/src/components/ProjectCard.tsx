@@ -1,8 +1,5 @@
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import type { Project } from "@shared/schema";
 
 interface ProjectCardProps {
@@ -19,43 +16,50 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.08, ease: easing }}
+      className="h-full"
     >
-      <Link href={`/proyectos/${project.slug}`} data-testid={`link-project-${project.slug}`}>
-        <Card 
-          className="border-0 cursor-pointer group h-full transition-all duration-500 rounded-none bg-[#e6e6e6]"
-          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)' }}
-          data-testid={`card-project-${project.slug}`}
+      <Link
+        href={`/proyectos/${project.slug}`}
+        className="project-card transition-transform duration-300 hover:-translate-y-2"
+        style={{ display: "flex", flexDirection: "column", textDecoration: "none", width: "100%", height: "100%" }}
+        data-testid={`card-project-${project.slug}`}
+      >
+        {/* Imagen superior — 250px, object-fit cover */}
+        <div className="card-image-wrapper" style={{ width: "100%", height: "250px", overflow: "hidden" }}>
+          <img
+            src={project.thumbnail}
+            alt={project.title}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            className="transition-transform duration-700 hover:scale-110"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Contenido con clip-path en esquina inferior derecha */}
+        <div
+          className="card-content"
+          style={{
+            backgroundColor: "#E5E5E5",
+            padding: "25px",
+            position: "relative",
+            flexGrow: 1,
+            clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%)"
+          }}
         >
-          <div className="aspect-[4/3] relative overflow-hidden">
-            <img
-              src={project.thumbnail}
-              alt={project.title}
-              className="w-full h-full object-cover transition-all duration-700 ease-premium group-hover:scale-105"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-90" />
-            <Badge 
-              className="absolute top-5 left-5 bg-[#2F2F2F] text-white border-0 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-sm"
-              data-testid={`badge-project-type-${project.slug}`}
-            >
-              {project.typeLabel}
-            </Badge>
-            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-              <span className="inline-flex items-center text-white font-medium text-sm gap-2">
-                Ver ficha completa
-                <ArrowRight className="h-4 w-4" />
-              </span>
-            </div>
-          </div>
-          <CardContent className="p-6 lg:p-7">
-            <h3 className="font-heading font-black text-[13px] uppercase tracking-wider text-black mb-2 line-clamp-2 transition-colors duration-300">
-              {project.title}
-            </h3>
-            {project.location && (
-              <p className="text-black/50 font-medium text-xs mt-3">{project.location}</p>
-            )}
-          </CardContent>
-        </Card>
+          <span style={{ color: "#FF6600", fontSize: "12px", fontWeight: "bold", textTransform: "uppercase", marginBottom: "10px", display: "block" }}>
+            {project.typeLabel}
+          </span>
+
+          <h3 style={{ color: "#000", fontSize: "18px", fontWeight: 800, marginBottom: "8px", textTransform: "uppercase" }}>
+            {project.title}
+          </h3>
+
+          {project.location && (
+            <p style={{ color: "#555", fontSize: "14px", margin: 0 }}>
+              {project.client ? `${project.client} — ` : ""}{project.location}
+            </p>
+          )}
+        </div>
       </Link>
     </motion.div>
   );

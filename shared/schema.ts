@@ -53,18 +53,21 @@ export type LeadFormData = z.infer<typeof leadFormSchema>;
 
 // Project types
 export type ProjectCategory =
-  | "infraestructura"
+  | "obra-civil"
+  | "redes"
   | "industrial"
+  | "especiales"
+  | "infraestructura"
   | "obras-publicas"
   | "urbanismo"
   | "sistemas"
   | "cerramientos"
-  | "obra-civil"
   | "hidraulica";
 
 export type Project = {
   title: string;
   slug: string;
+  client?: string;
   category: ProjectCategory;
   typeLabel: string;
   location?: string;
