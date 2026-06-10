@@ -49,7 +49,7 @@ export default function Capacidades() {
               {/* 1 */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-10 items-center mb-8 sm:mb-10 lg:mb-11">
                 <img
-                  src={FIELD_PHOTO}
+                  src="/images/imagen-capacidad-1.png"
                   alt="Operarios en obra"
                   className="w-full rounded-[15px] object-cover shadow-md aspect-[4/3] max-h-[220px] sm:max-h-[260px] lg:max-h-[280px]"
                 />
@@ -83,7 +83,7 @@ export default function Capacidades() {
                 </div>
                 <div className="order-1 lg:order-2">
                   <img
-                    src={FIELD_PHOTO}
+                    src="/images/imagen-capacidad-2.png"
                     alt="Supervisión en campo"
                     className="w-full rounded-[15px] object-cover shadow-md aspect-[4/3] max-h-[220px] sm:max-h-[260px] lg:max-h-[280px]"
                   />
@@ -93,7 +93,7 @@ export default function Capacidades() {
               {/* 3 */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-10 items-center mb-8 sm:mb-10 lg:mb-12">
                 <img
-                  src={FIELD_PHOTO}
+                  src="/images/imagen-capacidad-3.png"
                   alt="Topografía y precisión"
                   className="w-full rounded-[15px] object-cover shadow-md aspect-[4/3] max-h-[220px] sm:max-h-[260px] lg:max-h-[280px]"
                 />
