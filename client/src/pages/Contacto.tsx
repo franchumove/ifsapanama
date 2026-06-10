@@ -11,8 +11,6 @@ const FOLDER_STYLE = {
   backgroundSize: "100% 100%" as const,
   backgroundPosition: "center top" as const,
   backgroundRepeat: "no-repeat" as const,
-  clipPath:
-    "polygon(0 0, 75% 0, 76% 15px, 100% 15px, 100% 100%, 0 100%)",
 };
 
 function SidePanel({
@@ -63,10 +61,10 @@ export default function Contacto() {
 
         <div className="w-full px-[15px] sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
           <div
-            className="relative w-full max-w-7xl mx-auto z-10 rounded-[2rem] sm:rounded-[2.25rem] overflow-hidden border border-white/10"
+            className="folder-shell max-w-7xl mx-auto z-10"
             style={FOLDER_STYLE}
           >
-            <div className="px-5 pt-20 pb-10 sm:px-8 sm:pt-24 sm:pb-11 md:px-10 md:pt-28 md:pb-12 lg:px-12 lg:pt-28 lg:pb-14">
+            <div className="folder-inner">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
                 <motion.div
                   initial={{ opacity: 0, y: 16 }}

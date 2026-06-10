@@ -275,6 +275,7 @@ export default function CalidadSeguridad() {
       <div className="bg-black min-h-screen">
         <HeroVideo
           src="/video-calidad.mp4"
+          poster="/images/poster-calidad.jpg"
           overlay="gradient"
           ariaLabelledBy="calidad-heading"
         >
@@ -293,17 +294,16 @@ export default function CalidadSeguridad() {
 
         <div className="relative w-full px-[15px] sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
           <div
-            className="relative w-full max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.25rem] overflow-hidden border border-white/10"
+            className="folder-shell max-w-7xl mx-auto"
             style={{
               backgroundImage: `url(${FOLDER_BG})`,
               backgroundSize: "100% 100%",
               backgroundPosition: "center top",
               backgroundRepeat: "no-repeat",
-              clipPath: FOLDER_CLIP,
             }}
           >
             <div
-              className={`relative ${NARROW_MAX} mx-auto flex flex-col gap-8 sm:gap-10 lg:gap-12 px-5 pt-20 pb-10 sm:px-6 sm:pt-24 sm:pb-12 md:pt-28 md:pb-14`}
+              className={`folder-inner relative ${NARROW_MAX} mx-auto flex flex-col gap-6 sm:gap-10 lg:gap-12`}
             >
               <section aria-labelledby="principios-obra">
                 <SectionTitle id="principios-obra">Principios en obra</SectionTitle>

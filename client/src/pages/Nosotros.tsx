@@ -168,16 +168,15 @@ export default function Nosotros() {
 
         <div className="relative w-full px-[15px] sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
           <div
-            className="relative w-full max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.25rem] overflow-hidden border border-white/10"
+            className="folder-shell max-w-7xl mx-auto"
             style={{
               backgroundImage: `url(${FOLDER_BG})`,
               backgroundSize: "100% 100%",
               backgroundPosition: "center top",
               backgroundRepeat: "no-repeat",
-              clipPath: FOLDER_CLIP,
             }}
           >
-            <div className="relative max-w-[52rem] mx-auto flex flex-col gap-10 sm:gap-12 lg:gap-14 px-5 pt-20 pb-10 sm:px-6 sm:pt-24 sm:pb-12 md:pt-28 md:pb-14">
+            <div className="folder-inner relative max-w-[52rem] mx-auto flex flex-col gap-8 sm:gap-12 lg:gap-14">
               <section
                 aria-labelledby="nuestra-filosofia"
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center"

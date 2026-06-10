@@ -291,6 +291,56 @@
   .hero-overlay-minimal {
     @apply absolute inset-0 bg-black/20;
   }
+
+  /* Carpeta — pestaña superior 15px; contenido debajo de la pestaña */
+  .folder-shell {
+    @apply relative w-full overflow-hidden border border-white/10;
+    border-radius: 1.25rem;
+    clip-path: polygon(0 0, 75% 0, 76% 15px, 100% 15px, 100% 100%, 0 100%);
+  }
+
+  @media (min-width: 640px) {
+    .folder-shell {
+      border-radius: 2rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .folder-shell {
+      border-radius: 3rem;
+    }
+  }
+
+  .folder-inner {
+    padding: 28px 15px 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .folder-inner {
+      padding: 3rem 2rem 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .folder-inner {
+      padding: 3.5rem 2.5rem 3rem;
+    }
+  }
+
+  /* Tarjeta servicio — forma PNG solo en desktop; móvil compacto */
+  .service-card-mobile {
+    @apply flex flex-col w-full rounded-xl border border-black/15 bg-[#d4d4d4] overflow-hidden;
+  }
+
+  @media (min-width: 768px) {
+    .service-card-mobile {
+      @apply rounded-none border-0 bg-transparent;
+      background-image: url("/images/service-card-shape.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      min-height: 700px;
+    }
+  }
 }
 
 @layer utilities {

@@ -2,7 +2,8 @@ import { useState, type ReactNode } from "react";
 
 interface HeroVideoProps {
   src: string;
-  poster?: string;
+  /** Frame del propio video — evita flash de imagen de Home */
+  poster: string;
   flip?: boolean;
   /** minimal = overlay ligero (Servicios); gradient = título legible (Capacidades/Calidad) */
   overlay?: "minimal" | "gradient";
@@ -10,11 +11,9 @@ interface HeroVideoProps {
   children?: ReactNode;
 }
 
-const DEFAULT_POSTER = "/images/hero-construction.png";
-
 export function HeroVideo({
   src,
-  poster = DEFAULT_POSTER,
+  poster,
   flip = false,
   overlay = "gradient",
   ariaLabelledBy,
@@ -32,6 +31,7 @@ export function HeroVideo({
         src={poster}
         alt=""
         aria-hidden
+        fetchPriority="high"
         className={`${mediaClass} ${ready ? "opacity-0" : "opacity-100"}`}
       />
 

@@ -50,15 +50,14 @@ export function IntentRoutes() {
         <div className="relative w-full">
           {/* Asset as top decorative border */}
           <div 
-            className="relative min-h-[200px] rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[3rem] overflow-hidden border-2 border-black/20 shadow-[0_0_0_1px_rgba(0,0,0,0.05)]"
+            className="folder-shell border-2 border-black/20 shadow-[0_0_0_1px_rgba(0,0,0,0.05)]"
             style={{ 
               backgroundImage: "url('/images/folder-card-bg.png')",
               backgroundSize: '100% 100%',
               backgroundRepeat: 'no-repeat',
-              clipPath: 'polygon(0 0, 75% 0, 76% 15px, 100% 15px, 100% 100%, 0 100%)'
             }}
           >
-            <div className="px-[15px] py-10 sm:px-8 sm:py-16 md:px-16 md:py-20">
+            <div className="folder-inner md:px-16">
               <div className="text-center mb-10 sm:mb-16 w-full">
                 <h2 className="heading-section md:text-4xl font-bold text-white uppercase tracking-tighter mb-2 sm:mb-3">
                   Explora Proyectos
