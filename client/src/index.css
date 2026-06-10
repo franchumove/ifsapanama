@@ -311,20 +311,22 @@
     }
   }
 
-  /* Solo móvil (<640px): bajar títulos e imágenes debajo de la pestaña */
+  /* Móvil: bajar contenido debajo de la pestaña del PNG */
   .folder-inner {
-    padding: 4rem 15px 1.5rem;
+    padding: 7rem 15px 1.5rem;
   }
 
+  /* Tablet — restaurar espacio previo (sm:pt-24 / sm:pt-32) */
   @media (min-width: 640px) {
     .folder-inner {
-      padding: 3rem 2rem 2.5rem;
+      padding: 8rem 2rem 2.5rem;
     }
   }
 
+  /* Desktop — restaurar espacio previo (md:pt-28 / md:pt-40) */
   @media (min-width: 1024px) {
     .folder-inner {
-      padding: 3.5rem 2.5rem 3rem;
+      padding: 10rem 2.5rem 3rem;
     }
   }
 
