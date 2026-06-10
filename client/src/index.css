@@ -292,7 +292,7 @@
     @apply absolute inset-0 bg-black/20;
   }
 
-  /* Carpeta — pestaña superior 15px; contenido debajo de la pestaña */
+  /* Carpeta — en móvil el PNG tiene pestaña visual más alta que el clip-path */
   .folder-shell {
     @apply relative w-full overflow-hidden border border-white/10;
     border-radius: 1.25rem;
@@ -311,8 +311,9 @@
     }
   }
 
+  /* Solo móvil (<640px): bajar títulos e imágenes debajo de la pestaña */
   .folder-inner {
-    padding: 28px 15px 1.5rem;
+    padding: 4rem 15px 1.5rem;
   }
 
   @media (min-width: 640px) {
