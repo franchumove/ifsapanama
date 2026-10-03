@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Layout } from "@/components/Layout";
 import { CTASection } from "@/components/CTASection";
+import { HeroVideo } from "@/components/HeroVideo";
 
 const FOLDER_BG = "/images/folder-card-bg.png";
 const FOLDER_CLIP =
@@ -141,30 +142,24 @@ export default function Nosotros() {
   return (
     <Layout>
       <div className="bg-black min-h-screen">
-        <section
-          className="hero-container"
-          aria-labelledby="nosotros-heading"
+        <HeroVideo
+          src="/videos/nosotros.mp4"
+          poster="/images/hero-construction.png"
+          overlay="gradient"
+          ariaLabelledBy="nosotros-heading"
         >
-          <img
-            src="/images/hero-construction.png"
-            alt=""
-            className="hero-media"
-          />
-          <div className="hero-overlay-gradient" />
-          <div className="hero-content">
-            <h1
-              id="nosotros-heading"
-              className="font-heading font-black heading-hero-page text-white uppercase tracking-tighter"
-            >
-              Método y
-              <br />
-              ejecución
-            </h1>
-            <p className="mt-3 max-w-xl text-white/75 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
-              Cuando una obra no puede fallar, el método importa.
-            </p>
-          </div>
-        </section>
+          <h1
+            id="nosotros-heading"
+            className="font-heading font-black heading-hero-page text-white uppercase tracking-tighter"
+          >
+            Método y
+            <br />
+            ejecución
+          </h1>
+          <p className="mt-3 max-w-xl text-white/75 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
+            Cuando una obra no puede fallar, el método importa.
+          </p>
+        </HeroVideo>
 
         <div className="relative w-full px-[15px] sm:px-6 md:px-8 pb-16 sm:pb-20 pt-5 sm:pt-6">
           <div
