@@ -274,7 +274,7 @@ export default function CalidadSeguridad() {
     <Layout>
       <div className="bg-black min-h-screen">
         <HeroVideo
-          src="/video-calidad.mp4"
+          src="/videos/video-calidad-y-seguridad.mp4"
           poster="/images/poster-calidad.jpg"
           overlay="gradient"
           ariaLabelledBy="calidad-heading"
