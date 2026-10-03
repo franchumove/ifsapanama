@@ -48,83 +48,93 @@ export default function Capacidades() {
             <div className="folder-inner">
               {/* 1 */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-10 items-center mb-8 sm:mb-10 lg:mb-11">
-                <img
-                  src="/images/imagen-capacidad-1.png"
-                  alt="Operarios en obra"
-                  className="w-full rounded-[15px] object-cover shadow-md aspect-[4/3] max-h-[220px] sm:max-h-[260px] lg:max-h-[280px]"
-                />
-                <div className="flex flex-col gap-3 sm:gap-4">
                   <img
-                    src="/images/capabilities-title-1.png"
-                    alt="Cómo respondemos en campo"
-                    className="w-full max-w-md object-contain object-left"
-                  />
-                  <img
-                    src="/images/capabilities-checks-1.png"
-                    alt="Planificación de frentes, ejecución, supervisión, cumplimiento y responsabilidad operativa"
-                    className="w-full max-w-md object-contain object-left"
-                  />
-                </div>
-              </div>
-
-              {/* 2 */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-10 items-center mb-8 sm:mb-10 lg:mb-11">
-                <div className="flex flex-col gap-3 sm:gap-4 items-end order-2 lg:order-1">
-                  <img
-                    src="/images/capabilities-title-2.png"
-                    alt="Capacidad técnica y supervisión"
-                    className="w-full max-w-md object-contain object-right"
-                  />
-                  <img
-                    src="/images/capabilities-checks-2.png"
-                    alt="Equipo técnico, método, supervisión compleja y control de calidad"
-                    className="w-full max-w-md object-contain object-right"
-                  />
-                </div>
-                <div className="order-1 lg:order-2">
-                  <img
-                    src="/images/imagen-capacidad-2.png"
-                    alt="Supervisión en campo"
+                    src="/images/imagen-capacidad-1.png"
+                    alt="Operarios en obra"
+                    loading="lazy"
                     className="w-full rounded-[15px] object-cover shadow-md aspect-[4/3] max-h-[220px] sm:max-h-[260px] lg:max-h-[280px]"
                   />
+                  <div className="flex flex-col gap-3 sm:gap-4">
+                    <img
+                      src="/images/capabilities-title-1.png"
+                      alt="Cómo respondemos en campo"
+                      loading="lazy"
+                      className="w-full max-w-md object-contain object-left"
+                    />
+                    <img
+                      src="/images/capabilities-checks-1.png"
+                      alt="Planificación de frentes, ejecución, supervisión, cumplimiento y responsabilidad operativa"
+                      loading="lazy"
+                      className="w-full max-w-md object-contain object-left"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* 3 */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-10 items-center mb-8 sm:mb-10 lg:mb-12">
-                <img
-                  src="/images/imagen-capacidad-3.png"
-                  alt="Topografía y precisión"
-                  className="w-full rounded-[15px] object-cover shadow-md aspect-[4/3] max-h-[220px] sm:max-h-[260px] lg:max-h-[280px]"
-                />
-                <div className="flex flex-col gap-3 sm:gap-4">
+                {/* 2 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-10 items-center mb-8 sm:mb-10 lg:mb-11">
+                  <div className="flex flex-col gap-3 sm:gap-4 items-end order-2 lg:order-1">
+                    <img
+                      src="/images/capabilities-title-2.png"
+                      alt="Capacidad técnica y supervisión"
+                      loading="lazy"
+                      className="w-full max-w-md object-contain object-right"
+                    />
+                    <img
+                      src="/images/capabilities-checks-2.png"
+                      alt="Equipo técnico, método, supervisión compleja y control de calidad"
+                      loading="lazy"
+                      className="w-full max-w-md object-contain object-right"
+                    />
+                  </div>
+                  <div className="order-1 lg:order-2">
+                    <img
+                      src="/images/imagen-capacidad-2.png"
+                      alt="Supervisión en campo"
+                      loading="lazy"
+                      className="w-full rounded-[15px] object-cover shadow-md aspect-[4/3] max-h-[220px] sm:max-h-[260px] lg:max-h-[280px]"
+                    />
+                  </div>
+                </div>
+
+                {/* 3 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-10 items-center mb-8 sm:mb-10 lg:mb-12">
                   <img
-                    src="/images/capabilities-title-3.png"
+                    src="/images/imagen-capacidad-3.png"
                     alt="Topografía y precisión"
-                    className="w-full max-w-md object-contain object-left"
+                    loading="lazy"
+                    className="w-full rounded-[15px] object-cover shadow-md aspect-[4/3] max-h-[220px] sm:max-h-[260px] lg:max-h-[280px]"
                   />
-                  <img
-                    src="/images/capabilities-checks-3.png"
-                    alt="Levantamiento, replanteo, control de niveles y validación por tramos"
-                    className="w-full max-w-md object-contain object-left"
-                  />
+                  <div className="flex flex-col gap-3 sm:gap-4">
+                    <img
+                      src="/images/capabilities-title-3.png"
+                      alt="Topografía y precisión"
+                      loading="lazy"
+                      className="w-full max-w-md object-contain object-left"
+                    />
+                    <img
+                      src="/images/capabilities-checks-3.png"
+                      alt="Levantamiento, replanteo, control de niveles y validación por tramos"
+                      loading="lazy"
+                      className="w-full max-w-md object-contain object-left"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* 4 — tarjeta clara con icono excavadora + texto */}
-              <div
-                className="relative w-full overflow-hidden rounded-2xl bg-[#d4d4d4] shadow-lg border border-black/10"
-                style={{
-                  clipPath:
-                    "polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%)",
-                }}
-              >
-                <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 md:gap-8 items-stretch sm:items-center p-5 sm:p-6 md:py-7 md:px-8">
-                  <div className="flex justify-center sm:justify-start shrink-0">
-                    <div className="rounded-xl bg-[#9a9a9a]/90 w-[7.5rem] h-[7.5rem] sm:w-[8.25rem] sm:h-[8.25rem] flex items-center justify-center p-4 shadow-inner">
-                      <img
-                        src={MAQUINARIA_ICON}
-                        alt=""
+                {/* 4 — tarjeta clara con icono excavadora + texto */}
+                <div
+                  className="relative w-full overflow-hidden rounded-2xl bg-[#d4d4d4] shadow-lg border border-black/10"
+                  style={{
+                    clipPath:
+                      "polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%)",
+                  }}
+                >
+                  <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 md:gap-8 items-stretch sm:items-center p-5 sm:p-6 md:py-7 md:px-8">
+                    <div className="flex justify-center sm:justify-start shrink-0">
+                      <div className="rounded-xl bg-[#9a9a9a]/90 w-[7.5rem] h-[7.5rem] sm:w-[8.25rem] sm:h-[8.25rem] flex items-center justify-center p-4 shadow-inner">
+                        <img
+                          src={MAQUINARIA_ICON}
+                          alt=""
+                          loading="lazy"
                         className="max-h-[5rem] sm:max-h-[5.5rem] w-auto max-w-full object-contain"
                       />
                     </div>
