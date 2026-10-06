@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 export function ClientsMarquee() {
-  const logos = Array.from({ length: 8 }).map((_, i) => `/images/clientes/cliente-${i + 1}.png`);
+  const logos = Array.from({ length: 10 }).map((_, i) => `/images/clientes/cliente-${i + 1}.png`);
   
   // We duplicate the logos array to create an infinite scroll effect
   const repeatedLogos = [...logos, ...logos, ...logos];
