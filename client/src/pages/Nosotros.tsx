@@ -200,7 +200,7 @@ export default function Nosotros() {
                 <img
                     src="/images/ifsa-logo.png"
                     alt="IFSA Panama Logo"
-                    className="w-full max-w-[300px] lg:max-w-[400px] mx-auto object-contain drop-shadow-xl"
+                    className="w-full max-w-[300px] lg:max-w-[400px] ml-auto lg:translate-x-8 object-contain drop-shadow-xl brightness-0 invert"
                     loading="lazy"
                   />
               </section>
