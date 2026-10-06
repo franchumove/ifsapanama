@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { ProjectsGrid } from "@/components/ProjectsGrid";
 import { IntentRoutes } from "@/components/IntentRoutes";
 import { CTASection } from "@/components/CTASection";
+import { ClientsMarquee } from "@/components/ClientsMarquee";
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
@@ -10,7 +11,6 @@ import { Link } from "wouter";
 export default function Home() {
   const featuredSlugs = [
     "lipp",
-    "casetas-de-guardia",
     "smartbrix",
     "metaldeza"
   ] as const;
@@ -59,6 +59,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ClientsMarquee />
 
       <CTASection 
         title="Si tu obra no puede fallar, empecemos con una visita técnica."
