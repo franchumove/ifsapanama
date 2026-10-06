@@ -149,13 +149,11 @@ export default function Nosotros() {
           ariaLabelledBy="nosotros-heading"
         >
           <h1
-            id="nosotros-heading"
-            className="font-heading font-black heading-hero-page text-white uppercase tracking-tighter"
-          >
-            Método y
-            <br />
-            ejecución
-          </h1>
+              id="nosotros-heading"
+              className="font-heading font-black heading-hero-page text-white uppercase tracking-tighter"
+            >
+              Nosotros
+            </h1>
           <p className="mt-3 max-w-xl text-white/75 text-xs sm:text-sm uppercase tracking-[0.18em] font-medium leading-relaxed">
             Cuando una obra no puede fallar, el método importa.
           </p>
