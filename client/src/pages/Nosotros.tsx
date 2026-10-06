@@ -177,15 +177,12 @@ export default function Nosotros() {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center"
               >
                 <div>
-                  <div className="flex items-center gap-4 mb-5 sm:mb-6">
-                      <img src="/images/ifsa-logo.png" alt="IFSA Panama Logo" className="h-10 sm:h-12 w-auto object-contain" />
-                      <h2
-                        id="nuestra-filosofia"
-                        className="font-heading font-black text-xl sm:text-2xl text-white uppercase tracking-tighter m-0"
-                      >
-                        Nuestra filosofía
-                      </h2>
-                    </div>
+                  <h2
+                      id="nuestra-filosofia"
+                      className="font-heading font-black text-xl sm:text-2xl text-white uppercase tracking-tighter mb-5 sm:mb-6"
+                    >
+                      Nuestra filosofía
+                    </h2>
                   <div className="space-y-4 text-white/70 text-sm sm:text-[15px] leading-relaxed">
                     <p>
                       IFSA PANAMÁ nace para responder a proyectos donde el control
@@ -201,11 +198,11 @@ export default function Nosotros() {
                   </div>
                 </div>
                 <img
-                  src="/images/about-engineers-photo.png"
-                  alt="Ingenieros revisando planos en obra"
-                  className="w-full rounded-[12px] object-cover aspect-[4/3] grayscale shadow-md"
-                  loading="lazy"
-                />
+                    src="/images/ifsa-logo.png"
+                    alt="IFSA Panama Logo"
+                    className="w-full max-w-[300px] lg:max-w-[400px] mx-auto object-contain drop-shadow-xl"
+                    loading="lazy"
+                  />
               </section>
 
               <section aria-labelledby="principios-operativos">
