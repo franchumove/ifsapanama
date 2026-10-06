@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 export function ClientsMarquee() {
-  const logos = Array.from({ length: 10 }).map((_, i) => `/images/clientes/cliente-${i + 1}.png`);
+  const logos = Array.from({ length: 9 }).map((_, i) => `/images/clientes/cliente-${i + 1}.png`);
   
   // We duplicate the logos array to create an infinite scroll effect
   const repeatedLogos = [...logos, ...logos, ...logos];
@@ -36,7 +36,7 @@ export function ClientsMarquee() {
               <img 
                 src={logo} 
                 alt={`Cliente ${index + 1}`} 
-                className="w-full h-auto object-contain"
+                className={`w-full h-auto object-contain ${logo.includes('cliente-9') ? 'scale-[1.3]' : ''}`}
               />
             </div>
           ))}
