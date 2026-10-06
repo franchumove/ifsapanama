@@ -9,9 +9,10 @@ import { Link } from "wouter";
 
 export default function Home() {
   const featuredSlugs = [
-    "tanque-digestor-lipp",
-    "bordillos-metro-panama",
-    "evaluacion-estructural-muro",
+    "lipp",
+    "casetas-de-guardia",
+    "smartbrix",
+    "metaldeza"
   ] as const;
   const featuredProjects = featuredSlugs
     .map((slug) => projects.find((p) => p.slug === slug))
