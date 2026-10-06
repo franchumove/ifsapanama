@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
 import { Layout } from "@/components/Layout";
+import { HeroVideo } from "@/components/HeroVideo";
 import { ProjectFilters } from "@/components/ProjectFilters";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
@@ -22,29 +23,22 @@ export default function Proyectos() {
   return (
     <Layout>
       <div className="bg-black min-h-screen">
-        <section
-          className="hero-container"
-          aria-labelledby="proyectos-heading"
+        <HeroVideo
+          src="/videos/proyectos.mp4"
+          poster="/images/hero-construction.png"
+          ariaLabelledBy="proyectos-heading"
         >
-          <img
-            src="/images/hero-construction.png"
-            alt=""
-            className="hero-media"
-          />
-          <div className="hero-overlay-gradient" />
-          <div className="hero-content text-center pb-10 sm:pb-12">
-            <h1
-              id="proyectos-heading"
-              className="font-heading font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white uppercase tracking-tight leading-tight text-center"
-            >
-              Encuentra un proyecto similar al tuyo.
-            </h1>
-            <p className="mt-4 max-w-3xl mx-auto text-white/75 text-xs sm:text-sm uppercase tracking-[0.16em] font-medium leading-relaxed text-center">
-              Si tu proyecto exige control y respuesta operativa, aquí verás cómo
-              estructuramos la ejecución.
-            </p>
-          </div>
-        </section>
+          <h1
+            id="proyectos-heading"
+            className="font-heading font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white uppercase tracking-tight leading-tight text-center"
+          >
+            Encuentra un proyecto similar al tuyo.
+          </h1>
+          <p className="mt-4 max-w-3xl mx-auto text-white/75 text-xs sm:text-sm uppercase tracking-[0.16em] font-medium leading-relaxed text-center">
+            Si tu proyecto exige control y respuesta operativa, aquí verás cómo
+            estructuramos la ejecución.
+          </p>
+        </HeroVideo>
 
         <section
           className="bg-[#111111] pb-24 pt-10 sm:pt-12"
