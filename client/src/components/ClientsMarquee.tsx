@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 export function ClientsMarquee() {
-  const logos = Array.from({ length: 9 }).map((_, i) => `/images/clientes/cliente-${i + 1}.png`);
+  const logos = Array.from({ length: 8 }).map((_, i) => `/images/clientes/cliente-${i + 1}.png`);
   
   // We duplicate the logos array to create an infinite scroll effect
   const repeatedLogos = [...logos, ...logos, ...logos];
@@ -13,7 +13,7 @@ export function ClientsMarquee() {
           Nuestros Clientes
         </h2>
         <p className="text-white/60 mt-4 uppercase tracking-widest text-sm font-bold">
-          Empresas que confan en nosotros
+          Empresas que confían en nosotros
         </p>
       </div>
       
@@ -28,15 +28,15 @@ export function ClientsMarquee() {
           transition={{
             repeat: Infinity,
             ease: "linear",
-            duration: 20, // Adjust speed
+            duration: 25, // Adjust speed
           }}
         >
           {repeatedLogos.map((logo, index) => (
-            <div key={index} className="flex-shrink-0 px-8 md:px-12 lg:px-16 w-[150px] md:w-[200px]">
+            <div key={index} className="flex-shrink-0 px-8 md:px-12 lg:px-16 w-[200px] md:w-[250px] lg:w-[300px]">
               <img 
                 src={logo} 
                 alt={`Cliente ${index + 1}`} 
-                className="w-full h-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                className="w-full h-auto object-contain"
               />
             </div>
           ))}
