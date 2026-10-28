@@ -41,7 +41,10 @@ export const projects: (Project & { isDesarrolloMenor?: boolean })[] = [
       "/images/projects/estacionamiento-nestle/estacionamiento-nestle-2.jpg",
       "/images/projects/estacionamiento-nestle/estacionamiento-nestle-3.jpg",
       "/images/projects/estacionamiento-nestle/estacionamiento-nestle-4.jpg",
-      "/images/projects/estacionamiento-nestle/estacionamiento-nestle-5.jpg"
+      "/images/projects/estacionamiento-nestle/estacionamiento-nestle-5.jpg",
+      "/images/projects/estacionamiento-nestle/estacionamiento-nestle-6.jpg",
+      "/images/projects/estacionamiento-nestle/estacionamiento-nestle-7.jpg",
+      "/images/projects/estacionamiento-nestle/estacionamiento-nestle-8.jpg"
     ],
     "challenge": "",
     "solution": "",
@@ -93,7 +96,10 @@ export const projects: (Project & { isDesarrolloMenor?: boolean })[] = [
       "/images/projects/dise-o-calculo-y-construccion-muro-de-contencion/dise-o-calculo-y-construccion-muro-de-contencion-2.jpg",
       "/images/projects/dise-o-calculo-y-construccion-muro-de-contencion/dise-o-calculo-y-construccion-muro-de-contencion-3.jpg",
       "/images/projects/dise-o-calculo-y-construccion-muro-de-contencion/dise-o-calculo-y-construccion-muro-de-contencion-4.jpg",
-      "/images/projects/dise-o-calculo-y-construccion-muro-de-contencion/dise-o-calculo-y-construccion-muro-de-contencion-5.jpg"
+      "/images/projects/dise-o-calculo-y-construccion-muro-de-contencion/dise-o-calculo-y-construccion-muro-de-contencion-5.jpg",
+      "/images/projects/dise-o-calculo-y-construccion-muro-de-contencion/dise-o-calculo-y-construccion-muro-de-contencion-6.jpg",
+      "/images/projects/dise-o-calculo-y-construccion-muro-de-contencion/dise-o-calculo-y-construccion-muro-de-contencion-7.jpg",
+      "/images/projects/dise-o-calculo-y-construccion-muro-de-contencion/dise-o-calculo-y-construccion-muro-de-contencion-8.jpg"
     ],
     "challenge": "",
     "solution": "",
@@ -453,7 +459,10 @@ export const projects: (Project & { isDesarrolloMenor?: boolean })[] = [
       "/images/projects/vigaductos-electricos/vigaductos-electricos-2.jpg",
       "/images/projects/vigaductos-electricos/vigaductos-electricos-3.jpg",
       "/images/projects/vigaductos-electricos/vigaductos-electricos-4.jpg",
-      "/images/projects/vigaductos-electricos/vigaductos-electricos-5.jpg"
+      "/images/projects/vigaductos-electricos/vigaductos-electricos-5.jpg",
+      "/images/projects/vigaductos-electricos/vigaductos-electricos-6.jpg",
+      "/images/projects/vigaductos-electricos/vigaductos-electricos-7.jpg",
+      "/images/projects/vigaductos-electricos/vigaductos-electricos-8.jpg"
     ],
     "challenge": "",
     "solution": "",
@@ -501,7 +510,10 @@ export const projects: (Project & { isDesarrolloMenor?: boolean })[] = [
     "gallery": [
       "/images/projects/dise-o-calculo-y-construccion-red-contraincendios/dise-o-calculo-y-construccion-red-contraincendios-1.jpg",
       "/images/projects/dise-o-calculo-y-construccion-red-contraincendios/dise-o-calculo-y-construccion-red-contraincendios-4.jpg",
-      "/images/projects/dise-o-calculo-y-construccion-red-contraincendios/dise-o-calculo-y-construccion-red-contraincendios-5.jpg"
+      "/images/projects/dise-o-calculo-y-construccion-red-contraincendios/dise-o-calculo-y-construccion-red-contraincendios-5.jpg",
+      "/images/projects/dise-o-calculo-y-construccion-red-contraincendios/dise-o-calculo-y-construccion-red-contraincendios-6.jpg",
+      "/images/projects/dise-o-calculo-y-construccion-red-contraincendios/dise-o-calculo-y-construccion-red-contraincendios-7.jpg",
+      "/images/projects/dise-o-calculo-y-construccion-red-contraincendios/dise-o-calculo-y-construccion-red-contraincendios-8.jpg"
     ],
     "challenge": "",
     "solution": "",
@@ -581,7 +593,10 @@ export const projects: (Project & { isDesarrolloMenor?: boolean })[] = [
       "/images/projects/pasarelas-y-mant-escaleras/pasarelas-y-mant-escaleras-2.jpg",
       "/images/projects/pasarelas-y-mant-escaleras/pasarelas-y-mant-escaleras-3.jpg",
       "/images/projects/pasarelas-y-mant-escaleras/pasarelas-y-mant-escaleras-4.jpg",
-      "/images/projects/pasarelas-y-mant-escaleras/pasarelas-y-mant-escaleras-5.jpg"
+      "/images/projects/pasarelas-y-mant-escaleras/pasarelas-y-mant-escaleras-5.jpg",
+      "/images/projects/pasarelas-y-mant-escaleras/pasarelas-y-mant-escaleras-6.jpg",
+      "/images/projects/pasarelas-y-mant-escaleras/pasarelas-y-mant-escaleras-7.jpg",
+      "/images/projects/pasarelas-y-mant-escaleras/pasarelas-y-mant-escaleras-8.jpg"
     ],
     "challenge": "",
     "solution": "",
