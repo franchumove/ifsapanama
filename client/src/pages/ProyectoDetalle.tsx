@@ -99,29 +99,21 @@ export default function ProyectoDetalle() {
             </div>
           </div>
 
-          {/* Descripción Técnica */}
+          {/* Descripción Técnica: Solo Alcance */}
           <div className="space-y-8 mb-12">
             <div>
-              <h2 className="text-white font-bold text-xl mb-4 uppercase">El Reto</h2>
-              <p className="text-gray-300 leading-relaxed">
-                {project.challenge}
-              </p>
-            </div>
-            
-            <div>
-              <h2 className="text-white font-bold text-xl mb-4 uppercase">La Solución</h2>
-              <p className="text-gray-300 leading-relaxed">
-                {project.solution}
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-white font-bold text-xl mb-4 uppercase">Alcance de Trabajo</h2>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                {project.scope.map((item, index) => (
-                  <li key={index} className="leading-relaxed">{item}</li>
-                ))}
-              </ul>
+              <h2 className="text-white font-bold text-xl mb-4 uppercase">Alcance</h2>
+              <div className="text-gray-300 leading-relaxed space-y-4">
+                {Array.isArray(project.scope) && project.scope.length > 0 ? (
+                  project.scope.map((item, index) => (
+                    <p key={index} className="leading-relaxed">
+                      {item}
+                    </p>
+                  ))
+                ) : (
+                  <p className="leading-relaxed">{project.solution || project.challenge || "Alcance de ejecución técnica según especificaciones de ingeniería."}</p>
+                )}
+              </div>
             </div>
           </div>
 

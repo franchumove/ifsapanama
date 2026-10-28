@@ -57,10 +57,37 @@ export default function Proyectos() {
                 </p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] mt-10">
-                {filteredProjects.map((project, index) => (
-                  <ProjectCard key={project.slug} project={project} index={index} />
-                ))}
+              <div>
+                {/* Regular Projects */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] mt-10">
+                  {filteredProjects
+                    .filter((p) => !(p as any).isDesarrolloMenor)
+                    .map((project, index) => (
+                      <ProjectCard key={project.slug} project={project} index={index} />
+                    ))}
+                </div>
+
+                {/* Subtítulo y Proyectos de Desarrollo Menor */}
+                {filteredProjects.some((p) => (p as any).isDesarrolloMenor) && (
+                  <div className="mt-20">
+                    <div className="border-t border-white/20 pt-12 pb-6 text-center">
+                      <span className="text-[#FF6600] text-xs font-bold uppercase tracking-[0.25em] block mb-2">
+                        Infraestructura
+                      </span>
+                      <h2 className="text-2xl md:text-3xl font-black uppercase text-white tracking-tight">
+                        Proyectos de Desarrollo Menor
+                      </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] mt-8">
+                      {filteredProjects
+                        .filter((p) => (p as any).isDesarrolloMenor)
+                        .map((project, index) => (
+                          <ProjectCard key={project.slug} project={project} index={index} />
+                        ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>
