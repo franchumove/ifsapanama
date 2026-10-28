@@ -165,9 +165,8 @@ export const projects: (Project & { isDesarrolloMenor?: boolean })[] = [
     "typeLabel": "INFRAESTRUCTURA OBRA CIVIL",
     "isDesarrolloMenor": false,
     "location": "ESTACIONES DE BOMBEO – AVENIDA BALBOA",
-    "thumbnail": "/images/projects/casetas-de-guardia/casetas-de-guardia-1.jpg",
+    "thumbnail": "/images/projects/casetas-de-guardia/casetas-de-guardia-2.jpg",
     "gallery": [
-      "/images/projects/casetas-de-guardia/casetas-de-guardia-1.jpg",
       "/images/projects/casetas-de-guardia/casetas-de-guardia-2.jpg",
       "/images/projects/casetas-de-guardia/casetas-de-guardia-3.jpg",
       "/images/projects/casetas-de-guardia/casetas-de-guardia-4.jpg",
@@ -350,9 +349,7 @@ export const projects: (Project & { isDesarrolloMenor?: boolean })[] = [
     "gallery": [
       "/images/projects/bordillos-andenes-suez-international/bordillos-andenes-suez-international-1.jpg",
       "/images/projects/bordillos-andenes-suez-international/bordillos-andenes-suez-international-2.jpg",
-      "/images/projects/bordillos-andenes-suez-international/bordillos-andenes-suez-international-3.jpg",
-      "/images/projects/bordillos-andenes-suez-international/bordillos-andenes-suez-international-4.jpg",
-      "/images/projects/bordillos-andenes-suez-international/bordillos-andenes-suez-international-5.jpg"
+      "/images/projects/bordillos-andenes-suez-international/bordillos-andenes-suez-international-3.jpg"
     ],
     "challenge": "",
     "solution": "",
@@ -480,9 +477,7 @@ export const projects: (Project & { isDesarrolloMenor?: boolean })[] = [
     "gallery": [
       "/images/projects/red-de-riego/red-de-riego-1.jpg",
       "/images/projects/red-de-riego/red-de-riego-2.jpg",
-      "/images/projects/red-de-riego/red-de-riego-3.jpg",
-      "/images/projects/red-de-riego/red-de-riego-4.jpg",
-      "/images/projects/red-de-riego/red-de-riego-5.jpg"
+      "/images/projects/red-de-riego/red-de-riego-3.jpg"
     ],
     "challenge": "",
     "solution": "",
@@ -560,8 +555,7 @@ export const projects: (Project & { isDesarrolloMenor?: boolean })[] = [
       "/images/projects/smartbrix/smartbrix-1.jpg",
       "/images/projects/smartbrix/smartbrix-2.jpg",
       "/images/projects/smartbrix/smartbrix-3.jpg",
-      "/images/projects/smartbrix/smartbrix-4.jpg",
-      "/images/projects/smartbrix/smartbrix-5.jpg"
+      "/images/projects/smartbrix/smartbrix-4.jpg"
     ],
     "challenge": "",
     "solution": "",
