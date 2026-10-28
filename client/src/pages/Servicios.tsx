@@ -58,13 +58,6 @@ export default function Servicios() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-10 md:gap-y-16">
               {services.map((service, index) => {
                 const iconSrc = iconPngMap[service.icon] || "/images/icon-engineering.png";
-                const hasValidTitlePng = [0, 5].includes(index);
-                const titleText =
-                  index === 1
-                    ? "OBRA CIVIL INFRAESTRUCTURA"
-                    : index === 2
-                      ? "INFRAESTRUCTURA REDES"
-                      : service.title;
 
                 return (
                   <motion.div
@@ -86,17 +79,9 @@ export default function Servicios() {
                             />
                           </div>
                           <div className="flex-grow min-w-0">
-                            {hasValidTitlePng ? (
-                              <img
-                                src={`/images/title-service-${index + 1}.png`}
-                                alt={service.title}
-                                className="h-9 sm:h-12 w-auto max-w-full object-contain object-left"
-                              />
-                            ) : (
-                              <h3 className="text-black font-black text-[13px] sm:text-[15px] md:text-[17px] uppercase tracking-tight leading-tight">
-                                {titleText}
-                              </h3>
-                            )}
+                            <h3 className="font-heading font-black text-[15px] sm:text-[17px] md:text-[19px] uppercase tracking-tighter leading-[1.1] text-black">
+                              {service.title}
+                            </h3>
                           </div>
                         </div>
                       </div>
